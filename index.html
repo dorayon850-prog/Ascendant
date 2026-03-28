@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ASCENDANT">
+<meta name="theme-color" content="#02020a">
+<title>ASCENDANT — Daily Training Protocol</title>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cormorant+Garamond:wght@400;600;700&family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+<style>body.mode-male{--void:#02020a;--deep:#06061a;--surface:#0c0c28;--panel:#10103a;--border:#1e1e6a;--accent1:#4488ff;--accent2:#8844ff;--accent3:#00d4ff;--gold:#ffd700;--danger:#ff4466;--text:#c8d8ff;--text-dim:#5566aa;--card-bg:linear-gradient(135deg,#10103a 0%,#0a0a30 100%);--header-grad:linear-gradient(135deg,#fff 0%,#00d4ff 40%,#8844ff 100%);--xp-grad:linear-gradient(90deg,#4488ff,#00d4ff);--title-font:'Black Han Sans',sans-serif;--body-font:'Rajdhani',sans-serif;--mono-font:'Share Tech Mono',monospace;--particle-c1:68,136,255;--particle-c2:136,68,255}body.mode-female{--void:#08010f;--deep:#10021a;--surface:#180828;--panel:#1e0830;--border:#5a1a6a;--accent1:#c44aff;--accent2:#ff2d6e;--accent3:#ffd700;--gold:#ffd700;--danger:#ff2d6e;--text:#f0d4ff;--text-dim:#8855aa;--card-bg:linear-gradient(135deg,#1e0830 0%,#10021a 100%);--header-grad:linear-gradient(135deg,#fff 0%,#ffd700 35%,#c44aff 75%,#ff2d6e 100%);--xp-grad:linear-gradient(90deg,#c44aff,#ff2d6e);--title-font:'Cormorant Garamond',serif;--body-font:'Cormorant Garamond',serif;--mono-font:'Share Tech Mono',monospace;--particle-c1:196,74,255;--particle-c2:255,45,110}body.mode-male.theme-obsidian{--void:#000000;--deep:#080808;--surface:#101010;--panel:#161616;--border:#2a2a3a;--accent1:#7ab8ff;--accent2:#4466cc;--accent3:#e8f0ff;--gold:#c8d8ff;--danger:#ff4466;--text:#ddeeff;--text-dim:#445566;--card-bg:linear-gradient(135deg,#161616 0%,#0a0a0a 100%);--header-grad:linear-gradient(135deg,#ffffff 0%,#c8dcff 50%,#7ab8ff 100%);--xp-grad:linear-gradient(90deg,#4466cc,#a8ccff);--particle-c1:122,184,255;--particle-c2:68,102,204}body.mode-male.theme-ember{--void:#080502;--deep:#0f0a04;--surface:#1a1208;--panel:#221808;--border:#4a3010;--accent1:#ff8c00;--accent2:#cc4400;--accent3:#ffcc44;--gold:#ffcc44;--danger:#ff4422;--text:#ffe8c0;--text-dim:#886644;--card-bg:linear-gradient(135deg,#221808 0%,#140e04 100%);--header-grad:linear-gradient(135deg,#fff 0%,#ffcc44 40%,#ff6600 100%);--xp-grad:linear-gradient(90deg,#cc4400,#ff8c00);--particle-c1:255,140,0;--particle-c2:204,68,0}body.mode-female.theme-sovereign{--void:#050400;--deep:#0a0800;--surface:#141000;--panel:#1a1400;--border:#4a3800;--accent1:#d4a000;--accent2:#aa7800;--accent3:#ffd700;--gold:#ffd700;--danger:#cc4422;--text:#fff8e0;--text-dim:#886600;--card-bg:linear-gradient(135deg,#1a1400 0%,#0a0800 100%);--header-grad:linear-gradient(135deg,#ffffff 0%,#ffd700 50%,#aa7800 100%);--xp-grad:linear-gradient(90deg,#aa7800,#ffd700);--title-font:'Cormorant Garamond',serif;--body-font:'Cormorant Garamond',serif;--particle-c1:212,160,0;--particle-c2:170,120,0}body.mode-female.theme-phantom{--void:#04060a;--deep:#080c14;--surface:#10141e;--panel:#14182a;--border:#303050;--accent1:#d080c0;--accent2:#8888bb;--accent3:#d8d8f0;--gold:#d8d8f0;--danger:#d060a0;--text:#e8e0f0;--text-dim:#707090;--card-bg:linear-gradient(135deg,#14182a 0%,#080c14 100%);--header-grad:linear-gradient(135deg,#ffffff 0%,#e0d0f0 40%,#c090c0 80%,#9090cc 100%);--xp-grad:linear-gradient(90deg,#9090cc,#d080c0);--title-font:'Cormorant Garamond',serif;--body-font:'Cormorant Garamond',serif;--particle-c1:208,128,192;--particle-c2:136,136,187}.theme-switcher{display:flex;align-items:center;justify-content:center;gap:8px;margin:8px auto 0;max-width:320px;flex-wrap:wrap}.theme-switcher-label{font-family:var(--mono-font);font-size:9px;letter-spacing:3px;color:var(--text-dim);width:100%;text-align:center;margin-bottom:2px}.theme-dot{width:24px;height:24px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all 0.25s;position:relative}.theme-dot:hover{transform:scale(1.2)}.theme-dot.active{border-color:#fff;box-shadow:0 0 10px rgba(255,255,255,0.4)}.theme-dot[data-theme="void"]{background:linear-gradient(135deg,#4488ff,#8844ff)}.theme-dot[data-theme="obsidian"]{background:linear-gradient(135deg,#7ab8ff,#2244aa)}.theme-dot[data-theme="ember"]{background:linear-gradient(135deg,#ff8c00,#cc4400)}.theme-dot[data-theme="eclipse"]{background:linear-gradient(135deg,#c44aff,#ff2d6e)}.theme-dot[data-theme="sovereign"]{background:linear-gradient(135deg,#ffd700,#aa7800)}.theme-dot[data-theme="phantom"]{background:linear-gradient(135deg,#d080c0,#9090cc)}.theme-dot-tip{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font-family:var(--mono-font);font-size:8px;letter-spacing:1px;color:var(--text-dim);white-space:nowrap;opacity:0;transition:opacity 0.2s;pointer-events:none}.theme-dot:hover .theme-dot-tip{opacity:1}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--void);color:var(--text);font-family:var(--body-font),sans-serif;min-height:100vh;overflow-x:hidden;transition:background 0.6s,color 0.4s}#particles{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.45}.app{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:20px 16px 80px}.mode-toggle-bar{display:flex;align-items:center;justify-content:center;gap:0;margin:0 auto 0;max-width:300px;border:1px solid var(--border);border-radius:40px;overflow:hidden;position:relative;background:var(--deep)}.mode-btn{flex:1;padding:9px 0;font-family:var(--mono-font);font-size:10px;letter-spacing:2px;text-align:center;cursor:pointer;border:none;background:transparent;color:var(--text-dim);transition:all 0.35s;position:relative;z-index:1}.mode-btn.active{color:#fff;font-weight:700}.mode-slider{position:absolute;top:3px;bottom:3px;width:calc(50% - 6px);border-radius:34px;transition:left 0.35s cubic-bezier(0.4,0,0.2,1),background 0.4s}body.mode-male .mode-slider{left:3px;background:linear-gradient(135deg,#4488ff,#8844ff)}body.mode-female .mode-slider{left:calc(50% + 3px);background:linear-gradient(135deg,#c44aff,#ff2d6e)}body.mode-male .mode-btn:first-child{color:#fff}body.mode-female .mode-btn:last-child{color:#fff}.header{text-align:center;padding:28px 0 16px;position:relative}.header::after{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--accent1),var(--accent2),transparent);margin-top:18px}.sys-label{font-family:var(--mono-font);font-size:10px;letter-spacing:5px;color:var(--accent3);text-transform:uppercase;animation:flicker 4s infinite;margin-bottom:6px}.title{font-family:var(--title-font);font-size:clamp(34px,8vw,72px);letter-spacing:6px;background:var(--header-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 30px rgba(100,60,255,0.4));transition:filter 0.4s}body.mode-female .title{filter:drop-shadow(0 0 30px rgba(196,74,255,0.5));letter-spacing:8px}.subtitle-mode{font-family:var(--mono-font);font-size:9px;letter-spacing:4px;color:var(--text-dim);margin-top:4px;min-height:14px;transition:color 0.4s}.collapse-btn{background:none;border:1px solid var(--border);border-radius:3px;color:var(--text-dim);font-size:11px;cursor:pointer;padding:2px 7px;transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),color 0.2s,border-color 0.2s;line-height:1.6;flex-shrink:0}.collapse-btn:hover{color:var(--accent3);border-color:var(--accent1)}.collapse-btn.collapsed{transform:rotate(-90deg)}.collapsible-body{overflow:hidden;max-height:2000px;transition:max-height 0.6s cubic-bezier(0.4,0,0.2,1),opacity 0.3s ease;opacity:1}.collapsible-body.collapsed{max-height:0!important;opacity:0;pointer-events:none}.voice-panel{background:linear-gradient(135deg,rgba(68,136,255,0.04),rgba(136,68,255,0.04));border:1px solid var(--border);border-radius:4px;margin:0 0 16px;position:relative;overflow:hidden;transition:border-color 0.4s,background 0.4s}body.mode-female .voice-panel{background:linear-gradient(135deg,rgba(196,74,255,0.04),rgba(255,45,110,0.04))}.voice-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--accent2),var(--accent1));pointer-events:none;z-index:1}.voice-panel-header{display:flex;align-items:center;gap:14px;padding:14px 20px;cursor:pointer;user-select:none}.voice-panel-body{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:0 20px 14px}.voice-btn{width:52px;height:52px;border-radius:50%;background:radial-gradient(circle,rgba(68,136,255,0.15) 0%,rgba(8,8,40,0.8) 100%);border:2px solid var(--accent1);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:22px;transition:all 0.3s;flex-shrink:0;box-shadow:0 0 15px rgba(68,136,255,0.2)}body.mode-female .voice-btn{background:radial-gradient(circle,rgba(196,74,255,0.15) 0%,rgba(20,4,30,0.8) 100%)}.voice-btn:hover{box-shadow:0 0 30px rgba(68,136,255,0.5)}.voice-btn.listening{border-color:var(--danger);animation:pulse-ring 1s infinite}.voice-btn.speaking{border-color:var(--gold);animation:speakPulse 0.6s ease-in-out infinite alternate}.voice-info{flex:1;min-width:160px}.voice-status{font-family:var(--mono-font);font-size:10px;letter-spacing:3px;color:var(--text-dim);text-transform:uppercase;margin-bottom:4px}.voice-status.active{color:var(--danger)}.voice-status.speaking{color:var(--gold)}.voice-transcript{font-family:var(--mono-font);font-size:12px;color:var(--accent3);min-height:18px;transition:color 0.4s}.voice-waveform{display:flex;align-items:center;gap:3px;height:30px}.wave-bar{width:3px;background:var(--accent1);border-radius:2px;height:4px;transition:height 0.1s,background 0.4s;opacity:0.3}.voice-help-btn{background:rgba(68,136,255,0.08);border:1px solid rgba(68,136,255,0.2);border-radius:3px;color:var(--text-dim);font-family:var(--mono-font);font-size:10px;letter-spacing:1px;padding:6px 10px;cursor:pointer;transition:all 0.2s}.voice-help-btn:hover{border-color:var(--accent1);color:var(--accent3)}.commands-overlay{position:fixed;inset:0;background:rgba(2,2,10,0.85);z-index:90;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s}.commands-overlay.show{opacity:1;pointer-events:all}.commands-box{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:28px;max-width:500px;width:90%;position:relative}.commands-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent2),var(--accent3));border-radius:4px 4px 0 0}.commands-title{font-family:var(--title-font);font-size:20px;letter-spacing:4px;color:var(--gold);margin-bottom:16px}.cmd-group{margin-bottom:14px}.cmd-group-name{font-family:var(--mono-font);font-size:9px;letter-spacing:3px;color:var(--accent3);margin-bottom:6px}.cmd-item{font-family:var(--mono-font);font-size:11px;color:var(--text);margin:4px 0}.cmd-item b{color:var(--gold)}.player-card{background:var(--card-bg);border:1px solid var(--border);border-radius:4px;padding:24px;margin:20px 0;position:relative;overflow:hidden;box-shadow:0 0 40px rgba(68,68,255,0.07);transition:background 0.5s,border-color 0.4s,box-shadow 0.4s}body.mode-female .player-card{box-shadow:0 0 40px rgba(196,74,255,0.1)}.player-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent2),var(--accent1),var(--accent3));transition:background 0.4s}.corner{position:absolute;width:12px;height:12px;border-color:var(--accent3);border-style:solid;transition:border-color 0.4s}.corner-tl{top:6px;left:6px;border-width:1px 0 0 1px}.corner-tr{top:6px;right:6px;border-width:1px 1px 0 0}.corner-bl{bottom:6px;left:6px;border-width:0 0 1px 1px}.corner-br{bottom:6px;right:6px;border-width:0 1px 1px 0}.player-top{display:flex;align-items:center;gap:20px;flex-wrap:wrap}.rank-badge{width:70px;height:70px;border-radius:50%;background:radial-gradient(circle,var(--surface) 40%,var(--deep) 100%);border:2px solid var(--accent1);display:flex;align-items:center;justify-content:center;font-family:var(--title-font);font-size:26px;box-shadow:0 0 20px rgba(68,136,255,0.4);flex-shrink:0;transition:all 0.5s}.player-info{flex:1}.player-name-label{font-family:var(--mono-font);font-size:10px;color:var(--text-dim);letter-spacing:3px;margin-bottom:2px}.player-name input{background:none;border:none;border-bottom:1px solid var(--border);color:var(--text);font-family:var(--mono-font);font-size:13px;letter-spacing:3px;text-transform:uppercase;outline:none;width:180px;padding:2px 4px;transition:border-color 0.3s}.player-name input:focus{border-color:var(--accent1)}.player-level{font-family:var(--title-font);font-size:38px;color:#fff;line-height:1;margin-top:4px}.player-level span{font-size:16px;color:var(--accent3);font-family:var(--mono-font)}.player-title{font-family:var(--mono-font);font-size:11px;color:var(--gold);letter-spacing:2px;margin-top:4px}.player-stats-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}.mini-stat{background:rgba(68,136,255,0.05);border:1px solid rgba(68,136,255,0.15);border-radius:3px;padding:6px 12px;font-family:var(--mono-font);font-size:11px;color:var(--text-dim);transition:background 0.4s,border-color 0.4s}body.mode-female .mini-stat{background:rgba(196,74,255,0.05);border-color:rgba(196,74,255,0.15)}.mini-stat b{color:var(--accent3)}.xp-section{margin-top:20px}.xp-label{display:flex;justify-content:space-between;font-family:var(--mono-font);font-size:11px;color:var(--text-dim);margin-bottom:6px}.xp-bar{height:8px;background:rgba(68,136,255,0.1);border-radius:4px;border:1px solid rgba(68,136,255,0.2);overflow:hidden;transition:background 0.4s}body.mode-female .xp-bar{background:rgba(196,74,255,0.1);border-color:rgba(196,74,255,0.2)}.xp-fill{height:100%;background:var(--xp-grad);border-radius:4px;transition:width 0.8s cubic-bezier(0.25,1,0.5,1),background 0.4s;position:relative}.xp-fill::after{content:'';position:absolute;top:0;right:0;bottom:0;width:20px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.6));animation:shimmer 2s infinite}.section-header{font-family:var(--mono-font);font-size:10px;letter-spacing:4px;color:var(--accent3);text-transform:uppercase;margin:26px 0 12px;display:flex;align-items:center;gap:10px;transition:color 0.4s}.section-header::before,.section-header::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent);transition:background 0.4s}.section-header::before{background:linear-gradient(90deg,transparent,var(--border))}.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}.stat-card{background:var(--panel);border:1px solid var(--border);border-radius:3px;padding:14px;position:relative;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s,background 0.4s}.stat-card:hover{border-color:var(--accent1);box-shadow:0 0 15px rgba(68,136,255,0.15)}body.mode-female .stat-card:hover{box-shadow:0 0 15px rgba(196,74,255,0.15)}.stat-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;opacity:0.7;transition:background 0.4s}.stat-card.str::before{background:#ff6644}.stat-card.agi::before{background:#44ff88}.stat-card.vit::before{background:#ff4488}.stat-card.int::before{background:#44aaff}.stat-card.per::before{background:#ffaa44}body.mode-female .stat-card.str::before{background:#ff2d6e}body.mode-female .stat-card.agi::before{background:#c44aff}body.mode-female .stat-card.vit::before{background:#ffd700}body.mode-female .stat-card.int::before{background:#ff8adb}body.mode-female .stat-card.per::before{background:#c44aff}.stat-icon{font-size:20px;margin-bottom:6px}.stat-name{font-family:var(--mono-font);font-size:9px;letter-spacing:3px;color:var(--text-dim);text-transform:uppercase}.stat-value{font-family:var(--title-font);font-size:28px;color:#fff;line-height:1.1}body.mode-female .stat-value{font-size:32px}.stat-bar{height:3px;background:rgba(255,255,255,0.05);border-radius:2px;margin-top:8px;overflow:hidden}.stat-bar-fill{height:100%;border-radius:2px;transition:width 0.6s,background 0.4s}.stat-card.str .stat-bar-fill{background:linear-gradient(90deg,#cc4422,#ff6644)}.stat-card.agi .stat-bar-fill{background:linear-gradient(90deg,#22cc66,#44ff88)}.stat-card.vit .stat-bar-fill{background:linear-gradient(90deg,#cc2266,#ff4488)}.stat-card.int .stat-bar-fill{background:linear-gradient(90deg,#2266cc,#44aaff)}.stat-card.per .stat-bar-fill{background:linear-gradient(90deg,#cc8822,#ffaa44)}body.mode-female .stat-card.str .stat-bar-fill{background:linear-gradient(90deg,#aa1144,#ff2d6e)}body.mode-female .stat-card.agi .stat-bar-fill{background:linear-gradient(90deg,#8822cc,#c44aff)}body.mode-female .stat-card.vit .stat-bar-fill{background:linear-gradient(90deg,#aa8800,#ffd700)}body.mode-female .stat-card.int .stat-bar-fill{background:linear-gradient(90deg,#aa44aa,#ff8adb)}body.mode-female .stat-card.per .stat-bar-fill{background:linear-gradient(90deg,#7722bb,#c44aff)}.quests-panel{background:var(--panel);border:1px solid var(--border);border-radius:4px;overflow:hidden;transition:background 0.4s,border-color 0.4s}.quests-header{padding:14px 20px;background:linear-gradient(90deg,rgba(68,136,255,0.08),transparent);border-bottom:1px solid var(--border);font-family:var(--mono-font);font-size:11px;letter-spacing:3px;color:var(--accent3);display:flex;justify-content:space-between;align-items:center;transition:background 0.4s,color 0.4s}body.mode-female .quests-header{background:linear-gradient(90deg,rgba(196,74,255,0.08),transparent)}.quest-count{background:rgba(68,136,255,0.2);border:1px solid var(--accent1);border-radius:10px;padding:2px 8px;font-size:10px;transition:background 0.4s,border-color 0.4s}body.mode-female .quest-count{background:rgba(196,74,255,0.2)}.quest-item{padding:14px 20px;border-bottom:1px solid rgba(30,30,106,0.4);display:flex;align-items:center;gap:12px;cursor:pointer;transition:background 0.2s;min-height:58px}body.mode-female .quest-item{border-bottom-color:rgba(90,26,106,0.4)}.quest-item:hover{background:rgba(68,136,255,0.05)}body.mode-female .quest-item:hover{background:rgba(196,74,255,0.05)}.quest-item.completed{opacity:0.4}.quest-item.completed .quest-name{text-decoration:line-through}.quest-check{width:24px;height:24px;border:1px solid var(--border);border-radius:2px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.3s;font-size:13px}.quest-item.completed .quest-check{background:rgba(68,255,136,0.15);border-color:#44ff88;color:#44ff88}body.mode-female .quest-item.completed .quest-check{background:rgba(255,215,0,0.15);border-color:var(--gold);color:var(--gold)}.quest-body{flex:1}.quest-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px;font-family:var(--body-font)}body.mode-female .quest-name{font-size:14px;font-weight:600}.quest-alias{font-family:var(--mono-font);font-size:9px;color:var(--accent2);margin-top:1px;letter-spacing:1px}.quest-desc{font-family:var(--mono-font);font-size:10px;color:var(--text-dim)}.quest-reward{font-family:var(--mono-font);font-size:10px;text-align:right;flex-shrink:0}.quest-xp{color:var(--accent3)}.quest-stat{color:var(--text-dim);font-size:9px;margin-top:2px}.quest-edit-btn{background:rgba(68,136,255,0.06);border:1px solid rgba(68,136,255,0.15);border-radius:3px;color:var(--text-dim);font-size:11px;padding:5px 8px;cursor:pointer;transition:all 0.2s;flex-shrink:0;line-height:1}.quest-edit-btn:hover{border-color:var(--accent1);color:var(--accent3);background:rgba(68,136,255,0.12)}body.mode-female .quest-edit-btn:hover{border-color:var(--accent1);color:var(--accent3)}.add-quest-form{padding:14px 20px;background:rgba(68,136,255,0.02);border-top:1px solid var(--border);display:flex;gap:10px;flex-wrap:wrap}body.mode-female .add-quest-form{background:rgba(196,74,255,0.02)}.sys-input{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:3px;color:var(--text);font-family:var(--mono-font);font-size:11px;padding:8px 12px;outline:none;transition:border-color 0.2s}.sys-input:focus{border-color:var(--accent1)}.sys-input::placeholder{color:var(--text-dim)}.sys-btn{background:linear-gradient(135deg,rgba(68,136,255,0.15),rgba(136,68,255,0.15));border:1px solid var(--accent1);border-radius:3px;color:var(--accent3);font-family:var(--mono-font);font-size:11px;letter-spacing:2px;padding:8px 16px;cursor:pointer;transition:all 0.3s;text-transform:uppercase}.sys-btn:hover{background:rgba(68,136,255,0.25);box-shadow:0 0 15px rgba(68,136,255,0.3)}body.mode-female .sys-btn{background:linear-gradient(135deg,rgba(196,74,255,0.15),rgba(255,45,110,0.15));border-color:var(--accent1)}body.mode-female .sys-btn:hover{background:rgba(196,74,255,0.25);box-shadow:0 0 15px rgba(196,74,255,0.3)}.log-panel{background:var(--panel);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-top:10px;transition:background 0.4s,border-color 0.4s}.log-header{padding:10px 20px;border-bottom:1px solid var(--border);font-family:var(--mono-font);font-size:10px;letter-spacing:3px;color:var(--text-dim);display:flex;justify-content:space-between}.log-entries{max-height:160px;overflow-y:auto;padding:8px 0}.log-entries::-webkit-scrollbar{width:3px}.log-entries::-webkit-scrollbar-track{background:var(--deep)}.log-entries::-webkit-scrollbar-thumb{background:var(--border)}.log-entry{padding:5px 20px;font-family:var(--mono-font);font-size:11px;color:var(--text-dim);border-left:2px solid transparent;animation:logIn 0.3s ease}.log-entry.good{color:#44ff88;border-left-color:#44ff88}body.mode-female .log-entry.good{color:var(--gold);border-left-color:var(--gold)}.log-entry.level{color:var(--gold);border-left-color:var(--gold)}.log-entry.info{color:var(--accent3);border-left-color:var(--accent3)}.log-entry.danger{color:var(--danger);border-left-color:var(--danger)}.log-entry .ts{color:rgba(255,255,255,0.2);margin-right:8px}.penalty-panel{background:var(--panel);border:1px solid rgba(255,68,102,0.25);border-radius:4px;overflow:hidden;transition:background 0.4s}body.mode-female .penalty-panel{border-color:rgba(255,45,110,0.25)}.penalty-header{padding:14px 20px;background:linear-gradient(90deg,rgba(255,68,102,0.07),transparent);border-bottom:1px solid rgba(255,68,102,0.12);font-family:var(--mono-font);font-size:11px;letter-spacing:3px;color:var(--danger);display:flex;justify-content:space-between;align-items:center}.penalty-subtitle{font-family:var(--mono-font);font-size:9px;letter-spacing:2px;color:var(--text-dim);margin-top:3px}.penalty-item{padding:14px 20px;border-bottom:1px solid rgba(255,68,102,0.07);display:flex;align-items:center;gap:14px;cursor:pointer;transition:background 0.2s;min-height:58px}.penalty-item:hover{background:rgba(255,68,102,0.05)}.penalty-item.triggered{opacity:0.45}.penalty-item.triggered .penalty-name{text-decoration:line-through}.penalty-btn{width:24px;height:24px;border:1px solid rgba(255,68,102,0.3);border-radius:2px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all 0.3s;color:transparent}.penalty-item.triggered .penalty-btn{background:rgba(255,68,102,0.15);border-color:var(--danger);color:var(--danger)}.penalty-body{flex:1}.penalty-name{font-size:13px;font-weight:700;color:rgba(255,180,180,0.85);margin-bottom:2px;font-family:var(--body-font)}body.mode-female .penalty-name{font-size:14px}.penalty-consequence{font-family:var(--mono-font);font-size:9px;color:rgba(255,68,102,0.5);margin-top:2px;font-style:italic}.penalty-desc{font-family:var(--mono-font);font-size:10px;color:var(--text-dim)}.penalty-cost{font-family:var(--mono-font);font-size:10px;text-align:right;flex-shrink:0}.penalty-xp{color:var(--danger)}.penalty-stat-cost{color:var(--text-dim);font-size:9px;margin-top:2px}.system-notice{background:rgba(255,68,102,0.03);border:1px solid rgba(255,68,102,0.12);border-left:3px solid var(--danger);border-radius:0 3px 3px 0;padding:12px 18px;margin-bottom:10px}.system-notice p{font-family:var(--mono-font);font-size:10px;color:rgba(255,180,180,0.65);line-height:1.8}.system-notice b{color:var(--danger)}.levelup-overlay,.penalty-overlay,.edit-overlay{position:fixed;inset:0;z-index:110;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.4s}.levelup-overlay{background:rgba(2,2,10,0.92)}body.mode-female .levelup-overlay{background:rgba(8,1,15,0.93)}.penalty-overlay{background:rgba(10,2,2,0.92)}.edit-overlay{background:rgba(2,2,10,0.88)}.levelup-overlay.show,.penalty-overlay.show,.edit-overlay.show{opacity:1;pointer-events:all}.levelup-box{text-align:center;padding:40px 28px}.levelup-ring{width:180px;height:180px;border-radius:50%;border:2px solid var(--accent1);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;animation:ringPulse 1.5s ease-in-out infinite;box-shadow:0 0 60px rgba(68,136,255,0.5),inset 0 0 40px rgba(68,136,255,0.15)}body.mode-female .levelup-ring{border-color:var(--accent1);box-shadow:0 0 60px rgba(196,74,255,0.5),inset 0 0 40px rgba(196,74,255,0.15)}.levelup-number{font-family:var(--title-font);font-size:80px;background:var(--header-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.levelup-text{font-family:var(--title-font);font-size:34px;letter-spacing:6px;color:var(--gold);animation:textPulse 0.8s ease-in-out infinite alternate}.levelup-subtitle{font-family:var(--mono-font);font-size:11px;letter-spacing:3px;color:var(--text-dim);margin-top:8px}.levelup-close{margin-top:24px;cursor:pointer;display:inline-block}.penalty-box{text-align:center;padding:40px 24px;max-width:420px}.penalty-ring{width:160px;height:160px;border-radius:50%;border:2px solid var(--danger);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;animation:penaltyPulse 1.2s ease-in-out infinite;box-shadow:0 0 50px rgba(255,68,102,0.4),inset 0 0 30px rgba(255,68,102,0.12);font-size:56px}.penalty-title-txt{font-family:var(--title-font);font-size:26px;letter-spacing:5px;color:var(--danger)}.penalty-msg{font-family:var(--mono-font);font-size:11px;letter-spacing:1px;color:rgba(255,180,180,0.6);margin-top:10px;line-height:1.9}.penalty-choice{display:flex;gap:12px;justify-content:center;margin-top:24px;flex-wrap:wrap}.edit-box{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:28px 24px;max-width:440px;width:92%;position:relative}.edit-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent1),var(--accent3));border-radius:4px 4px 0 0}.edit-title{font-family:var(--title-font);font-size:18px;letter-spacing:4px;color:var(--accent3);margin-bottom:4px}.edit-original{font-family:var(--mono-font);font-size:10px;color:var(--text-dim);letter-spacing:2px;margin-bottom:18px}.edit-field{margin-bottom:14px}.edit-label{font-family:var(--mono-font);font-size:9px;letter-spacing:3px;color:var(--text-dim);text-transform:uppercase;margin-bottom:6px;display:block}.edit-input{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:3px;color:var(--text);font-family:var(--mono-font);font-size:12px;padding:10px 12px;outline:none;transition:border-color 0.2s;width:100%}.edit-input:focus{border-color:var(--accent1)}.edit-input::placeholder{color:var(--text-dim);opacity:0.5}.edit-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}.edit-hint{font-family:var(--mono-font);font-size:9px;color:var(--text-dim);margin-top:14px;line-height:1.7;opacity:0.55}.reset-section{text-align:center;margin-top:26px;padding-top:20px;border-top:1px solid var(--border);display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.danger-btn{background:rgba(255,68,102,0.08);border:1px solid rgba(255,68,102,0.3);border-radius:3px;color:var(--danger);font-family:var(--mono-font);font-size:10px;letter-spacing:2px;padding:9px 16px;cursor:pointer;transition:all 0.2s;text-transform:uppercase}.danger-btn:hover{background:rgba(255,68,102,0.18);border-color:var(--danger)}@keyframes flicker{0%,94%,96%,100%{opacity:1}95%{opacity:0.3}}@keyframes shimmer{0%{transform:translateX(-40px)}100%{transform:translateX(40px)}}@keyframes logIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}@keyframes ringPulse{0%,100%{box-shadow:0 0 40px rgba(68,136,255,0.4),inset 0 0 30px rgba(68,136,255,0.1)}50%{box-shadow:0 0 80px rgba(68,136,255,0.8),inset 0 0 60px rgba(68,136,255,0.25)}}@keyframes textPulse{from{text-shadow:0 0 10px rgba(255,215,0,0.3)}to{text-shadow:0 0 30px rgba(255,215,0,0.9)}}@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(255,68,102,0.4)}70%{box-shadow:0 0 0 14px rgba(255,68,102,0)}100%{box-shadow:0 0 0 0 rgba(255,68,102,0)}}@keyframes speakPulse{from{box-shadow:0 0 10px rgba(255,215,0,0.3)}to{box-shadow:0 0 30px rgba(255,215,0,0.7)}}@keyframes penaltyPulse{0%,100%{box-shadow:0 0 30px rgba(255,68,102,0.3),inset 0 0 20px rgba(255,68,102,0.1)}50%{box-shadow:0 0 60px rgba(255,68,102,0.7),inset 0 0 40px rgba(255,68,102,0.25)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes modeSwitch{0%{opacity:0;transform:scale(0.97)}100%{opacity:1;transform:scale(1)}}.float{animation:float 3s ease-in-out infinite}.switching{animation:modeSwitch 0.4s ease forwards}.preset-tabs{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border);background:var(--panel)}.preset-tabs::-webkit-scrollbar{display:none}.preset-tab{flex-shrink:0;padding:11px 16px;font-family:var(--mono-font);font-size:10px;letter-spacing:2px;color:var(--text-dim);cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;text-transform:uppercase}.preset-tab:hover{color:var(--accent3);background:rgba(68,136,255,0.04)}body.mode-female .preset-tab:hover{background:rgba(196,74,255,0.04)}.preset-tab.active{color:var(--accent3);border-bottom-color:var(--accent1)}.preset-tab-desc{padding:10px 20px 0;font-family:var(--mono-font);font-size:9px;letter-spacing:2px;color:var(--text-dim);line-height:1.6;border-bottom:1px solid rgba(74,42,106,0.2);padding-bottom:10px}@media(max-width:480px){.preset-tab{padding:10px 12px;font-size:9px;letter-spacing:1px}}@media(max-width:768px){.app{padding:14px 12px 80px}.player-card{padding:18px 16px;margin:14px 0}.player-top{gap:14px}.rank-badge{width:58px;height:58px;font-size:22px}.player-level{font-size:30px}.player-name input{width:150px}.stats-grid{grid-template-columns:repeat(3,1fr);gap:8px}.stat-value{font-size:24px}.stat-card{padding:12px}.quest-item,.penalty-item{padding:13px 14px}.add-quest-form{gap:8px;padding:12px 14px}.log-entries{max-height:120px}.levelup-ring{width:150px;height:150px}.levelup-number{font-size:66px}.levelup-text{font-size:26px}}@media(max-width:480px){.app{padding:10px 10px 100px}.header{padding:14px 0 10px}.sys-label{font-size:8px;letter-spacing:3px}.player-card{padding:14px 12px}.player-top{flex-direction:column;align-items:flex-start;gap:8px}.player-top>div:last-child{width:100%}.rank-badge{width:50px;height:50px;font-size:18px;align-self:center}.player-info{width:100%}.player-name input{width:100%;max-width:220px}.player-level{font-size:26px}.player-title{font-size:10px;letter-spacing:1px}.player-stats-row{gap:6px}.mini-stat{padding:4px 8px;font-size:9px;flex:1;text-align:center}.stats-grid{grid-template-columns:repeat(2,1fr);gap:8px}.stat-value{font-size:22px}body.mode-female .stat-value{font-size:24px}.stat-icon{font-size:16px;margin-bottom:4px}.stat-card{padding:10px 12px}.stat-name{font-size:8px;letter-spacing:2px}.section-header{font-size:9px;letter-spacing:3px;margin:18px 0 10px}.quest-item,.penalty-item{padding:12px 10px;gap:10px;min-height:60px}.quest-name,.penalty-name{font-size:12px}.quest-desc,.penalty-desc{font-size:9px}body.mode-female .quest-name,body.mode-female .penalty-name{font-size:13px}.quest-check,.penalty-btn{width:28px;height:28px;font-size:15px}.add-quest-form{flex-direction:column;padding:12px}.sys-input{width:100%!important}.sys-btn{width:100%;padding:11px;font-size:11px}.voice-panel-header{padding:12px 14px}.voice-panel-body{padding:0 14px 12px;gap:12px}.voice-btn{width:46px;height:46px;font-size:20px}.voice-waveform{display:none}.log-entries{max-height:90px}.log-entry{font-size:10px;padding:4px 14px}.quests-header,.penalty-header{padding:12px 14px;font-size:10px}.system-notice{padding:10px 12px}.system-notice p{font-size:9px}.xp-bar{height:10px}.levelup-box{padding:28px 18px}.levelup-ring{width:130px;height:130px}.levelup-number{font-size:54px}.levelup-text{font-size:20px;letter-spacing:4px}.penalty-ring{width:110px;height:110px;font-size:38px}.penalty-title-txt{font-size:20px}.reset-section{flex-direction:column;align-items:center}.danger-btn{width:100%;max-width:300px;padding:12px;text-align:center}.mode-toggle-bar{max-width:260px}.mode-btn{font-size:9px;letter-spacing:1px}.commands-box{padding:18px}.edit-box{padding:20px 16px}}@media(max-width:768px) and (orientation:landscape) and (max-height:500px){.header{padding:8px 0 6px}.title{font-size:clamp(22px,5vw,40px)}.player-card{margin:8px 0;padding:12px 14px}.rank-badge{width:44px;height:44px;font-size:17px}.player-level{font-size:22px}.stats-grid{grid-template-columns:repeat(5,1fr)}.stat-value{font-size:18px}.log-entries{max-height:70px}.app{padding:6px 12px 60px}}@media(hover:none){.quest-item:hover,.penalty-item:hover{background:transparent}.stat-card:hover{border-color:var(--border);box-shadow:none}.quest-item:active{background:rgba(68,136,255,0.07)}body.mode-female .quest-item:active{background:rgba(196,74,255,0.07)}.penalty-item:active{background:rgba(255,68,102,0.06)}.sys-btn:active{opacity:0.7}.voice-btn:active{box-shadow:0 0 30px rgba(68,136,255,0.6)}}.boss-panel{background:var(--panel);border:1px solid rgba(255,160,0,0.3);border-radius:4px;overflow:hidden;transition:background 0.4s,border-color 0.4s}body.mode-female .boss-panel{border-color:rgba(196,74,255,0.35)}.boss-header{padding:14px 20px;background:linear-gradient(90deg,rgba(255,140,0,0.1),transparent);border-bottom:1px solid rgba(255,140,0,0.15);display:flex;justify-content:space-between;align-items:center;transition:background 0.4s}body.mode-female .boss-header{background:linear-gradient(90deg,rgba(196,74,255,0.1),transparent);border-bottom-color:rgba(196,74,255,0.15)}.boss-title-row{font-family:var(--mono-font);font-size:11px;letter-spacing:3px;color:#ffaa00;transition:color 0.4s}body.mode-female .boss-title-row{color:var(--accent1)}.boss-sub{font-family:var(--mono-font);font-size:9px;letter-spacing:2px;color:var(--text-dim);margin-top:3px}.boss-badge{background:rgba(255,140,0,0.15);border:1px solid rgba(255,140,0,0.4);border-radius:10px;padding:2px 10px;font-family:var(--mono-font);font-size:10px;color:#ffaa00;transition:all 0.4s}body.mode-female .boss-badge{background:rgba(196,74,255,0.15);border-color:rgba(196,74,255,0.4);color:var(--accent1)}.boss-badge.cleared{background:rgba(68,255,136,0.15);border-color:#44ff88;color:#44ff88}.boss-body{padding:18px 20px}.boss-name{font-family:var(--title-font);font-size:22px;color:#fff;margin-bottom:4px}.boss-desc{font-family:var(--mono-font);font-size:10px;color:var(--text-dim);margin-bottom:14px;line-height:1.6}.boss-progress-label{display:flex;justify-content:space-between;font-family:var(--mono-font);font-size:10px;color:var(--text-dim);margin-bottom:6px}.boss-progress-label span:last-child{color:#ffaa00}body.mode-female .boss-progress-label span:last-child{color:var(--accent1)}.boss-bar{height:12px;background:rgba(255,140,0,0.08);border-radius:6px;border:1px solid rgba(255,140,0,0.2);overflow:hidden;margin-bottom:14px}body.mode-female .boss-bar{background:rgba(196,74,255,0.08);border-color:rgba(196,74,255,0.2)}.boss-bar-fill{height:100%;background:linear-gradient(90deg,#cc7700,#ffaa00);border-radius:6px;transition:width 0.8s cubic-bezier(0.25,1,0.5,1)}body.mode-female .boss-bar-fill{background:linear-gradient(90deg,#8822cc,#c44aff)}.boss-bar-fill.cleared{background:linear-gradient(90deg,#22cc66,#44ff88)}.boss-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.boss-input{background:rgba(255,255,255,0.03);border:1px solid rgba(255,140,0,0.25);border-radius:3px;color:var(--text);font-family:var(--mono-font);font-size:12px;padding:8px 12px;outline:none;width:110px;transition:border-color 0.2s}.boss-input:focus{border-color:#ffaa00}body.mode-female .boss-input{border-color:rgba(196,74,255,0.25)}body.mode-female .boss-input:focus{border-color:var(--accent1)}.boss-btn{background:linear-gradient(135deg,rgba(255,140,0,0.15),rgba(200,80,0,0.15));border:1px solid rgba(255,140,0,0.5);border-radius:3px;color:#ffaa00;font-family:var(--mono-font);font-size:11px;letter-spacing:2px;padding:8px 16px;cursor:pointer;transition:all 0.2s;text-transform:uppercase}.boss-btn:hover{background:rgba(255,140,0,0.25);box-shadow:0 0 15px rgba(255,140,0,0.3)}body.mode-female .boss-btn{background:linear-gradient(135deg,rgba(196,74,255,0.15),rgba(255,45,110,0.15));border-color:rgba(196,74,255,0.5);color:var(--accent1)}body.mode-female .boss-btn:hover{background:rgba(196,74,255,0.25);box-shadow:0 0 15px rgba(196,74,255,0.3)}.boss-reward{font-family:var(--mono-font);font-size:10px;color:var(--text-dim);margin-left:auto}.boss-reward b{color:#ffaa00}body.mode-female .boss-reward b{color:var(--accent1)}.boss-cleared-msg{font-family:var(--mono-font);font-size:11px;color:#44ff88;letter-spacing:2px;padding:10px 0 0}.skill-panel{background:var(--panel);border:1px solid var(--border);border-radius:4px;overflow:hidden;transition:background 0.4s,border-color 0.4s}.skill-header{padding:14px 20px;background:linear-gradient(90deg,rgba(68,136,255,0.08),transparent);border-bottom:1px solid var(--border);font-family:var(--mono-font);font-size:11px;letter-spacing:3px;color:var(--accent3);display:flex;justify-content:space-between;align-items:center}body.mode-female .skill-header{background:linear-gradient(90deg,rgba(196,74,255,0.08),transparent)}.skill-map{padding:20px;overflow-x:auto}.skill-map canvas{display:block;margin:0 auto}.skill-list{padding:0 20px 16px;display:flex;flex-direction:column;gap:8px}.skill-node{display:flex;align-items:flex-start;gap:14px;padding:12px 16px;border:1px solid var(--border);border-radius:3px;background:rgba(255,255,255,0.02);transition:all 0.3s}.skill-node.unlocked{border-color:var(--accent1);background:rgba(68,136,255,0.06)}body.mode-female .skill-node.unlocked{border-color:var(--accent1);background:rgba(196,74,255,0.06)}.skill-node.locked{opacity:0.45}.skill-icon{font-size:22px;flex-shrink:0;width:32px;text-align:center}.skill-info{flex:1}.skill-name{font-family:var(--title-font);font-size:15px;color:#fff;margin-bottom:2px}body.mode-female .skill-name{font-size:16px}.skill-desc{font-family:var(--mono-font);font-size:10px;color:var(--text-dim);line-height:1.5}.skill-unlock-label{font-family:var(--mono-font);font-size:9px;letter-spacing:2px;flex-shrink:0;padding:3px 8px;border-radius:3px}.skill-node.unlocked .skill-unlock-label{color:#44ff88;border:1px solid rgba(68,255,136,0.3);background:rgba(68,255,136,0.08)}body.mode-female .skill-node.unlocked .skill-unlock-label{color:var(--gold);border-color:rgba(255,215,0,0.3);background:rgba(255,215,0,0.08)}.skill-node.locked .skill-unlock-label{color:var(--text-dim);border:1px solid var(--border)}.summary-overlay{position:fixed;inset:0;background:rgba(2,2,10,0.92);z-index:120;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.4s}.summary-overlay.show{opacity:1;pointer-events:all}.summary-box{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:0;max-width:480px;width:92%;position:relative;overflow:hidden}.summary-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent2),var(--accent1),var(--accent3))}.summary-header{padding:20px 24px 14px;border-bottom:1px solid var(--border)}.summary-title{font-family:var(--title-font);font-size:22px;letter-spacing:5px;color:var(--gold)}.summary-week{font-family:var(--mono-font);font-size:10px;letter-spacing:3px;color:var(--text-dim);margin-top:2px}.summary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border-bottom:1px solid var(--border)}.summary-stat{background:var(--panel);padding:16px 20px}.summary-stat-val{font-family:var(--title-font);font-size:32px;color:#fff;line-height:1}body.mode-female .summary-stat-val{font-size:36px}.summary-stat-label{font-family:var(--mono-font);font-size:9px;letter-spacing:3px;color:var(--text-dim);margin-top:4px}.summary-quote{padding:16px 24px;font-family:var(--mono-font);font-size:11px;color:var(--text-dim);line-height:1.8;border-bottom:1px solid var(--border);font-style:italic}.summary-quote b{color:var(--accent3);font-style:normal}.summary-footer{padding:16px 24px;display:flex;justify-content:flex-end}@media(max-width:480px){.summary-stat-val{font-size:26px}.summary-title{font-size:18px;letter-spacing:3px}.summary-grid{grid-template-columns:repeat(2,1fr)}.summary-box{width:96%}}.chart-panel{background:var(--panel);border:1px solid var(--border);border-radius:4px;overflow:hidden;transition:background 0.4s,border-color 0.4s}.chart-header{padding:14px 20px;background:linear-gradient(90deg,rgba(68,136,255,0.08),transparent);border-bottom:1px solid var(--border);font-family:var(--mono-font);font-size:11px;letter-spacing:3px;color:var(--accent3);display:flex;justify-content:space-between;align-items:center}body.mode-female .chart-header{background:linear-gradient(90deg,rgba(196,74,255,0.08),transparent)}.chart-body{padding:16px 20px 12px;overflow-x:auto}.chart-body canvas{display:block;width:100%;max-width:100%}.chart-legend{display:flex;gap:14px;flex-wrap:wrap;padding:8px 20px 16px;font-family:var(--mono-font);font-size:9px;letter-spacing:2px;color:var(--text-dim)}.legend-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle}.chart-empty{padding:28px 20px;text-align:center;font-family:var(--mono-font);font-size:11px;color:var(--text-dim);letter-spacing:2px}@media(max-width:480px){.chart-body{padding:12px 12px 8px}.chart-legend{padding:6px 12px 12px;gap:10px}}.timer-block{position:relative;text-align:center;padding:20px 16px 16px;margin-bottom:4px}.timer-label{font-family:var(--mono-font);font-size:9px;letter-spacing:5px;color:var(--text-dim);text-transform:uppercase;margin-bottom:8px;transition:color 0.4s}.timer-display{font-family:'Black Han Sans',sans-serif;font-size:clamp(42px,10vw,80px);letter-spacing:4px;line-height:1;background:var(--header-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:filter 0.4s;cursor:pointer}.timer-display.urgent{filter:drop-shadow(0 0 20px rgba(255,68,102,0.8));animation:timerPulse 1s ease-in-out infinite alternate}.timer-display.critical{filter:drop-shadow(0 0 30px rgba(255,68,102,1));animation:timerPulse 0.5s ease-in-out infinite alternate}.timer-sublabel{font-family:var(--mono-font);font-size:9px;letter-spacing:3px;color:var(--text-dim);margin-top:6px;cursor:pointer;transition:color 0.2s}.timer-sublabel:hover{color:var(--accent3)}.timer-progress{height:3px;background:rgba(255,255,255,0.05);border-radius:2px;margin:10px auto 0;max-width:300px;overflow:hidden}.timer-progress-fill{height:100%;background:var(--xp-grad);border-radius:2px;transition:width 1s linear,background 0.4s}.timer-progress-fill.urgent{background:linear-gradient(90deg,#cc2244,#ff4466)}.timer-modal{position:fixed;inset:0;background:rgba(2,2,10,0.88);z-index:120;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.25s}.timer-modal.show{opacity:1;pointer-events:all}.timer-modal-box{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:28px 24px;max-width:340px;width:90%;position:relative}.timer-modal-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent1),var(--accent3));border-radius:4px 4px 0 0}.timer-modal-title{font-family:var(--title-font);font-size:18px;letter-spacing:3px;color:var(--accent3);margin-bottom:6px}.timer-modal-sub{font-family:var(--mono-font);font-size:9px;letter-spacing:2px;color:var(--text-dim);margin-bottom:20px}.timer-time-pick{display:flex;align-items:center;gap:10px;margin-bottom:18px}.timer-select{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:3px;color:var(--text);font-family:var(--mono-font);font-size:14px;padding:10px 14px;outline:none;flex:1;cursor:pointer;transition:border-color 0.2s}.timer-select:focus{border-color:var(--accent1)}.timer-colon{font-family:var(--mono-font);font-size:18px;color:var(--text-dim)}.timer-modal-actions{display:flex;gap:10px;flex-wrap:wrap}@keyframes timerPulse{from{filter:drop-shadow(0 0 15px rgba(255,68,102,0.6))}to{filter:drop-shadow(0 0 35px rgba(255,68,102,1))}}@media(max-width:480px){.timer-display{font-size:clamp(36px,12vw,60px)}.timer-block{padding:16px 12px 12px}}.allocate-overlay{position:fixed;inset:0;background:rgba(2,2,10,0.95);z-index:115;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.4s}.allocate-overlay.show{opacity:1;pointer-events:all}.allocate-box{background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:32px 26px;max-width:420px;width:92%;position:relative;text-align:center}.allocate-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent2),var(--accent1),var(--accent3));border-radius:4px 4px 0 0}.allocate-title{font-family:var(--title-font);font-size:22px;letter-spacing:5px;color:var(--gold);margin-bottom:6px}.allocate-sub{font-family:var(--mono-font);font-size:10px;letter-spacing:3px;color:var(--text-dim);margin-bottom:24px}.allocate-points-left{font-family:var(--title-font);font-size:48px;color:#fff;line-height:1;margin-bottom:4px}.allocate-points-label{font-family:var(--mono-font);font-size:9px;letter-spacing:3px;color:var(--text-dim);margin-bottom:20px}.allocate-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}.allocate-stat{background:var(--deep);border:1px solid var(--border);border-radius:3px;padding:14px 12px;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden}.allocate-stat:hover{border-color:var(--accent1);background:rgba(68,136,255,0.08)}body.mode-female .allocate-stat:hover{background:rgba(196,74,255,0.08)}.allocate-stat::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;opacity:0.6}.allocate-stat.s-str::before{background:#ff6644}.allocate-stat.s-agi::before{background:#44ff88}.allocate-stat.s-vit::before{background:#ff4488}.allocate-stat.s-int::before{background:#44aaff}.allocate-stat.s-per::before{background:#ffaa44}.allocate-stat-icon{font-size:18px;margin-bottom:6px}.allocate-stat-name{font-family:var(--mono-font);font-size:9px;letter-spacing:2px;color:var(--text-dim)}.allocate-stat-val{font-family:var(--title-font);font-size:26px;color:#fff}.allocate-stat-gain{font-family:var(--mono-font);font-size:10px;color:var(--accent3);margin-top:2px}.allocate-hint{font-family:var(--mono-font);font-size:9px;color:var(--text-dim);letter-spacing:1px;line-height:1.7;margin-bottom:16px}
+/* ── TWO-COLUMN DASHBOARD LAYOUT ── */
+.dashboard{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+.col-left,.col-right{display:flex;flex-direction:column;gap:0;}
+@media(max-width:768px){
+ .dashboard{grid-template-columns:1fr;gap:0;}
+ .col-right{margin-top:0;}
+}
+
+/* ── DASHBOARD PAIRS — Boss + Skills side by side on desktop ── */
+.section-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;}
+.section-pair .collapsible-body{margin-bottom:0;}
+@media(max-width:768px){
+ .section-pair{grid-template-columns:1fr;gap:0;}
+}
+/* Tighter section spacing */
+.section-header{margin:20px 0 10px;}
+@media(max-width:480px){.section-header{margin:14px 0 8px;}}
+</style>
+</head><body class="mode-male"><canvas id="particles"></canvas><div class="summary-overlay" id="summaryOverlay"><div class="summary-box"><div class="summary-header"><div class="summary-title" id="summaryTitle">WEEKLY DEBRIEF</div><div class="summary-week" id="summaryWeek"></div></div><div class="summary-grid"><div class="summary-stat"><div class="summary-stat-val" id="sumMissions">0</div><div class="summary-stat-label">MISSIONS DONE</div></div><div class="summary-stat"><div class="summary-stat-val" id="sumXP">0</div><div class="summary-stat-label">XP EARNED</div></div><div class="summary-stat"><div class="summary-stat-val" id="sumStreak">0</div><div class="summary-stat-label">DAY STREAK</div></div><div class="summary-stat"><div class="summary-stat-val" id="sumPenalties">0</div><div class="summary-stat-label">PENALTIES TAKEN</div></div></div><div class="summary-quote" id="summaryQuote"></div><div class="summary-footer"><div class="sys-btn" onclick="closeSummary()">[ BEGIN NEW WEEK ]</div></div></div></div><div class="levelup-overlay" id="levelupOverlay"><div class="levelup-box"><div class="levelup-ring float"><div class="levelup-number" id="levelupNum">2</div></div><div class="levelup-text" id="levelupText">ASCENDED</div><div class="levelup-subtitle" id="levelupSub">THE PROTOCOL ACKNOWLEDGES YOUR EVOLUTION</div><div class="sys-btn levelup-close" onclick="closeLevelUp()">[ CONFIRM ]</div></div></div><div class="allocate-overlay" id="allocateOverlay"><div class="allocate-box"><div class="allocate-title" id="allocateTitle">LEVEL UP</div><div class="allocate-sub" id="allocateSub">ALLOCATE YOUR BONUS POINTS</div><div class="allocate-points-left" id="allocatePointsLeft">1</div><div class="allocate-points-label">BONUS POINTS REMAINING</div><div class="allocate-grid"><div class="allocate-stat s-str" onclick="allocatePoint('str')"><div class="allocate-stat-icon" id="alloc-icon-str">⚔️</div><div class="allocate-stat-name">STRENGTH</div><div class="allocate-stat-val" id="alloc-val-str">1</div><div class="allocate-stat-gain" id="alloc-gain-str"></div></div><div class="allocate-stat s-agi" onclick="allocatePoint('agi')"><div class="allocate-stat-icon" id="alloc-icon-agi">💨</div><div class="allocate-stat-name">AGILITY</div><div class="allocate-stat-val" id="alloc-val-agi">1</div><div class="allocate-stat-gain" id="alloc-gain-agi"></div></div><div class="allocate-stat s-vit" onclick="allocatePoint('vit')"><div class="allocate-stat-icon" id="alloc-icon-vit">❤️</div><div class="allocate-stat-name">VITALITY</div><div class="allocate-stat-val" id="alloc-val-vit">1</div><div class="allocate-stat-gain" id="alloc-gain-vit"></div></div><div class="allocate-stat s-int" onclick="allocatePoint('int')"><div class="allocate-stat-icon" id="alloc-icon-int">🧠</div><div class="allocate-stat-name">INTELLIGENCE</div><div class="allocate-stat-val" id="alloc-val-int">1</div><div class="allocate-stat-gain" id="alloc-gain-int"></div></div><div class="allocate-stat s-per" onclick="allocatePoint('per')" style="grid-column:1/-1;"><div class="allocate-stat-icon" id="alloc-icon-per">👁️</div><div class="allocate-stat-name">PERCEPTION</div><div class="allocate-stat-val" id="alloc-val-per">1</div><div class="allocate-stat-gain" id="alloc-gain-per"></div></div></div><div class="allocate-hint" id="allocateHint">Tap a stat to invest your bonus point.<br>Every 5 levels you receive 2 bonus points instead of 1.</div><div class="sys-btn" id="allocateConfirm" onclick="confirmAllocation()" style="display:none;margin-top:8px;">[ CONFIRM ]</div></div></div><div class="penalty-overlay" id="penaltyOverlay"><div class="penalty-box"><div class="penalty-ring float" id="penaltyIcon">⚠️</div><div class="penalty-title-txt" id="penaltyTitle">PENALTY APPLIED</div><div class="penalty-msg" id="penaltyMsg"></div><div class="penalty-choice"><div class="sys-btn" onclick="closePenalty()" style="border-color:var(--danger);color:var(--danger);">[ ACCEPT ]</div></div></div></div><div class="edit-overlay" id="bossEditOverlay"><div class="edit-box"><div class="edit-title" style="color:#ffaa00;">⚔ EDIT BOSS CHALLENGE</div><div class="edit-original" id="bossEditOrigLabel">THIS WEEK'S CHALLENGE</div><div class="edit-field"><label class="edit-label">Challenge Name</label><input class="edit-input" id="bossEditName" placeholder="e.g. Deep Work Week"></div><div class="edit-field"><label class="edit-label">Description</label><input class="edit-input" id="bossEditDesc" placeholder="e.g. Log 20 hours of focused work this week"></div><div class="edit-field" style="display:flex;gap:10px;"><div style="flex:1;"><label class="edit-label">Target Number</label><input class="edit-input" id="bossEditTarget" type="number" min="1" placeholder="e.g. 20" style="width:100%"></div><div style="flex:1;"><label class="edit-label">Unit</label><input class="edit-input" id="bossEditUnit" placeholder="e.g. hours / pages / km" style="width:100%"></div><div style="flex:1;"><label class="edit-label">XP Reward</label><input class="edit-input" id="bossEditXP" type="number" min="10" max="500" placeholder="e.g. 100" style="width:100%"></div></div><div class="edit-actions"><button class="sys-btn" onclick="saveBossEdit()" style="border-color:#ffaa00;color:#ffaa00;">[ SAVE ]</button><button class="sys-btn" onclick="closeBossEditModal()" style="border-color:rgba(255,255,255,0.1);color:var(--text-dim);">[ CANCEL ]</button></div><div class="edit-hint">▸ Changes apply to this week only — next Monday a new challenge generates.<br>▸ Progress already logged is preserved when you save.<br>▸ Set unit to match what you're tracking: hours, pages, sessions, km, reps.</div></div></div><div class="edit-overlay" id="editOverlay"><div class="edit-box"><div class="edit-title">✏ EDIT QUEST</div><div class="edit-original" id="editOriginalLabel">ORIGINAL: —</div><div class="edit-field"><label class="edit-label">Quest Name / Substitute</label><input class="edit-input" id="editName" placeholder="e.g. 5km Run (instead of 10km)"></div><div class="edit-field"><label class="edit-label">Short Note</label><input class="edit-input" id="editAlias" placeholder="e.g. substituted with cycling"></div><div class="edit-field"><label class="edit-label">Description</label><input class="edit-input" id="editDesc" placeholder="e.g. 45 min indoor bike"></div><div class="edit-actions"><button class="sys-btn" onclick="saveQuestEdit()">[ SAVE ]</button><button class="sys-btn" onclick="resetQuestEdit()" style="border-color:var(--text-dim);color:var(--text-dim);">[ RESTORE ORIGINAL ]</button><button class="sys-btn" onclick="closeEditModal()" style="border-color:rgba(255,255,255,0.1);color:var(--text-dim);">[ CANCEL ]</button></div><div class="edit-hint">▸ XP and stat bonuses remain the same — the effort is what counts.<br>▸ Restore Original resets this quest to its built-in default.</div></div></div><div class="commands-overlay" id="commandsOverlay"><div class="commands-box"><div class="commands-title">🎙 VOICE COMMANDS</div><div class="cmd-group"><div class="cmd-group-name">▸ QUEST CONTROL</div><div class="cmd-item"><b>"complete [quest name]"</b> — mark quest done</div><div class="cmd-item"><b>"finish push-ups"</b> / <b>"done with run"</b></div><div class="cmd-item"><b>"uncheck [quest name]"</b> — mark incomplete</div></div><div class="cmd-group"><div class="cmd-group-name">▸ STATUS</div><div class="cmd-item"><b>"status"</b> / <b>"report"</b> — hear level & XP</div><div class="cmd-item"><b>"quests"</b> / <b>"missions"</b> — list remaining</div><div class="cmd-item"><b>"stats"</b> — hear your attributes</div></div><div class="cmd-group"><div class="cmd-group-name">▸ SYSTEM</div><div class="cmd-item"><b>"ascend"</b> — system greeting</div><div class="cmd-item"><b>"reset day"</b> — reset daily quests</div></div><div class="sys-btn" onclick="document.getElementById('commandsOverlay').classList.remove('show')" style="margin-top:16px;cursor:pointer;">[ CLOSE ]</div></div></div><div class="commands-overlay" id="guideOverlay"><div class="commands-box" style="max-width:560px;max-height:90vh;overflow-y:auto;"><div class="commands-title" id="guideTitleEl">📖 HOW TO USE ASCENDANT</div><div class="cmd-group"><div class="cmd-group-name">▸ YOUR DAILY ROUTINE</div><div class="cmd-item">Open the app → pick a preset tab → complete your missions throughout the day → tap <b>RESET DAILY MISSIONS</b> before your countdown hits zero. That's the full loop.</div></div><div class="cmd-group"><div class="cmd-group-name">▸ PRESET TABS</div><div class="cmd-item"><b>🏋 Fitness</b> — heavy physical training at the core, sharpened with mindset work.</div><div class="cmd-item"><b>💻 Focus</b> — deep work and mental output, supported by movement.</div><div class="cmd-item"><b>⚖ Balance</b> — an even split of body and mind.</div><div class="cmd-item"><b>🧘 Wellness</b> — sleep, water, breathwork and recovery.</div><div class="cmd-item"><b>💼 Entrepreneur</b> — output, strategy, learning and visibility.</div><div class="cmd-item">Tap <b>✏</b> on any mission to rename or substitute it. Your edits persist.</div></div><div class="cmd-group"><div class="cmd-group-name">▸ XP AND LEVELLING</div><div class="cmd-item">Every completed mission earns <b>XP</b> and raises an attribute. XP resets to zero each level — but more is needed to reach the next. Complete <b>all missions in a day</b> for a perfect day bonus. Maintain your streak for multiplied rewards — the longer the streak, the bigger the bonus.</div></div><div class="cmd-group"><div class="cmd-group-name">▸ STREAK RULES</div><div class="cmd-item">You must complete <b>every mission</b> before resetting to maintain your streak. Partial completion breaks it. This is non-negotiable — the system demands all of you.</div></div><div class="cmd-group"><div class="cmd-group-name">▸ WEEKLY BOSS</div><div class="cmd-item">A new challenge appears every Monday, scaled to your level. Log your progress with the <b>+ LOG</b> button throughout the week. Clear it before Monday for a major XP reward. Tap <b>✏</b> to customise the challenge to match your goals.</div></div><div class="cmd-group"><div class="cmd-group-name">▸ SKILL TREE</div><div class="cmd-item">Passive abilities unlock as you level up — they change how the system works behind the scenes. XP boosts, double stat gains, reduced penalties, increased streak rewards. You don't activate them — they activate automatically when you reach the required level.</div></div><div class="cmd-group"><div class="cmd-group-name">▸ FAILURE LOG</div><div class="cmd-item">Be honest about what you skipped. Tap a failure to confess it — XP and stats are deducted. Unfinished missions trigger <b>automatic penalties</b> when you reset. The log shifts with your active preset — Fitness penalties are physical, Focus penalties are cognitive.</div></div><div class="cmd-group"><div class="cmd-group-name">▸ MODES</div><div class="cmd-item"><b>⚔ ASCENDANT</b> — dark blue, military tone, brutal physical quests.</div><div class="cmd-item"><b>🌑 ECLIPSE</b> — crimson gold, sovereign tone, mixed physical and mindset rites.</div><div class="cmd-item">Switch anytime with the toggle. Your level, XP and stats carry across both.</div></div><div class="cmd-group"><div class="cmd-group-name">▸ THE TIMER</div><div class="cmd-item">The countdown at the top shows time remaining in your day. Tap it to set your personal reset time. When it hits zero the system resets automatically. The progress bar drains as the day goes on — red means you're running out of time.</div></div><div class="sys-btn" onclick="document.getElementById('guideOverlay').classList.remove('show')" style="margin-top:16px;cursor:pointer;">[ CLOSE ]</div></div></div><div class="timer-modal" id="timerModal"><div class="timer-modal-box"><div class="timer-modal-title">⏱ RESET TIME</div><div class="timer-modal-sub">SET THE HOUR YOUR DAILY MISSIONS RESET</div><div class="timer-time-pick"><select class="timer-select" id="timerHour"></select><span class="timer-colon">:</span><select class="timer-select" id="timerMinute"></select></div><div class="timer-modal-actions"><button class="sys-btn" onclick="saveTimerSettings()">[ SET RESET TIME ]</button><button class="sys-btn" onclick="closeTimerModal()" style="border-color:var(--text-dim);color:var(--text-dim);">[ CANCEL ]</button></div></div></div><div class="app"><div class="header"><div class="sys-label" id="sysLabel">▶ DAILY TRAINING PROTOCOL ◀</div><div class="title" id="mainTitle">ASCENDANT</div><div class="subtitle-mode" id="subtitleMode"></div></div><div class="timer-block"><div class="timer-label" id="timerLabel">TIME REMAINING TODAY</div><div class="timer-display" id="timerDisplay" onclick="openTimerModal()">00:00:00</div><div class="timer-progress"><div class="timer-progress-fill" id="timerFill" style="width:100%"></div></div><div style="display:flex;justify-content:center;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap;"><div class="timer-sublabel" onclick="openTimerModal()" style="margin-top:0;">⏱ SET RESET TIME</div><span style="color:var(--border);font-size:10px;">|</span><div class="timer-sublabel" onclick="openGuide()" style="margin-top:0;">📖 HOW TO USE</div></div></div><div class="mode-toggle-bar" style="margin-bottom:10px;"><div class="mode-slider" id="modeSlider"></div><button class="mode-btn" id="btnMale" onclick="setMode('male')">⚔ ASCENDANT</button><button class="mode-btn" id="btnFemale" onclick="setMode('female')">🌑 ECLIPSE</button></div><div class="theme-switcher" id="themeSwitcher"><div class="theme-switcher-label">COLOUR THEME</div></div><div class="voice-panel"><div class="voice-panel-header" onclick="toggleSection('voiceBody','voiceChevron')"><span style="font-family:var(--mono-font);font-size:10px;letter-spacing:3px;color:var(--accent3);">🎙 VOICE SYSTEM</span><button class="collapse-btn" id="voiceChevron">▼</button></div><div class="collapsible-body" id="voiceBody"><div class="voice-panel-body"><button class="voice-btn" id="voiceBtn" onclick="toggleVoice()">🎙</button><div class="voice-info"><div class="voice-status" id="voiceStatus">VOICE SYSTEM READY</div><div class="voice-transcript" id="voiceTranscript">Tap mic or say "ascend"...</div></div><div class="voice-waveform" id="waveform"><div class="wave-bar"></div><div class="wave-bar" style="height:8px"></div><div class="wave-bar" style="height:12px"></div><div class="wave-bar" style="height:6px"></div><div class="wave-bar" style="height:18px"></div><div class="wave-bar" style="height:8px"></div><div class="wave-bar" style="height:4px"></div><div class="wave-bar" style="height:10px"></div></div><button class="voice-help-btn" onclick="document.getElementById('commandsOverlay').classList.add('show')">COMMANDS</button></div></div></div><div class="player-card"><div class="corner corner-tl"></div><div class="corner corner-tr"></div><div class="corner corner-bl"></div><div class="corner corner-br"></div><div class="player-top"><div class="rank-badge" id="rankBadge">I</div><div class="player-info"><div class="player-name-label" id="nameLabel">OPERATIVE:</div><div class="player-name"><input type="text" id="playerName" value="YOUR NAME" maxlength="20"/></div><div class="player-level"><span id="lvlLabel">LVL</span><span id="playerLevel">1</span></div><div class="player-title" id="playerTitle">[ DORMANT ]</div></div><div><div class="player-stats-row"><div class="mini-stat">STREAK <b id="streakVal">0</b>d</div><div class="mini-stat">DONE <b id="totalCompleted">0</b></div><div class="mini-stat">XP <b id="totalXPVal">0</b></div></div></div></div><div class="xp-section"><div class="xp-label"><span id="xpLabelText">POTENTIAL</span><span id="xpText">0 / 100</span></div><div class="xp-bar"><div class="xp-fill" id="xpFill" style="width:0%"></div></div></div></div><div class="section-header" id="statsHeader">ATTRIBUTES</div><div class="stats-grid"><div class="stat-card str"><div class="stat-icon" id="icon-str">⚔️</div><div class="stat-name" id="name-str">STRENGTH</div><div class="stat-value" id="stat-str">1</div><div class="stat-bar"><div class="stat-bar-fill" id="bar-str" style="width:5%"></div></div></div><div class="stat-card agi"><div class="stat-icon" id="icon-agi">💨</div><div class="stat-name" id="name-agi">AGILITY</div><div class="stat-value" id="stat-agi">1</div><div class="stat-bar"><div class="stat-bar-fill" id="bar-agi" style="width:5%"></div></div></div><div class="stat-card vit"><div class="stat-icon" id="icon-vit">❤️</div><div class="stat-name" id="name-vit">VITALITY</div><div class="stat-value" id="stat-vit">1</div><div class="stat-bar"><div class="stat-bar-fill" id="bar-vit" style="width:5%"></div></div></div><div class="stat-card int"><div class="stat-icon" id="icon-int">🧠</div><div class="stat-name" id="name-int">INTELLIGENCE</div><div class="stat-value" id="stat-int">1</div><div class="stat-bar"><div class="stat-bar-fill" id="bar-int" style="width:5%"></div></div></div><div class="stat-card per"><div class="stat-icon" id="icon-per">👁️</div><div class="stat-name" id="name-per">PERCEPTION</div><div class="stat-value" id="stat-per">1</div><div class="stat-bar"><div class="stat-bar-fill" id="bar-per" style="width:5%"></div></div></div></div><div class="section-header" id="questsHeader">DAILY MISSIONS</div><div class="quests-panel"><div class="quests-header"><span id="questsHeaderLabel">▶ ACTIVE PROTOCOLS</span><span class="quest-count" id="questCount">0/0</span></div><div class="preset-tabs" id="presetTabs"></div><div class="preset-tab-desc" id="presetTabDesc"></div><div id="questList"></div><div class="add-quest-form"><input class="sys-input" id="newQuestName" placeholder="Mission name..." style="flex:1;min-width:120px"><select class="sys-input" id="newQuestStat"><option value="str">⚔️ Strength</option><option value="agi">💨 Agility</option><option value="vit">❤️ Vitality</option><option value="int">🧠 Intelligence</option><option value="per">👁️ Perception</option></select><input class="sys-input" id="newQuestXP" type="number" placeholder="XP (1-50)" min="1" max="50" style="width:90px"><button class="sys-btn" onclick="addCustomQuest()">+ ADD</button></div></div><div class="section-header">PROTOCOL LOG</div><div class="log-panel"><div class="log-header"><span id="logLabel">OPERATIVE'S LOG</span><span id="logDate"></span></div><div class="log-entries" id="logEntries"></div></div><div class="section-header" style="cursor:pointer;" onclick="toggleSection('penaltyBody','penaltyChevron')"><span id="penaltyHeaderLabel">FAILURE REGISTER</span><button class="collapse-btn" id="penaltyChevron" style="margin-left:8px;">▼</button></div><div class="collapsible-body" id="penaltyBody"><div class="system-notice"><p id="noticeText">The Protocol observes without intervention. <b>Only you know what you skipped.</b><br>Accountability is the foundation of ascension. Log your failures — accept the cost — rise anyway.<br><b>Uncompleted missions at day's end invoke automatic penalties.</b></p></div><div class="penalty-panel"><div class="penalty-header"><div><div id="penaltyHeaderInner">▶ FAILURE LOG</div><div class="penalty-subtitle" id="penaltySubtitle">CONFESS — THE PROTOCOL DOES NOT FORGET</div></div><span class="quest-count" id="penaltyCount" style="border-color:var(--danger);background:rgba(255,68,102,0.1);color:var(--danger);">0 penalties</span></div><div id="penaltyList"></div></div></div><div class="section-pair"><div><div class="section-header" style="cursor:pointer;" onclick="toggleSection('bossBody','bossChevron')"><span id="bossHeaderLabel">⚔ WEEKLY BOSS</span><button class="collapse-btn" id="bossChevron" style="margin-left:8px;">▼</button></div><div class="collapsible-body" id="bossBody"><div class="boss-panel"><div class="boss-header"><div><div class="boss-title-row" id="bossTitleRow">▶ ACTIVE CHALLENGE</div><div class="boss-sub" id="bossSub">Resets every Monday — complete before the week ends</div></div><span class="boss-badge" id="bossBadge">IN PROGRESS</span></div><div class="boss-body"><div class="boss-name" id="bossName">Loading...</div><div class="boss-desc" id="bossDesc"></div><div class="boss-progress-label"><span>PROGRESS</span><span id="bossProgressLabel">0 / 0</span></div><div class="boss-bar"><div class="boss-bar-fill" id="bossBarFill" style="width:0%"></div></div><div class="boss-actions"><input class="boss-input" id="bossInput" type="number" min="0" placeholder="Log reps / km..."><button class="boss-btn" onclick="logBossProgress()">+ LOG</button><div class="boss-reward">Reward: <b id="bossReward">—</b></div><button class="quest-edit-btn" onclick="openBossEditModal()" title="Edit this week's challenge" style="margin-left:auto;">✏</button></div><div class="boss-cleared-msg" id="bossClearedMsg" style="display:none;">✓ BOSS CLEARED — REWARD CLAIMED</div></div></div></div><div class="section-header" style="cursor:pointer;" onclick="toggleSection('skillBody','skillChevron')"><span id="skillHeaderLabel">◈ SKILL TREE</span><button class="collapse-btn" id="skillChevron" style="margin-left:8px;">▼</button></div><div class="collapsible-body" id="skillBody"><div class="skill-panel"><div class="skill-header"><span id="skillHeaderInner">▶ PASSIVE ABILITIES</span><span id="skillUnlockCount" style="font-size:10px;color:var(--text-dim);">0 unlocked</span></div><div class="skill-map"><canvas id="skillCanvas" height="120"></canvas></div><div class="skill-list" id="skillList"></div></div></div></div></div><div class="section-header" style="cursor:pointer;" onclick="toggleSection('chartBody','chartChevron')"><span>📈 ATTRIBUTE HISTORY</span><button class="collapse-btn" id="chartChevron" style="margin-left:8px;">▼</button></div><div class="collapsible-body" id="chartBody"><div class="chart-panel"><div class="chart-header"><span>▶ GROWTH OVER TIME</span><span id="chartSnapCount" style="font-size:10px;color:var(--text-dim);">0 snapshots</span></div><div class="chart-body"><canvas id="statChart" height="180"></canvas></div><div class="chart-legend" id="chartLegend"></div><div class="chart-empty" id="chartEmpty">Reset your first day to begin tracking growth.</div></div></div><div class="reset-section"><button class="danger-btn" onclick="resetDay()" id="resetBtn">⟳ RESET DAILY MISSIONS</button><button class="danger-btn" onclick="if(confirm('Delete all progress?'))fullReset()">⚠ FULL RESET</button></div></div> <script>const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');
+let pts=[];
+function rsz(){canvas.width=innerWidth;canvas.height=innerHeight;}
+rsz();addEventListener('resize',rsz);
+for(let i=0;i<60;i++) pts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.3,vy:-Math.random()*.4-.1,sz:Math.random()*2+.5,a:Math.random()*.5+.1});
+function getParticleColors(){
+ const mode=getMode();
+ const themes=THEMES[mode]||THEMES.male;
+ const active=state&&state.activeTheme?state.activeTheme:(mode==='male'?'void':'eclipse');
+ const t=themes.find(t=>t.id===active)||themes[0];
+ return t?t.particles:['68,136,255','136,68,255'];
+}
+let pColors=['68,136,255','136,68,255'];
+const THEMES = {
+ male:[
+ {id:'void', label:'VOID', particles:['68,136,255','136,68,255']},
+ {id:'obsidian', label:'OBSIDIAN', particles:['122,184,255','68,102,204']},
+ {id:'ember', label:'EMBER', particles:['255,140,0','204,68,0']},
+ ],
+ female:[
+ {id:'eclipse', label:'ECLIPSE', particles:['196,74,255','255,45,110']},
+ {id:'sovereign',label:'SOVEREIGN',particles:['212,160,0','170,120,0']},
+ {id:'phantom', label:'PHANTOM', particles:['208,128,192','136,136,187']},
+ ],
+};
+function getActiveTheme(){
+ return state.activeTheme||(getMode()==='male'?'void':'eclipse');
+}
+function setTheme(themeId){
+ state.activeTheme=themeId;
+ saveState();
+ applyThemeClass();
+ renderThemeSwitcher();
+ pColors=getParticleColors();
+}
+function applyThemeClass(){
+ const mode=getMode();
+ const theme=getActiveTheme();
+ document.body.className=`mode-${mode}`;
+ const defaultTheme=mode==='male'?'void':'eclipse';
+ if(theme!==defaultTheme) document.body.classList.add(`theme-${theme}`);
+}
+function renderThemeSwitcher(){
+ const switcher=document.getElementById('themeSwitcher');
+ if(!switcher)return;
+ const mode=getMode();
+ const themes=THEMES[mode];
+ const active=getActiveTheme();
+ const label=switcher.querySelector('.theme-switcher-label');
+ switcher.innerHTML='';
+ if(label) switcher.appendChild(label);
+ else {
+ const l=document.createElement('div');
+ l.className='theme-switcher-label';
+ l.textContent='COLOUR THEME';
+ switcher.appendChild(l);
+ }
+ themes.forEach(t=>{
+ const dot=document.createElement('div');
+ dot.className='theme-dot'+(t.id===active?' active':'');
+ dot.dataset.theme=t.id;
+ dot.title=t.label;
+ dot.onclick=()=>setTheme(t.id);
+ const tip=document.createElement('span');
+ tip.className='theme-dot-tip';
+ tip.textContent=t.label;
+ dot.appendChild(tip);
+ switcher.appendChild(dot);
+ });
+}
+(function ap(){
+ ctx.clearRect(0,0,canvas.width,canvas.height);
+ pts.forEach((p,i)=>{
+ p.x+=p.vx;p.y+=p.vy;
+ if(p.y<0){p.y=canvas.height;p.x=Math.random()*canvas.width;}
+ if(p.x<0||p.x>canvas.width)p.vx*=-1;
+ ctx.beginPath();ctx.arc(p.x,p.y,p.sz,0,Math.PI*2);
+ ctx.fillStyle=`rgba(${pColors[i%2]},${p.a})`;ctx.fill();
+ });
+ requestAnimationFrame(ap);
+})();
+const waveBars=document.querySelectorAll('.wave-bar');
+let waveInt=null;
+function startWave(){waveInt=setInterval(()=>waveBars.forEach(b=>b.style.height=(Math.random()*20+2)+'px'),100);}
+function stopWave(){clearInterval(waveInt);waveBars.forEach(b=>b.style.height='4px');}
+const THEME = {
+ male:{
+ sysLabel:'▶ DAILY TRAINING PROTOCOL ◀',
+ title:'ASCENDANT',
+ subtitle:'',
+ nameLabel:'OPERATIVE:',
+ xpLabel:'POTENTIAL',
+ lvlLabel:'LVL',
+ statsHeader:'ATTRIBUTES',
+ questsHeader:'DAILY MISSIONS',
+ questsHeaderLabel:'▶ ACTIVE PROTOCOLS',
+ logLabel:"OPERATIVE'S LOG",
+ penaltyHeader:'FAILURE REGISTER',
+ penaltySubtitle:'CONFESS — THE PROTOCOL DOES NOT FORGET',
+ noticeText:'The Protocol observes without intervention. Only you know what you skipped. Accountability is the foundation of ascension. Log your failures — accept the cost — rise anyway. Uncompleted missions at day\'s end invoke automatic penalties.',
+ resetBtn:'⟳ RESET DAILY MISSIONS',
+ greet:(name,lvl)=>`Protocol online. Welcome back, Operative ${name}. Level ${lvl}.`,
+ levelUpSub:'THE PROTOCOL ACKNOWLEDGES YOUR EVOLUTION',
+ levelUpText:'ASCENDED',
+ voiceGreet:(name,lvl,title)=>`Ascend, ${name}. Level ${lvl}. ${title}. The Protocol awaits your command.`,
+ questComplete:(name,xp)=>`Mission complete: ${name}. ${xp} experience gained. Keep pushing, Operative.`,
+ },
+ female:{
+ sysLabel:'▶ ASCENDANT: ECLIPSE ◀',
+ title:'ECLIPSE',
+ subtitle:'ASCENDANT',
+ nameLabel:'SOVEREIGN:',
+ xpLabel:'ASCENSION',
+ lvlLabel:'LVL',
+ statsHeader:'POWER ATTRIBUTES',
+ questsHeader:'DAILY RITES',
+ questsHeaderLabel:'▶ ACTIVE RITES',
+ logLabel:"SOVEREIGN'S CHRONICLE",
+ penaltyHeader:'SHADOW LEDGER',
+ penaltySubtitle:'TRUTH IS THE FIRST WEAPON — THE ECLIPSE REMEMBERS',
+ noticeText:'Eclipse does not punish weakness. It reveals it. Only you know what you chose not to do. Mark it. Accept the cost. That honesty is what separates the sovereign from the forgotten. Uncompleted rites at day\'s end invoke automatic penalties.',
+ resetBtn:'⟳ RESET DAILY RITES',
+ greet:(name,lvl)=>`Eclipse online. Welcome back, Sovereign ${name}. Level ${lvl}.`,
+ levelUpSub:'THE ECLIPSE RECOGNISES YOUR POWER',
+ levelUpText:'ASCENDED',
+ voiceGreet:(name,lvl,title)=>`Rise, ${name}. Level ${lvl}. ${title}. The Eclipse honours your presence.`,
+ questComplete:(name,xp)=>`Rite complete: ${name}. ${xp} ascension points earned. You were never ordinary.`,
+ }
+};
+const RANKS_MALE =['I','I','I','II','II','III','III','IV','IV','V','V','V','V','V','V','VI','VI','VI','VI','VI','VII','VII','VII','VII','VII','VIII','VIII','VIII','VIII','VIII','IX','IX','IX','IX','IX','IX','IX','IX','IX','IX','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','∞'];
+const RANKS_FEMALE=['I','I','I','II','II','III','III','IV','IV','V','V','V','V','V','V','VI','VI','VI','VI','VI','VII','VII','VII','VII','VII','VIII','VIII','VIII','VIII','VIII','IX','IX','IX','IX','IX','IX','IX','IX','IX','IX','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','X','∞'];
+const RANK_SYMBOLS_MALE ={I:'#888888',II:'#44ff88',III:'#4488ff',IV:'#aa44ff',V:'#ffd700',VI:'#ff8844',VII:'#ff44aa',VIII:'#00ffff',IX:'#ffffff',X:'#ffd700','∞':'#ffd700'};
+const RANK_SYMBOLS_FEMALE={I:'#9966aa',II:'#c44aff',III:'#ff2d6e',IV:'#ffd700',V:'#ffffff',VI:'#ff8adb',VII:'#c44aff',VIII:'#ffd700',IX:'#ffffff',X:'#ffd700','∞':'#ffd700'};
+function buildTitles(pairs){
+ const arr=[];
+ for(let i=0;i<100;i++){
+ let title='DORMANT';
+ for(const [from,name] of pairs) if(i+1>=from) title=name;
+ arr.push(title);
+ }
+ return arr;
+}
+const TITLES_MALE=buildTitles([
+ [1,'DORMANT'],[3,'INITIATE'],[5,'ASCENDANT'],[7,'APEX'],[9,'TRANSCENDENT'],
+ [11,'SOVEREIGN'],[16,'WARLORD'],[21,'PHANTOM'],[26,'SPECTRE'],[31,'VANGUARD'],
+ [41,'HARBINGER'],[51,'WRAITH'],[61,'ECLIPSE'],[71,'ETERNAL'],[81,'VOID KING'],
+ [91,'ASCENDED'],[100,'THE PROTOCOL'],
+]);
+const TITLES_FEMALE=buildTitles([
+ [1,'DORMANT'],[3,'INITIATE'],[5,'ECLIPSE'],[7,'APEX'],[9,'TRANSCENDENT'],
+ [11,'SOVEREIGN'],[16,'PHANTOM QUEEN'],[21,'SHADOW EMPRESS'],[26,'WRAITH'],[31,'VANGUARD'],
+ [41,'HARBINGER'],[51,'ETERNAL'],[61,'VOID EMPRESS'],[71,'THE ECLIPSE SOVEREIGN'],
+ [81,'ASCENDED'],[91,'THE UNDYING'],[100,'THE SOVEREIGN PROTOCOL'],
+]);
+const DQ_MALE=[
+ {id:'q1',name:'100 Push-ups',desc:'Forge the upper body',stat:'str',xp:33,completed:false},
+ {id:'q4',name:'100 Squats',desc:'Iron legs, unyielding base',stat:'str',xp:33,completed:false},
+ {id:'q7',name:'50 Pull-ups',desc:'Back of steel, grip of iron',stat:'str',xp:40,completed:false},
+ {id:'q8',name:'50 Dips',desc:'Tricep and chest forged',stat:'str',xp:27,completed:false},
+ {id:'q3',name:'10km Run',desc:'Endurance without end',stat:'agi',xp:45,completed:false},
+ {id:'q9',name:'100 Jump Rope',desc:'Fleet-footed, shadow-quick',stat:'agi',xp:22,completed:false},
+ {id:'q10',name:'30-min Walk',desc:'Clear the mind, move the body',stat:'agi',xp:18,completed:false},
+ {id:'q11',name:'Sprint Intervals x10',desc:'10 × 50m all-out',stat:'agi',xp:36,completed:false},
+ {id:'q2',name:'100 Sit-ups',desc:'Core of iron',stat:'vit',xp:33,completed:false},
+ {id:'q12',name:'Cold Shower',desc:'Temper the body, harden the will',stat:'vit',xp:22,completed:false},
+ {id:'q13',name:'8hrs Sleep',desc:'Recovery is not weakness',stat:'vit',xp:27,completed:false},
+ {id:'q14',name:'Drink 3L Water',desc:'Hydration is armor',stat:'vit',xp:18,completed:false},
+ {id:'q5',name:'Meditation / Study',desc:'The sharpest weapon is the mind',stat:'int',xp:22,completed:false},
+ {id:'q15',name:'Read 20 Pages',desc:'Knowledge is a weapon',stat:'int',xp:22,completed:false},
+ {id:'q16',name:'Journal Entry',desc:'Reflect. Evolve. Dominate.',stat:'int',xp:18,completed:false},
+ {id:'q17',name:'No Phone — 1hr',desc:'Silence the noise, own the hour',stat:'int',xp:27,completed:false},
+ {id:'q6',name:'Stretching / Mobility',desc:'Fluid and unstoppable',stat:'per',xp:22,completed:false},
+ {id:'q18',name:'5-min Breathing',desc:'Control the breath, control the moment',stat:'per',xp:18,completed:false},
+ {id:'q19',name:'Visualise Your Goals',desc:'See it before you seize it',stat:'per',xp:18,completed:false},
+ {id:'q20',name:'Eat a Whole Meal',desc:'Fuel the machine with intention',stat:'per',xp:22,completed:false},
+];
+const DQ_FEMALE=[
+ {id:'q1',name:'30 Push-ups',desc:'Upper body strength, graceful power',stat:'str',xp:27,completed:false},
+ {id:'q4',name:'50 Squats',desc:'Strong legs carry a sovereign',stat:'str',xp:27,completed:false},
+ {id:'q7',name:'20 Resistance Band Rows',desc:'Back definition, posture of a queen',stat:'str',xp:32,completed:false},
+ {id:'q8',name:'Pilates Core Circuit',desc:'10 min deep core activation',stat:'str',xp:27,completed:false},
+ {id:'q3',name:'5km Run or Walk-Run',desc:'Pace yourself — distance is victory',stat:'agi',xp:40,completed:false},
+ {id:'q9',name:'20-min HIIT',desc:'Intensity over duration',stat:'agi',xp:36,completed:false},
+ {id:'q10',name:'30-min Walk',desc:'Move with purpose, breathe with intention',stat:'agi',xp:18,completed:false},
+ {id:'q11',name:'Jump Rope 5 min',desc:'Coordination and cardio forged',stat:'agi',xp:22,completed:false},
+ {id:'q2',name:'50 Sit-ups / Crunches',desc:'The core is your centre of power',stat:'vit',xp:27,completed:false},
+ {id:'q12',name:'Cold Shower',desc:'Discipline begins before the day does',stat:'vit',xp:22,completed:false},
+ {id:'q13',name:'8hrs Sleep',desc:'A sovereign rests to reign',stat:'vit',xp:27,completed:false},
+ {id:'q14',name:'Drink 2.5L Water',desc:'Hydration is the first act of self-respect',stat:'vit',xp:18,completed:false},
+ {id:'q5',name:'Meditation — 10 min',desc:'Stillness sharpens everything',stat:'int',xp:22,completed:false},
+ {id:'q15',name:'Read 20 Pages',desc:'The mind is your greatest asset',stat:'int',xp:22,completed:false},
+ {id:'q16',name:'Journal Entry',desc:'Write the woman you are becoming',stat:'int',xp:18,completed:false},
+ {id:'q17',name:'No Social Media — 1hr',desc:'Protect your energy ruthlessly',stat:'int',xp:27,completed:false},
+ {id:'q6',name:'Yoga / Stretching 15 min',desc:'Flexibility is feminine power',stat:'per',xp:22,completed:false},
+ {id:'q18',name:'5-min Breathwork',desc:'Breathe like you belong here',stat:'per',xp:18,completed:false},
+ {id:'q19',name:'Affirmations / Visualise',desc:'She who sees it, becomes it',stat:'per',xp:18,completed:false},
+ {id:'q20',name:'Nourishing Meal',desc:'Feed your body like it\'s sacred',stat:'per',xp:22,completed:false},
+];
+const PRESETS_MALE = {
+ fitness:{
+ id:'fitness', label:'🏋 FITNESS',
+ desc:'Heavy compound training and cardio at the core. Sharpened with daily mindset and recovery work — because a strong body without a clear mind is only half the equation.',
+ quests:[
+ {id:'pf1', name:'100 Push-ups', desc:'Forge the upper body', stat:'str',xp:33,completed:false},
+ {id:'pf2', name:'100 Squats', desc:'Iron legs, unyielding base', stat:'str',xp:33,completed:false},
+ {id:'pf3', name:'50 Pull-ups', desc:'Back of steel, grip of iron', stat:'str',xp:40,completed:false},
+ {id:'pf4', name:'50 Dips', desc:'Tricep and chest forged', stat:'str',xp:27,completed:false},
+ {id:'pf5', name:'10km Run', desc:'Endurance without end', stat:'agi',xp:45,completed:false},
+ {id:'pf6', name:'Sprint Intervals x10', desc:'10 × 50m all-out', stat:'agi',xp:36,completed:false},
+ {id:'pf7', name:'100 Jump Rope', desc:'Fleet-footed, shadow-quick', stat:'agi',xp:22,completed:false},
+ {id:'pf8', name:'100 Sit-ups', desc:'Core of iron', stat:'vit',xp:33,completed:false},
+ {id:'pf9', name:'Cold Shower', desc:'Temper the body, harden the will', stat:'vit',xp:22,completed:false},
+ {id:'pf10',name:'Drink 3L Water', desc:'Hydration is armour', stat:'vit',xp:12, completed:false},
+ {id:'pf11',name:'Stretching — 15 min', desc:'Fluid and unstoppable', stat:'per',xp:22,completed:false},
+ {id:'pf12',name:'5-min Breathing', desc:'Control the breath, control the moment',stat:'per',xp:18,completed:false},
+ {id:'pf13',name:'Eat a Whole Meal', desc:'Fuel the machine with intention', stat:'per',xp:22,completed:false},
+ {id:'pf14',name:'30-min Walk', desc:'Active recovery — move, clear, reset',stat:'agi',xp:18,completed:false},
+ {id:'pf15',name:'8hrs Sleep', desc:'Recovery is not weakness', stat:'vit',xp:27,completed:false},
+ {id:'pf16',name:'Meditation — 10 min', desc:'The sharpest weapon is the mind', stat:'int',xp:22,completed:false},
+ {id:'pf17',name:'Visualise Your Goals', desc:'See it before you seize it', stat:'per',xp:12, completed:false},
+ {id:'pf18',name:'Read 20 Pages', desc:'Knowledge is a weapon', stat:'int',xp:22,completed:false},
+ {id:'pf19',name:'Journal Entry', desc:'Reflect. Evolve. Dominate.', stat:'int',xp:12, completed:false},
+ {id:'pf20',name:'No Phone — 1hr', desc:'Silence the noise, own the hour', stat:'int',xp:27,completed:false},
+ ]
+ },
+ focus:{
+ id:'focus', label:'💻 FOCUS',
+ desc:'Deep work and mental output at the core. Anchored with daily movement and recovery — because the sharpest minds are housed in disciplined bodies.',
+ quests:[
+ {id:'pc1', name:'3hrs Deep Work', desc:'Distraction-free, high-value output', stat:'int',xp:45,completed:false},
+ {id:'pc2', name:'Complete 1 Priority Task', desc:'The task that moves everything else', stat:'int',xp:36,completed:false},
+ {id:'pc3', name:'Read 30 Pages', desc:'Knowledge compounds daily', stat:'int',xp:27,completed:false},
+ {id:'pc4', name:'Learn One New Skill', desc:'Invest in your edge every day', stat:'int',xp:27,completed:false},
+ {id:'pc5', name:'No Social Media — 2hrs', desc:'Guard your attention like a weapon', stat:'int',xp:32,completed:false},
+ {id:'pc6', name:'Journal Entry', desc:'Reflect. Process. Evolve.', stat:'int',xp:12, completed:false},
+ {id:'pc7', name:'Plan Tomorrow Tonight', desc:'Operatives prepare in advance', stat:'int',xp:12, completed:false},
+ {id:'pc8', name:'Review Your Metrics', desc:'What gets measured gets improved', stat:'int',xp:12, completed:false},
+ {id:'pc9', name:'Inbox Zero', desc:'Clear the mental overhead', stat:'int',xp:9, completed:false},
+ {id:'pc10',name:'Meditation — 10 min', desc:'Still the mind, sharpen the blade', stat:'per',xp:22,completed:false},
+ {id:'pc11',name:'Visualise Your Goals', desc:'The mind rehearses before the body acts',stat:'per',xp:18,completed:false},
+ {id:'pc12',name:'5-min Breathing', desc:'Regulate. Reset. Refocus.', stat:'per',xp:12, completed:false},
+ {id:'pc13',name:'Gratitude Practice', desc:'A grounded operative performs better', stat:'per',xp:9, completed:false},
+ {id:'pc14',name:'No Junk Input — 1hr', desc:'No news, doom-scrolling or noise', stat:'per',xp:22,completed:false},
+ {id:'pc15',name:'30-min Walk', desc:'Movement clears mental fog', stat:'agi',xp:12, completed:false},
+ {id:'pc16',name:'30 Push-ups', desc:'Blood flow sharpens cognition', stat:'str',xp:12, completed:false},
+ {id:'pc17',name:'8hrs Sleep', desc:'Sleep is cognitive performance', stat:'vit',xp:27,completed:false},
+ {id:'pc18',name:'Drink 2.5L Water', desc:'The brain is 75% water. Feed it.', stat:'vit',xp:12, completed:false},
+ {id:'pc19',name:'Cold Shower', desc:'Shock the system into alertness', stat:'vit',xp:22,completed:false},
+ {id:'pc20',name:'Stretching — 10 min', desc:'A sharp mind needs a mobile body', stat:'per',xp:12, completed:false},
+ ]
+ },
+ balance:{
+ id:'balance', label:'⚖ BALANCE',
+ desc:'Equal parts body and mind. Built for those who refuse to sacrifice one for the other — ten physical, ten mental, all essential.',
+ quests:[
+ {id:'pb1', name:'50 Push-ups', desc:'Upper body foundation', stat:'str',xp:22,completed:false},
+ {id:'pb2', name:'50 Squats', desc:'Lower body foundation', stat:'str',xp:22,completed:false},
+ {id:'pb3', name:'5km Run or Walk', desc:'Cardio baseline', stat:'agi',xp:27,completed:false},
+ {id:'pb4', name:'Sprint Intervals x5', desc:'Short burst intensity', stat:'agi',xp:22,completed:false},
+ {id:'pb5', name:'50 Sit-ups', desc:'Core strength', stat:'vit',xp:12, completed:false},
+ {id:'pb6', name:'Cold Shower', desc:'Daily discipline ritual', stat:'vit',xp:22,completed:false},
+ {id:'pb7', name:'Drink 2.5L Water', desc:'Foundation of everything', stat:'vit',xp:12, completed:false},
+ {id:'pb8', name:'8hrs Sleep', desc:'Recovery is performance', stat:'vit',xp:27,completed:false},
+ {id:'pb9', name:'Stretching — 10 min', desc:'Body maintenance', stat:'per',xp:12, completed:false},
+ {id:'pb10',name:'Eat a Whole Meal', desc:'Intentional nutrition', stat:'per',xp:12, completed:false},
+ {id:'pb11',name:'2hrs Deep Work', desc:'Focused, high-value output', stat:'int',xp:36,completed:false},
+ {id:'pb12',name:'Read 20 Pages', desc:'Knowledge every day', stat:'int',xp:22,completed:false},
+ {id:'pb13',name:'Journal Entry', desc:'Reflect and evolve', stat:'int',xp:12, completed:false},
+ {id:'pb14',name:'No Phone — 1hr', desc:'Protect your attention', stat:'int',xp:22,completed:false},
+ {id:'pb15',name:'Meditation — 10 min', desc:'Inner clarity', stat:'per',xp:22,completed:false},
+ {id:'pb16',name:'Visualise Your Goals', desc:'Mental rehearsal', stat:'per',xp:12, completed:false},
+ {id:'pb17',name:'5-min Breathing', desc:'Regulate the nervous system', stat:'per',xp:9, completed:false},
+ {id:'pb18',name:'Plan Tomorrow', desc:'Preparation is power', stat:'int',xp:9, completed:false},
+ {id:'pb19',name:'Learn Something New', desc:'One new concept today', stat:'int',xp:12, completed:false},
+ {id:'pb20',name:'Gratitude Practice', desc:'Mindset is everything', stat:'per',xp:9, completed:false},
+ ]
+ },
+ wellness:{
+ id:'wellness', label:'🧘 WELLNESS',
+ desc:'Sleep, water, breathwork and recovery at the core. Supported by light movement and mindset work — because restoration is its own form of discipline.',
+ quests:[
+ {id:'pw1', name:'8hrs Sleep', desc:'The foundation of all performance', stat:'vit',xp:33,completed:false},
+ {id:'pw2', name:'Drink 3L Water', desc:'Hydration is the first act of care', stat:'vit',xp:22,completed:false},
+ {id:'pw3', name:'Cold Shower', desc:'The body adapts to what you demand', stat:'vit',xp:22,completed:false},
+ {id:'pw4', name:'Eat a Whole Meal', desc:'Fuel with intention, not habit', stat:'vit',xp:22,completed:false},
+ {id:'pw5', name:'No Alcohol Today', desc:'Protect the recovery process', stat:'vit',xp:27,completed:false},
+ {id:'pw6', name:'No Caffeine After 2pm', desc:'Protect your sleep architecture', stat:'vit',xp:12, completed:false},
+ {id:'pw7', name:'Sunlight — 10 min', desc:'Regulate your circadian rhythm', stat:'vit',xp:9, completed:false},
+ {id:'pw8', name:'10-min Breathing', desc:'Breathwork is medicine', stat:'per',xp:22,completed:false},
+ {id:'pw9', name:'Meditation — 15 min', desc:'Stillness is the antidote to chaos', stat:'per',xp:27,completed:false},
+ {id:'pw10',name:'Stretching — 15 min', desc:'Flexibility is longevity', stat:'per',xp:22,completed:false},
+ {id:'pw11',name:'5-min Body Scan', desc:'Awareness of what your body needs', stat:'per',xp:9, completed:false},
+ {id:'pw12',name:'Digital Sunset — 9pm', desc:'Wind down. No screens before sleep.', stat:'per',xp:12, completed:false},
+ {id:'pw13',name:'Gratitude Journal', desc:'Train the mind to find the good', stat:'int',xp:12, completed:false},
+ {id:'pw14',name:'Social Connection', desc:'One meaningful conversation today', stat:'per',xp:12, completed:false},
+ {id:'pw15',name:'30-min Walk in Nature', desc:'Movement and perspective combined', stat:'agi',xp:22,completed:false},
+ {id:'pw16',name:'30 Squats', desc:'Move the body, wake the system', stat:'str',xp:12, completed:false},
+ {id:'pw17',name:'Read 15 Pages', desc:'Feed the mind gently', stat:'int',xp:12, completed:false},
+ {id:'pw18',name:'Visualise Your Best Self', desc:'Daily mental rehearsal', stat:'per',xp:12, completed:false},
+ {id:'pw19',name:'No Screen — 30 min', desc:'Rest the eyes, rest the mind', stat:'per',xp:12, completed:false},
+ {id:'pw20',name:'Plan Tomorrow', desc:'Calm preparation before sleep', stat:'int',xp:9, completed:false},
+ ]
+ },
+ entrepreneur:{
+ id:'entrepreneur', label:'💼 ENTREPRENEUR',
+ desc:'Output, strategy and learning at the core. Anchored with physical discipline and mental recovery — because the best operators build themselves as hard as they build their business.',
+ quests:[
+ {id:'pe1', name:'3hrs Deep Work', desc:'Build the thing. Ship the thing.', stat:'int',xp:45,completed:false},
+ {id:'pe2', name:'Complete 1 Priority Task', desc:'The one task that changes today', stat:'int',xp:36,completed:false},
+ {id:'pe3', name:'Read 20 Pages', desc:'Leaders are readers. No exceptions.', stat:'int',xp:22,completed:false},
+ {id:'pe4', name:'Learn One New Skill', desc:'Invest in your edge daily', stat:'int',xp:27,completed:false},
+ {id:'pe5', name:'Review Revenue / Metrics', desc:'Know your numbers. Own your direction.',stat:'int',xp:22,completed:false},
+ {id:'pe6', name:'Plan Tomorrow Tonight', desc:'The prepared operator wins', stat:'int',xp:12, completed:false},
+ {id:'pe7', name:'Create One Content Piece', desc:'Visibility compounds. Show up daily.', stat:'int',xp:27,completed:false},
+ {id:'pe8', name:'Make One Business Contact', desc:'Your network is your net worth', stat:'per',xp:22,completed:false},
+ {id:'pe9', name:'No Social Media — 2hrs', desc:'Consume less. Create more.', stat:'int',xp:32,completed:false},
+ {id:'pe10',name:'Journal Entry', desc:'Process the day. Extract the lessons.',stat:'int',xp:12, completed:false},
+ {id:'pe11',name:'Inbox Zero', desc:'Clear the mental overhead', stat:'int',xp:9, completed:false},
+ {id:'pe12',name:'Visualise Your Goals', desc:'The operator who sees it, builds it.', stat:'per',xp:12, completed:false},
+ {id:'pe13',name:'Gratitude Practice', desc:'Abundance mindset fuels execution', stat:'per',xp:9, completed:false},
+ {id:'pe14',name:'Review Long-Term Goals', desc:'Stay anchored to the vision', stat:'per',xp:12, completed:false},
+ {id:'pe15',name:'30-min Walk', desc:'Movement clears strategic fog', stat:'agi',xp:12, completed:false},
+ {id:'pe16',name:'50 Push-ups', desc:'Physical discipline breeds mental discipline',stat:'str',xp:18,completed:false},
+ {id:'pe17',name:'8hrs Sleep', desc:'Sleep is the ultimate performance drug',stat:'vit',xp:27,completed:false},
+ {id:'pe18',name:'Drink 2.5L Water', desc:'Cognitive function needs hydration', stat:'vit',xp:12, completed:false},
+ {id:'pe19',name:'Meditation — 10 min', desc:'Clear the noise. Hear the signal.', stat:'per',xp:22,completed:false},
+ {id:'pe20',name:'Cold Shower', desc:'Operators embrace discomfort daily', stat:'vit',xp:22,completed:false},
+ ]
+ },
+};
+const PRESETS_FEMALE = {
+ fitness:{
+ id:'fitness', label:'🏋 FITNESS',
+ desc:'Strength, cardio and physical discipline at the core. Rounded with daily mindset and recovery — because a powerful body and a sovereign mind are built together.',
+ quests:[
+ {id:'pf1', name:'30 Push-ups', desc:'Build upper body strength gracefully', stat:'str',xp:27,completed:false},
+ {id:'pf2', name:'50 Squats', desc:'Strong legs carry a sovereign', stat:'str',xp:27,completed:false},
+ {id:'pf3', name:'20 Resistance Rows', desc:'Back definition, posture of a queen', stat:'str',xp:32,completed:false},
+ {id:'pf4', name:'Pilates Core Circuit', desc:'10 min deep core activation', stat:'str',xp:27,completed:false},
+ {id:'pf5', name:'5km Run or Walk-Run', desc:'Pace yourself — distance is victory', stat:'agi',xp:40,completed:false},
+ {id:'pf6', name:'20-min HIIT', desc:'Intensity over duration', stat:'agi',xp:36,completed:false},
+ {id:'pf7', name:'Jump Rope — 5 min', desc:'Coordination and cardio forged', stat:'agi',xp:22,completed:false},
+ {id:'pf8', name:'50 Sit-ups', desc:'The core is your centre of power', stat:'vit',xp:27,completed:false},
+ {id:'pf9', name:'Cold Shower', desc:'Discipline begins before the day does', stat:'vit',xp:22,completed:false},
+ {id:'pf10',name:'Drink 2.5L Water', desc:'Hydration is the first act of self-respect',stat:'vit',xp:18,completed:false},
+ {id:'pf11',name:'Yoga / Stretching 15 min',desc:'Flexibility is feminine power', stat:'per',xp:22,completed:false},
+ {id:'pf12',name:'5-min Breathwork', desc:'Breathe like you belong here', stat:'per',xp:12, completed:false},
+ {id:'pf13',name:'Nourishing Meal', desc:'Feed your body like it\'s sacred', stat:'per',xp:22,completed:false},
+ {id:'pf14',name:'30-min Walk', desc:'Move with purpose, breathe with intention',stat:'agi',xp:12, completed:false},
+ {id:'pf15',name:'8hrs Sleep', desc:'A sovereign rests to reign', stat:'vit',xp:27,completed:false},
+ {id:'pf16',name:'Meditation — 10 min', desc:'Stillness sharpens everything', stat:'int',xp:22,completed:false},
+ {id:'pf17',name:'Affirmations / Visualise',desc:'She who sees it, becomes it', stat:'per',xp:12, completed:false},
+ {id:'pf18',name:'Read 20 Pages', desc:'The mind is your greatest asset', stat:'int',xp:22,completed:false},
+ {id:'pf19',name:'Journal Entry', desc:'Write the woman you are becoming', stat:'int',xp:12, completed:false},
+ {id:'pf20',name:'No Social Media — 1hr',desc:'Protect your energy ruthlessly', stat:'int',xp:27,completed:false},
+ ]
+ },
+ focus:{
+ id:'focus', label:'💻 FOCUS',
+ desc:'Deep work and mental mastery at the core. Supported by movement and restoration — because sovereign minds are housed in disciplined, well-rested bodies.',
+ quests:[
+ {id:'pc1', name:'3hrs Deep Work', desc:'Focused, distraction-free output', stat:'int',xp:45,completed:false},
+ {id:'pc2', name:'Complete 1 Priority Task', desc:'The task that changes everything today', stat:'int',xp:36,completed:false},
+ {id:'pc3', name:'Read 30 Pages', desc:'The mind is your most powerful tool', stat:'int',xp:27,completed:false},
+ {id:'pc4', name:'Learn One New Skill', desc:'Growth is a daily choice', stat:'int',xp:27,completed:false},
+ {id:'pc5', name:'No Social Media — 2hrs', desc:'Your attention is your most sacred resource',stat:'int',xp:32,completed:false},
+ {id:'pc6', name:'Journal Entry', desc:'Write the woman you are becoming', stat:'int',xp:12, completed:false},
+ {id:'pc7', name:'Plan Tomorrow Tonight', desc:'Sovereigns prepare before they execute', stat:'int',xp:12, completed:false},
+ {id:'pc8', name:'Review Your Goals', desc:'Stay anchored to your vision', stat:'int',xp:12, completed:false},
+ {id:'pc9', name:'Inbox Zero', desc:'Clear the mental overhead', stat:'int',xp:9, completed:false},
+ {id:'pc10',name:'Meditation — 10 min', desc:'Stillness is where clarity lives', stat:'per',xp:22,completed:false},
+ {id:'pc11',name:'Affirmations / Visualise', desc:'She who sees it, becomes it', stat:'per',xp:12, completed:false},
+ {id:'pc12',name:'5-min Breathwork', desc:'Regulate. Reset. Refocus.', stat:'per',xp:12, completed:false},
+ {id:'pc13',name:'Gratitude Practice', desc:'Abundance mindset fuels focused action', stat:'per',xp:9, completed:false},
+ {id:'pc14',name:'No Junk Input — 1hr', desc:'Protect what enters your mind', stat:'per',xp:22,completed:false},
+ {id:'pc15',name:'30-min Walk', desc:'Movement clears the mental fog', stat:'agi',xp:12, completed:false},
+ {id:'pc16',name:'30 Push-ups', desc:'Physical discipline feeds mental clarity',stat:'str',xp:12, completed:false},
+ {id:'pc17',name:'8hrs Sleep', desc:'Sleep is how a sovereign restores power',stat:'vit',xp:27,completed:false},
+ {id:'pc18',name:'Drink 2.5L Water', desc:'Nourish the brain that carries you', stat:'vit',xp:12, completed:false},
+ {id:'pc19',name:'Cold Shower', desc:'Shock the system into full presence', stat:'vit',xp:22,completed:false},
+ {id:'pc20',name:'Yoga / Stretching 10 min',desc:'A clear mind needs a free body', stat:'per',xp:12, completed:false},
+ ]
+ },
+ balance:{
+ id:'balance', label:'⚖ BALANCE',
+ desc:'Ten physical rites, ten mental ones. Built for the sovereign who refuses to sacrifice her body for her ambitions or her mind for her fitness.',
+ quests:[
+ {id:'pb1', name:'30 Push-ups', desc:'Upper body strength, graceful power', stat:'str',xp:22,completed:false},
+ {id:'pb2', name:'50 Squats', desc:'Strong legs carry a sovereign', stat:'str',xp:22,completed:false},
+ {id:'pb3', name:'5km Run or Walk', desc:'Pace yourself — distance is victory', stat:'agi',xp:27,completed:false},
+ {id:'pb4', name:'20-min HIIT', desc:'Short, powerful, effective', stat:'agi',xp:22,completed:false},
+ {id:'pb5', name:'50 Sit-ups', desc:'The core is your centre of power', stat:'vit',xp:12, completed:false},
+ {id:'pb6', name:'Cold Shower', desc:'Discipline before the world begins', stat:'vit',xp:22,completed:false},
+ {id:'pb7', name:'Drink 2.5L Water', desc:'Hydration is the first act of self-respect',stat:'vit',xp:18,completed:false},
+ {id:'pb8', name:'8hrs Sleep', desc:'A sovereign rests to reign', stat:'vit',xp:27,completed:false},
+ {id:'pb9', name:'Yoga / Stretching', desc:'Flexibility is freedom', stat:'per',xp:12, completed:false},
+ {id:'pb10',name:'Nourishing Meal', desc:'Feed your body like it\'s sacred', stat:'per',xp:12, completed:false},
+ {id:'pb11',name:'2hrs Deep Work', desc:'Focused, high-value output', stat:'int',xp:36,completed:false},
+ {id:'pb12',name:'Read 20 Pages', desc:'The mind is your greatest asset', stat:'int',xp:22,completed:false},
+ {id:'pb13',name:'Journal Entry', desc:'Write the woman you are becoming', stat:'int',xp:12, completed:false},
+ {id:'pb14',name:'No Social Media — 1hr',desc:'Protect your energy ruthlessly', stat:'int',xp:22,completed:false},
+ {id:'pb15',name:'Meditation — 10 min', desc:'Inner clarity, outer power', stat:'per',xp:22,completed:false},
+ {id:'pb16',name:'Affirmations / Visualise',desc:'She who sees it, becomes it', stat:'per',xp:12, completed:false},
+ {id:'pb17',name:'5-min Breathwork', desc:'Regulate the nervous system', stat:'per',xp:9, completed:false},
+ {id:'pb18',name:'Plan Tomorrow', desc:'Preparation is a form of respect', stat:'int',xp:9, completed:false},
+ {id:'pb19',name:'Learn Something New', desc:'Growth is a daily choice', stat:'int',xp:12, completed:false},
+ {id:'pb20',name:'Gratitude Practice', desc:'What you appreciate, appreciates', stat:'per',xp:9, completed:false},
+ ]
+ },
+ wellness:{
+ id:'wellness', label:'🧘 WELLNESS',
+ desc:'Restoration, nourishment and breathwork at the core. Wrapped in gentle movement and mental care — because a sovereign who rests well, rises fully.',
+ quests:[
+ {id:'pw1', name:'8hrs Sleep', desc:'The foundation of all sovereignty', stat:'vit',xp:33,completed:false},
+ {id:'pw2', name:'Drink 2.5L Water', desc:'Hydration is the first act of self-love',stat:'vit',xp:22,completed:false},
+ {id:'pw3', name:'Cold Shower', desc:'The body honours what you demand of it', stat:'vit',xp:22,completed:false},
+ {id:'pw4', name:'Nourishing Meal', desc:'Feed your body like it\'s sacred', stat:'vit',xp:22,completed:false},
+ {id:'pw5', name:'No Alcohol Today', desc:'Protect the restoration process', stat:'vit',xp:27,completed:false},
+ {id:'pw6', name:'No Caffeine After 2pm', desc:'Protect your sleep, protect your power', stat:'vit',xp:12, completed:false},
+ {id:'pw7', name:'Sunlight — 10 min', desc:'Regulate your rhythm, lift your energy', stat:'vit',xp:9, completed:false},
+ {id:'pw8', name:'10-min Breathwork', desc:'Breathwork is medicine for the sovereign',stat:'per',xp:22,completed:false},
+ {id:'pw9', name:'Meditation — 15 min', desc:'Stillness is where you find yourself', stat:'per',xp:27,completed:false},
+ {id:'pw10',name:'Yoga / Stretching 15 min',desc:'Flexibility is feminine strength', stat:'per',xp:22,completed:false},
+ {id:'pw11',name:'5-min Body Scan', desc:'Listen to what your body is telling you',stat:'per',xp:9, completed:false},
+ {id:'pw12',name:'Digital Sunset — 9pm', desc:'Wind down. You have earned your rest.', stat:'per',xp:12, completed:false},
+ {id:'pw13',name:'Gratitude Journal', desc:'Train the mind to see abundance', stat:'int',xp:12, completed:false},
+ {id:'pw14',name:'Social Connection', desc:'One meaningful connection today', stat:'per',xp:12, completed:false},
+ {id:'pw15',name:'30-min Walk in Nature', desc:'Movement, air and perspective', stat:'agi',xp:22,completed:false},
+ {id:'pw16',name:'30 Squats', desc:'Move the body, honour the vessel', stat:'str',xp:12, completed:false},
+ {id:'pw17',name:'Read 15 Pages', desc:'Feed the mind softly and steadily', stat:'int',xp:12, completed:false},
+ {id:'pw18',name:'Affirmations / Visualise', desc:'She who sees it, becomes it', stat:'per',xp:12, completed:false},
+ {id:'pw19',name:'No Screen — 30 min', desc:'Rest the eyes. Rest the mind.', stat:'per',xp:12, completed:false},
+ {id:'pw20',name:'Plan Tomorrow', desc:'Calm preparation is an act of sovereignty',stat:'int',xp:14,completed:false},
+ ]
+ },
+ entrepreneur:{
+ id:'entrepreneur', label:'💼 ENTREPRENEUR',
+ desc:'Output, strategy and visibility at the core. Grounded in physical discipline and daily restoration — because the woman building an empire must also build herself.',
+ quests:[
+ {id:'pe1', name:'3hrs Deep Work', desc:'Create. Build. Ship. No excuses.', stat:'int',xp:45,completed:false},
+ {id:'pe2', name:'Complete 1 Priority Task', desc:'The task that changes today\'s trajectory',stat:'int',xp:36,completed:false},
+ {id:'pe3', name:'Read 20 Pages', desc:'Every sovereign leader is a reader', stat:'int',xp:22,completed:false},
+ {id:'pe4', name:'Learn One New Skill', desc:'Your edge is built one skill at a time', stat:'int',xp:27,completed:false},
+ {id:'pe5', name:'Review Revenue / Metrics', desc:'Know your numbers. Own your direction.', stat:'int',xp:22,completed:false},
+ {id:'pe6', name:'Plan Tomorrow Tonight', desc:'Sovereigns who prepare, dominate', stat:'int',xp:12, completed:false},
+ {id:'pe7', name:'Create One Content Piece', desc:'Visibility compounds. Show up daily.', stat:'int',xp:27,completed:false},
+ {id:'pe8', name:'Make One Business Contact', desc:'Your network reflects your vision', stat:'per',xp:22,completed:false},
+ {id:'pe9', name:'No Social Media — 2hrs', desc:'Consume less. Create more. Rise more.', stat:'int',xp:32,completed:false},
+ {id:'pe10',name:'Journal Entry', desc:'Process the day. Extract the lesson.', stat:'int',xp:12, completed:false},
+ {id:'pe11',name:'Inbox Zero', desc:'A clear inbox is a clear mind', stat:'int',xp:9, completed:false},
+ {id:'pe12',name:'Affirmations / Visualise', desc:'The empire is built in the mind first', stat:'per',xp:12, completed:false},
+ {id:'pe13',name:'Gratitude Practice', desc:'Abundance mindset fuels abundant action',stat:'per',xp:9, completed:false},
+ {id:'pe14',name:'Review Long-Term Vision', desc:'Stay anchored to where you are going', stat:'per',xp:12, completed:false},
+ {id:'pe15',name:'30-min Walk', desc:'Movement clears strategic fog', stat:'agi',xp:12, completed:false},
+ {id:'pe16',name:'30 Push-ups', desc:'Physical discipline breeds mental power', stat:'str',xp:12, completed:false},
+ {id:'pe17',name:'8hrs Sleep', desc:'Rest is how a sovereign restores her power',stat:'vit',xp:27,completed:false},
+ {id:'pe18',name:'Drink 2.5L Water', desc:'Nourish the mind that builds your empire',stat:'vit',xp:18,completed:false},
+ {id:'pe19',name:'Meditation — 10 min', desc:'Silence the noise. Hear the strategy.', stat:'per',xp:22,completed:false},
+ {id:'pe20',name:'Cold Shower', desc:'Sovereign operators embrace discomfort', stat:'vit',xp:22,completed:false},
+ ]
+ },
+};
+const PRESET_ORDER = ['fitness','focus','balance','wellness','entrepreneur'];
+const PENALTY_SETS_MALE = {
+ fitness:{
+ desc:'You trained today — or you didn\'t. The body keeps the score.',
+ list:[
+ {id:'p1', name:'Skipped the Run', desc:'You chose comfort over distance.', stat:'agi',xp:10,consequence:'The weak rest. The ascendant run.'},
+ {id:'p2', name:'Missed Push-ups', desc:'Strength left unbuilt.', stat:'str',xp:8, consequence:'Every avoided rep is a wall around your limits.'},
+ {id:'p3', name:'Skipped Sleep', desc:'Recovery abandoned.', stat:'vit',xp:10,consequence:'A depleted operative is a liability.'},
+ {id:'p4', name:'Ate Without Intention', desc:'You fuelled the weakness.', stat:'vit',xp:8, consequence:'The body remembers every choice.'},
+ {id:'p5', name:'Skipped Cold Shower', desc:'You chose warmth over discipline.', stat:'vit',xp:6, consequence:'Comfort is the enemy of the ascendant.'},
+ {id:'p6', name:'Under-hydrated', desc:'You ran dry.', stat:'vit',xp:8, consequence:'Weakness seeps in where discipline runs out.'},
+ {id:'p7', name:'Missed Stretching', desc:'Mobility forsaken.', stat:'per',xp:6, consequence:'Rigidity is the body surrendering early.'},
+ {id:'p8', name:'Quit Mid-Workout', desc:'You stopped when it got hard.', stat:'str',xp:15,consequence:'Ascendants are built exactly where you quit.'},
+ {id:'p9', name:'Slept Past Noon', desc:'Half the day surrendered.', stat:'agi',xp:10,consequence:'While you slept, your limits got comfortable.'},
+ {id:'p10',name:'Skipped Sprints', desc:'Intensity avoided.', stat:'agi',xp:8, consequence:'Speed is built in the moments you didn\'t want to run.'},
+ ]
+ },
+ focus:{
+ desc:'The mind was either sharpened today or it wasn\'t. There is no middle ground.',
+ list:[
+ {id:'p1', name:'No Deep Work Done', desc:'The day passed without real output.', stat:'int',xp:15,consequence:'Time is the one resource the Protocol cannot restore.'},
+ {id:'p2', name:'Lost to Scrolling 2hrs+', desc:'Your attention was surrendered.', stat:'int',xp:12,consequence:'What you feed your mind, you become.'},
+ {id:'p3', name:'Skipped Reading', desc:'Knowledge left ungained today.', stat:'int',xp:8, consequence:'Every unread page is an edge left undeveloped.'},
+ {id:'p4', name:'Skipped Journal', desc:'Reflection abandoned.', stat:'int',xp:6, consequence:'An unexamined day is a wasted one.'},
+ {id:'p5', name:'Skipped Meditation', desc:'The mind left unguarded.', stat:'per',xp:6, consequence:'An unfocused mind dulls every edge.'},
+ {id:'p6', name:'No Priority Task Done', desc:'The most important thing went undone.', stat:'int',xp:12,consequence:'Busy is not the same as productive.'},
+ {id:'p7', name:'Skipped Planning', desc:'Tomorrow is now undefended.', stat:'int',xp:6, consequence:'Operatives who don\'t plan, react.'},
+ {id:'p8', name:'Skipped Breathing', desc:'Regulation neglected.', stat:'per',xp:6, consequence:'Control the breath or the chaos controls you.'},
+ {id:'p9', name:'Skipped Sleep', desc:'Cognitive recovery abandoned.', stat:'int',xp:10,consequence:'A tired mind makes expensive decisions.'},
+ {id:'p10',name:'Under-hydrated', desc:'The brain ran dry.', stat:'int',xp:6, consequence:'Cognition degrades without hydration.'},
+ ]
+ },
+ balance:{
+ desc:'Balance is earned, not assumed. A missed day in either direction breaks the equation.',
+ list:[
+ {id:'p1', name:'Skipped Movement', desc:'The body went still.', stat:'agi',xp:8, consequence:'Motion is medicine. You skipped the dose.'},
+ {id:'p2', name:'No Deep Work Done', desc:'The mind went untrained.', stat:'int',xp:10,consequence:'A balanced operative trains both edges.'},
+ {id:'p3', name:'Skipped Sleep', desc:'Recovery abandoned on both fronts.', stat:'vit',xp:10,consequence:'Without rest, neither body nor mind performs.'},
+ {id:'p4', name:'Ate Without Intention', desc:'Nutrition neglected.', stat:'vit',xp:8, consequence:'The body remembers every choice.'},
+ {id:'p5', name:'Skipped Meditation', desc:'The inner compass left unchecked.', stat:'per',xp:6, consequence:'Balance begins in the mind.'},
+ {id:'p6', name:'Lost to Scrolling 2hrs+', desc:'Attention surrendered.', stat:'int',xp:10,consequence:'What you consume shapes what you become.'},
+ {id:'p7', name:'Skipped Stretching', desc:'Flexibility forsaken.', stat:'per',xp:6, consequence:'Rigidity is the first sign of imbalance.'},
+ {id:'p8', name:'Under-hydrated', desc:'The foundation neglected.', stat:'vit',xp:6, consequence:'Everything runs on water. Including you.'},
+ {id:'p9', name:'Skipped Planning', desc:'Tomorrow is undefended.', stat:'int',xp:6, consequence:'Balance requires intention in advance.'},
+ {id:'p10',name:'Quit Early', desc:'You stopped before completion.', stat:'str',xp:10,consequence:'The balanced operative finishes what they start.'},
+ ]
+ },
+ wellness:{
+ desc:'Restoration is a discipline. Neglecting recovery is not rest — it\'s erosion.',
+ list:[
+ {id:'p1', name:'Skipped Sleep', desc:'The most critical recovery missed.', stat:'vit',xp:15,consequence:'Everything degrades without adequate sleep.'},
+ {id:'p2', name:'Under-hydrated', desc:'The body ran dry.', stat:'vit',xp:10,consequence:'Weakness seeps in where hydration runs out.'},
+ {id:'p3', name:'Skipped Breathwork', desc:'The nervous system went unregulated.', stat:'per',xp:8, consequence:'Breathwork is medicine. You skipped the dose.'},
+ {id:'p4', name:'Skipped Meditation', desc:'Stillness abandoned.', stat:'per',xp:8, consequence:'A restless mind cannot truly restore.'},
+ {id:'p5', name:'Poor Nutrition Today', desc:'You fed the body without intention.', stat:'vit',xp:8, consequence:'Recovery requires quality fuel.'},
+ {id:'p6', name:'Screens Before Bed', desc:'Sleep quality compromised.', stat:'vit',xp:8, consequence:'What you expose yourself to before sleep matters.'},
+ {id:'p7', name:'Skipped Stretching', desc:'The body tightened.', stat:'per',xp:6, consequence:'Flexibility is the body\'s right. You denied it.'},
+ {id:'p8', name:'No Movement Today', desc:'Complete stillness.', stat:'agi',xp:8, consequence:'Even gentle movement is necessary medicine.'},
+ {id:'p9', name:'Skipped Gratitude', desc:'The mindset went uncultivated.', stat:'per',xp:6, consequence:'What you don\'t appreciate, you erode.'},
+ {id:'p10',name:'Isolated Today', desc:'No meaningful connection made.', stat:'per',xp:6, consequence:'Recovery includes the social dimension.'},
+ ]
+ },
+ entrepreneur:{
+ desc:'The business reflects the operator. A missed day of discipline compounds against you.',
+ list:[
+ {id:'p1', name:'No Deep Work Done', desc:'Zero real output today.', stat:'int',xp:15,consequence:'Operators who don\'t build fall behind those who do.'},
+ {id:'p2', name:'No Priority Task Done', desc:'The most important thing ignored.', stat:'int',xp:12,consequence:'Motion without progress is just noise.'},
+ {id:'p3', name:'Lost to Scrolling 2hrs+', desc:'Attention consumed by others\' agendas.',stat:'int',xp:12,consequence:'Your feed is someone else\'s product. Act accordingly.'},
+ {id:'p4', name:'Skipped Learning', desc:'No new knowledge acquired today.', stat:'int',xp:8, consequence:'The operator who stops learning, stops leading.'},
+ {id:'p5', name:'Skipped Planning', desc:'Tomorrow is undefended.', stat:'int',xp:8, consequence:'Reactive operators get outmanoeuvred.'},
+ {id:'p6', name:'No Content Created', desc:'Visibility was surrendered today.', stat:'int',xp:8, consequence:'Your audience forgets those who disappear.'},
+ {id:'p7', name:'No Connections Made', desc:'Network stagnant today.', stat:'per',xp:6, consequence:'Relationships are compound interest. Skipping a day costs.'},
+ {id:'p8', name:'Skipped Sleep', desc:'Executive function compromised.', stat:'int',xp:10,consequence:'Tired leaders make expensive decisions.'},
+ {id:'p9', name:'Skipped Exercise', desc:'Physical energy bank left unfilled.', stat:'agi',xp:8, consequence:'Energy is the entrepreneur\'s most valuable resource.'},
+ {id:'p10',name:'Skipped Journal', desc:'Lessons of the day unprocessed.', stat:'int',xp:6, consequence:'Without reflection, you repeat your mistakes.'},
+ ]
+ },
+ custom:{
+ desc:'You set the standard. Missing your own missions is the deepest failure.',
+ list:[
+ {id:'p1', name:'Skipped Your Work', desc:'Your own mission went undone.', stat:'int',xp:10,consequence:'You designed the system. You chose not to follow it.'},
+ {id:'p2', name:'Lost Focus Today', desc:'Distraction won.', stat:'int',xp:8, consequence:'The protocol only works if you work it.'},
+ {id:'p3', name:'Skipped Sleep', desc:'Recovery neglected.', stat:'vit',xp:10,consequence:'Even custom operatives need rest.'},
+ {id:'p4', name:'Under-hydrated', desc:'Basics ignored.', stat:'vit',xp:6, consequence:'Self-discipline starts with the fundamentals.'},
+ {id:'p5', name:'Skipped Movement', desc:'The body went unattended.', stat:'agi',xp:8, consequence:'Whatever your custom path, the body still needs motion.'},
+ {id:'p6', name:'Skipped Meditation', desc:'No stillness found today.', stat:'per',xp:6, consequence:'Even the most custom journey needs a quiet centre.'},
+ {id:'p7', name:'No Progress Made', desc:'The day passed without advancement.', stat:'int',xp:10,consequence:'Progress is the only proof the system is working.'},
+ {id:'p8', name:'Gave Up Early', desc:'You stopped before completion.', stat:'str',xp:10,consequence:'You wrote the quest. You didn\'t finish it.'},
+ {id:'p9', name:'Skipped Planning', desc:'No preparation for tomorrow.', stat:'int',xp:6, consequence:'Custom paths require intentional navigation.'},
+ {id:'p10',name:'Poor Nutrition', desc:'The body went unfuelled properly.', stat:'vit',xp:6, consequence:'Any protocol breaks down without proper fuel.'},
+ ]
+ },
+};
+const PENALTY_SETS_FEMALE = {
+ fitness:{
+ desc:'Your body keeps the score. You either showed up for it today or you didn\'t.',
+ list:[
+ {id:'p1', name:'Skipped the Run / Walk', desc:'You stayed still when motion heals.', stat:'agi',xp:10,consequence:'A sovereign does not hide from her own body.'},
+ {id:'p2', name:'Missed Strength Work', desc:'Power left undeveloped.', stat:'str',xp:8, consequence:'You are stronger than you let yourself become.'},
+ {id:'p3', name:'Skipped Sleep', desc:'You denied your body its crown.', stat:'vit',xp:10,consequence:'Rest is not weakness. Neglecting it is.'},
+ {id:'p4', name:'Ate Without Nourishment', desc:'You fed the body, not the sovereign.', stat:'vit',xp:8, consequence:'Your body is sacred. Treat it that way.'},
+ {id:'p5', name:'Skipped Cold Shower', desc:'Comfort chosen over discipline.', stat:'vit',xp:6, consequence:'The sovereign who avoids discomfort, limits herself.'},
+ {id:'p6', name:'Under-hydrated', desc:'You forgot your most basic ritual.', stat:'vit',xp:8, consequence:'Self-respect starts with a glass of water.'},
+ {id:'p7', name:'Missed Yoga / Stretch', desc:'The body tightened, the mind followed.', stat:'per',xp:6, consequence:'Flexibility is freedom. You chose the cage.'},
+ {id:'p8', name:'Gave Up Early', desc:'You stopped before the breakthrough.', stat:'str',xp:15,consequence:'The woman you are becoming lives past the point you stopped.'},
+ {id:'p9', name:'Slept Past Intention', desc:'The morning was lost to comfort.', stat:'agi',xp:10,consequence:'Sovereignty means choosing your hours before they choose you.'},
+ {id:'p10',name:'Skipped HIIT / Cardio', desc:'Intensity avoided.', stat:'agi',xp:8, consequence:'Power is built in the moments you didn\'t want to push.'},
+ ]
+ },
+ focus:{
+ desc:'The sovereign mind is cultivated daily. A day without sharpening is a day dulling.',
+ list:[
+ {id:'p1', name:'No Deep Work Done', desc:'The day passed without real output.', stat:'int',xp:15,consequence:'Your potential is not patient. Use it or lose it.'},
+ {id:'p2', name:'Lost to Scrolling 2hrs+', desc:'Your attention was stolen.', stat:'int',xp:12,consequence:'What you consume shapes what you become.'},
+ {id:'p3', name:'Skipped Reading', desc:'The mind went untended.', stat:'int',xp:8, consequence:'A sovereign who stops learning stops leading.'},
+ {id:'p4', name:'Skipped Journal', desc:'Your becoming went unwritten.', stat:'int',xp:6, consequence:'Write the woman. Don\'t just think her.'},
+ {id:'p5', name:'Skipped Meditation', desc:'The inner voice went unheard.', stat:'per',xp:6, consequence:'Stillness is where sovereigns are made.'},
+ {id:'p6', name:'No Priority Task Done', desc:'The most important thing went undone.', stat:'int',xp:12,consequence:'Busy is not the same as powerful.'},
+ {id:'p7', name:'Skipped Planning', desc:'Tomorrow is undefended.', stat:'int',xp:6, consequence:'A sovereign who doesn\'t plan, reacts.'},
+ {id:'p8', name:'Skipped Breathwork', desc:'Regulation neglected.', stat:'per',xp:6, consequence:'Breathe with intention or anxiety will breathe for you.'},
+ {id:'p9', name:'Skipped Sleep', desc:'Cognitive restoration abandoned.', stat:'int',xp:10,consequence:'A rested sovereign outperforms a tired one every time.'},
+ {id:'p10',name:'Under-hydrated', desc:'The sovereign brain ran dry.', stat:'int',xp:6, consequence:'Nourish the mind that carries you.'},
+ ]
+ },
+ balance:{
+ desc:'Balance is a daily practice, not a destination. One side neglected tips the whole.',
+ list:[
+ {id:'p1', name:'Skipped Movement', desc:'The body went still.', stat:'agi',xp:8, consequence:'A sovereign body requires daily motion.'},
+ {id:'p2', name:'No Deep Work Done', desc:'The mind went untrained.', stat:'int',xp:10,consequence:'The balanced sovereign trains both her body and her mind.'},
+ {id:'p3', name:'Skipped Sleep', desc:'The crown left unrestored.', stat:'vit',xp:10,consequence:'A sovereign rests to reign.'},
+ {id:'p4', name:'Ate Without Nourishment', desc:'The vessel left unfuelled with care.', stat:'vit',xp:8, consequence:'Your body is sacred. Feed it accordingly.'},
+ {id:'p5', name:'Skipped Meditation', desc:'The inner compass neglected.', stat:'per',xp:6, consequence:'Balance begins in stillness.'},
+ {id:'p6', name:'Lost to Scrolling 2hrs+', desc:'Attention surrendered.', stat:'int',xp:10,consequence:'What you allow in shapes what comes out.'},
+ {id:'p7', name:'Skipped Stretching', desc:'Flexibility forsaken.', stat:'per',xp:6, consequence:'Flexibility is feminine strength. Don\'t abandon it.'},
+ {id:'p8', name:'Under-hydrated', desc:'The foundation neglected.', stat:'vit',xp:6, consequence:'Everything runs on water. Including you.'},
+ {id:'p9', name:'Skipped Planning', desc:'Tomorrow left unguarded.', stat:'int',xp:6, consequence:'Balance requires intention in advance.'},
+ {id:'p10',name:'Gave Up Early', desc:'You stopped before completion.', stat:'str',xp:10,consequence:'The balanced sovereign finishes what she starts.'},
+ ]
+ },
+ wellness:{
+ desc:'Restoration is a sovereign discipline. Neglect is not rest — it is erosion.',
+ list:[
+ {id:'p1', name:'Skipped Sleep', desc:'Your crown went unrestored.', stat:'vit',xp:15,consequence:'A sovereign who doesn\'t rest cannot truly reign.'},
+ {id:'p2', name:'Under-hydrated', desc:'You forgot your most basic ritual.', stat:'vit',xp:10,consequence:'Self-respect starts with a glass of water.'},
+ {id:'p3', name:'Skipped Breathwork', desc:'The nervous system went untended.', stat:'per',xp:8, consequence:'Breathwork is medicine. You chose to be unwell.'},
+ {id:'p4', name:'Skipped Meditation', desc:'Stillness abandoned.', stat:'per',xp:8, consequence:'A restless mind cannot truly restore.'},
+ {id:'p5', name:'Ate Without Nourishment', desc:'The body went unfed with intention.', stat:'vit',xp:8, consequence:'Your body is sacred. Feed it like it is.'},
+ {id:'p6', name:'Screens Before Bed', desc:'Your sleep quality was compromised.', stat:'vit',xp:8, consequence:'The sovereign who protects her sleep protects everything.'},
+ {id:'p7', name:'Skipped Stretching', desc:'The body tightened.', stat:'per',xp:6, consequence:'Flexibility is a sovereign right. You denied yours.'},
+ {id:'p8', name:'No Movement Today', desc:'Complete stillness chosen.', stat:'agi',xp:8, consequence:'Even gentle movement is necessary medicine.'},
+ {id:'p9', name:'Skipped Gratitude', desc:'The mindset went uncultivated.', stat:'per',xp:6, consequence:'What you don\'t appreciate, you erode.'},
+ {id:'p10',name:'Isolated Today', desc:'No meaningful connection made.', stat:'per',xp:6, consequence:'Restoration includes the soul, not just the body.'},
+ ]
+ },
+ entrepreneur:{
+ desc:'The empire reflects the empress. A missed day of discipline compounds against you.',
+ list:[
+ {id:'p1', name:'No Deep Work Done', desc:'Zero real output today.', stat:'int',xp:15,consequence:'The empire is built one focused hour at a time.'},
+ {id:'p2', name:'No Priority Task Done', desc:'The most important thing ignored.', stat:'int',xp:12,consequence:'Busy is not powerful. Output is.'},
+ {id:'p3', name:'Lost to Scrolling 2hrs+', desc:'Attention consumed by others\' agendas.',stat:'int',xp:12,consequence:'Your feed is someone else\'s empire. Build your own.'},
+ {id:'p4', name:'Skipped Learning', desc:'No new knowledge today.', stat:'int',xp:8, consequence:'The empress who stops learning stops leading.'},
+ {id:'p5', name:'Skipped Planning', desc:'Tomorrow left unguarded.', stat:'int',xp:8, consequence:'Reactive empresses get outmanoeuvred.'},
+ {id:'p6', name:'No Content Created', desc:'Visibility surrendered today.', stat:'int',xp:8, consequence:'Your audience forgets those who disappear.'},
+ {id:'p7', name:'No Connections Made', desc:'Network stagnant.', stat:'per',xp:6, consequence:'Relationships are compound interest. Every missed day costs.'},
+ {id:'p8', name:'Skipped Sleep', desc:'The sovereign mind went unrestored.', stat:'int',xp:10,consequence:'Tired empresses make expensive decisions.'},
+ {id:'p9', name:'Skipped Movement', desc:'Physical energy left unfilled.', stat:'agi',xp:8, consequence:'Energy is the empress\'s most valuable currency.'},
+ {id:'p10',name:'Skipped Journal', desc:'The day\'s lessons went unprocessed.', stat:'int',xp:6, consequence:'Without reflection, history repeats itself.'},
+ ]
+ },
+ custom:{
+ desc:'You wrote the rites. Missing them is a conversation with yourself.',
+ list:[
+ {id:'p1', name:'Skipped Your Rite', desc:'Your own mission went undone.', stat:'int',xp:10,consequence:'You designed the system. You chose not to honour it.'},
+ {id:'p2', name:'Lost Focus Today', desc:'Distraction won.', stat:'int',xp:8, consequence:'The protocol only works if you work it.'},
+ {id:'p3', name:'Skipped Sleep', desc:'Your crown went unrestored.', stat:'vit',xp:10,consequence:'Even the most sovereign path requires rest.'},
+ {id:'p4', name:'Under-hydrated', desc:'Basics ignored.', stat:'vit',xp:6, consequence:'Self-care starts with the fundamentals.'},
+ {id:'p5', name:'Skipped Movement', desc:'The body went unattended.', stat:'agi',xp:8, consequence:'Whatever your path, the body still needs motion.'},
+ {id:'p6', name:'Skipped Meditation', desc:'No stillness found today.', stat:'per',xp:6, consequence:'Even the most custom journey needs a quiet centre.'},
+ {id:'p7', name:'No Progress Made', desc:'The day passed without advancement.', stat:'int',xp:10,consequence:'Progress is the only proof the system is working.'},
+ {id:'p8', name:'Gave Up Early', desc:'You stopped before completion.', stat:'str',xp:10,consequence:'You wrote the rite. You didn\'t finish it.'},
+ {id:'p9', name:'Skipped Planning', desc:'No preparation for tomorrow.', stat:'int',xp:6, consequence:'Custom paths require intentional navigation.'},
+ {id:'p10',name:'Poor Nutrition', desc:'The vessel left improperly fuelled.', stat:'vit',xp:6, consequence:'Any sovereign protocol breaks down without proper fuel.'},
+ ]
+ },
+};
+function defaultState(mode){
+ const presets=mode==='female'?PRESETS_FEMALE:PRESETS_MALE;
+ return {
+ name:'YOUR NAME', level:1, xp:0, totalXP:0,
+ stats:{str:1,agi:1,vit:1,int:1,per:1},
+ quests:JSON.parse(JSON.stringify(presets.fitness.quests)),
+ log:[], streak:0, lastDate:null, totalCompleted:0,
+ totalPenalties:0, triggeredPenalties:[], mode:mode,
+ snapshots:[], weeklyStats:{missions:0,xp:0,penalties:0},
+ boss:null, lastWeekSummary:null, activePreset:'fitness',
+ customQuests:[], questEdits:{},
+ resetHour:0, resetMinute:0, hasSetDefaults:false, collapsedSections:{},
+ activeTheme:mode==='male'?'void':'eclipse'
+ };
+}
+function loadState(){
+ try{
+ const s=localStorage.getItem('ascendant_v1');
+ if(s){
+ const parsed=JSON.parse(s);
+ if(!parsed.activePreset) parsed.activePreset='fitness';
+ if(!parsed.customQuests) parsed.customQuests=[];
+ if(!parsed.questEdits) parsed.questEdits={};
+ if(parsed.resetHour===undefined) parsed.resetHour=0;
+ if(parsed.resetMinute===undefined) parsed.resetMinute=0;
+ if(parsed.hasSetDefaults===undefined) parsed.hasSetDefaults=false;
+      if(!parsed.collapsedSections) parsed.collapsedSections={};
+ if(!parsed.activeTheme) parsed.activeTheme=parsed.mode==='female'?'eclipse':'void';
+ return parsed;
+ }
+ }catch(e){}
+ return defaultState('male');
+}
+function saveState(){localStorage.setItem('ascendant_v1',JSON.stringify(state));}
+let state=loadState();
+if(!state.triggeredPenalties)state.triggeredPenalties=[];
+function xpForLevel(l){return Math.floor(100*Math.pow(1.2,l-1));}
+function ts(){return new Date().toTimeString().slice(0,5);}
+function addLog(msg,type='info'){state.log.unshift({msg,type,ts:ts()});if(state.log.length>40)state.log.pop();renderLog();saveState();}
+function getMode(){return state.mode||'male';}
+function getTitles(){return getMode()==='female'?TITLES_FEMALE:TITLES_MALE;}
+function getRanks(){return getMode()==='female'?RANKS_FEMALE:RANKS_MALE;}
+function getRankColors(){return getMode()==='female'?RANK_SYMBOLS_FEMALE:RANK_SYMBOLS_MALE;}
+function getActivePenaltySet(){
+ const preset=state.activePreset||'fitness';
+ const sets=getMode()==='female'?PENALTY_SETS_FEMALE:PENALTY_SETS_MALE;
+ return sets[preset]||sets.fitness;
+}
+function getPenalties(){return getActivePenaltySet().list;}
+function getTheme(){return THEME[getMode()];}
+function setMode(mode){
+ if(state.mode===mode) return;
+ state.mode=mode;
+ state.activeTheme=mode==='male'?'void':'eclipse'; 
+ const presets=mode==='female'?PRESETS_FEMALE:PRESETS_MALE;
+ const activeId=state.activePreset||'fitness';
+ const preset=presets[activeId]||presets.fitness;
+ state.quests=JSON.parse(JSON.stringify(preset.quests));
+ state.triggeredPenalties=[];
+ saveState();
+ applyTheme();
+ applyThemeClass();
+ pColors=getParticleColors();
+ renderAll();
+ restoreCollapsedSections();
+ speak(getTheme().greet(state.name,state.level),true);
+}
+function applyTheme(){
+ const mode=getMode();
+ document.body.className=`mode-${mode}`;
+ const t=getTheme();
+ document.getElementById('sysLabel').textContent=t.sysLabel;
+ document.getElementById('mainTitle').textContent=t.title;
+ document.getElementById('subtitleMode').textContent=t.subtitle;
+ document.getElementById('nameLabel').textContent=t.nameLabel;
+ document.getElementById('xpLabelText').textContent=t.xpLabel;
+ document.getElementById('lvlLabel').textContent=t.lvlLabel;
+ document.getElementById('statsHeader').textContent=t.statsHeader;
+ document.getElementById('questsHeader').textContent=t.questsHeader;
+ document.getElementById('questsHeaderLabel').textContent=t.questsHeaderLabel;
+ document.getElementById('logLabel').textContent=t.logLabel;
+ document.getElementById('penaltyHeaderLabel').textContent=t.penaltyHeader;
+ document.getElementById('penaltySubtitle').textContent=t.penaltySubtitle;
+ document.getElementById('noticeText').innerHTML=t.noticeText.replace('Only you know what you skipped.','<b>Only you know what you skipped.</b>').replace('Uncompleted','<b>Uncompleted');
+ document.getElementById('resetBtn').textContent=t.resetBtn;
+ if(mode==='female'){
+ document.getElementById('icon-str').textContent='🏋️';
+ document.getElementById('icon-agi').textContent='⚡';
+ document.getElementById('icon-vit').textContent='🌸';
+ document.getElementById('icon-int').textContent='👑';
+ document.getElementById('icon-per').textContent='🌙';
+ } else {
+ document.getElementById('icon-str').textContent='⚔️';
+ document.getElementById('icon-agi').textContent='💨';
+ document.getElementById('icon-vit').textContent='❤️';
+ document.getElementById('icon-int').textContent='🧠';
+ document.getElementById('icon-per').textContent='👁️';
+ }
+ document.querySelector('.app').classList.add('switching');
+ setTimeout(()=>document.querySelector('.app').classList.remove('switching'),400);
+}
+const voiceBtn=document.getElementById('voiceBtn');
+function speak(text,priority=false){
+ if(!window.speechSynthesis)return;
+ if(priority)speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(text);
+ u.rate=0.9;u.pitch=getMode()==='female'?1.05:0.8;u.volume=1;
+ const voices=speechSynthesis.getVoices();
+ let v;
+ if(getMode()==='female'){
+ v=voices.find(v=>v.name.includes('Samantha')||v.name.includes('Karen')||v.name.includes('Victoria')||v.name.includes('Moira')||(v.lang.startsWith('en')&&v.name.toLowerCase().includes('female')))||voices.find(v=>v.lang.startsWith('en'));
+ } else {
+ v=voices.find(v=>v.name.includes('Daniel')||v.name.includes('Arthur')||v.name.includes('Alex')||v.lang==='en-GB')||voices.find(v=>v.lang.startsWith('en'));
+ }
+ if(v)u.voice=v;
+ voiceBtn.classList.add('speaking');
+ document.getElementById('voiceStatus').textContent='SYSTEM SPEAKING...';
+ document.getElementById('voiceStatus').className='voice-status speaking';
+ document.getElementById('voiceTranscript').textContent=text;
+ u.onend=()=>{voiceBtn.classList.remove('speaking');document.getElementById('voiceStatus').textContent='VOICE SYSTEM READY';document.getElementById('voiceStatus').className='voice-status';document.getElementById('voiceTranscript').textContent='Tap mic or say "ascend"...';};
+ speechSynthesis.speak(u);
+}
+speechSynthesis.onvoiceschanged=()=>speechSynthesis.getVoices();
+let recog=null,listening=false;
+// ── VOICE SYSTEM ──
+const isAndroid=/Android/i.test(navigator.userAgent);
+let micPermissionGranted=false;
+
+function setVoiceStatus(status,transcript){
+ if(status) document.getElementById('voiceStatus').textContent=status;
+ if(transcript!==undefined) document.getElementById('voiceTranscript').textContent=transcript;
+}
+
+function buildRecog(){
+ const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+ if(!SR) return null;
+ const r=new SR();
+ r.continuous=false;r.interimResults=true;r.lang='en-US';
+ r.onstart=()=>{
+  listening=true;
+  voiceBtn.classList.add('listening');voiceBtn.textContent='🔴';
+  document.getElementById('voiceStatus').textContent='LISTENING...';
+  document.getElementById('voiceStatus').className='voice-status active';
+  document.getElementById('voiceTranscript').textContent='...';
+  startWave();
+ };
+ r.onresult=e=>{
+  const t=Array.from(e.results).map(r=>r[0].transcript).join('').toLowerCase().trim();
+  document.getElementById('voiceTranscript').textContent='"'+t+'"';
+  if(e.results[e.results.length-1].isFinal)processCmd(t);
+ };
+ r.onerror=e=>{
+  stopListening();
+  const msgs={
+   'not-allowed':isAndroid
+    ?'Mic blocked. Go to Chrome Settings → Site Settings → Microphone → allow this site.'
+    :'Microphone access denied. Check your browser settings.',
+   'network':'Network error. Check your connection.',
+   'no-speech':'No speech detected. Tap and try again.',
+   'audio-capture':'No microphone found on this device.',
+   'service-not-allowed':'Voice requires HTTPS. Use the Dropbox link.',
+  };
+  setVoiceStatus('MIC ERROR',msgs[e.error]||`Error: ${e.error}`);
+  addLog(`Voice error: ${e.error}`,'danger');
+  micPermissionGranted=false;
+ };
+ r.onend=stopListening;
+ return r;
+}
+
+function startRecog(){
+ recog=buildRecog();
+ if(!recog){
+  setVoiceStatus('NOT SUPPORTED','Use Chrome or Edge for voice commands.');
+  return;
+ }
+ try{recog.start();}
+ catch(e){setVoiceStatus('VOICE SYSTEM READY','Could not start. Tap again.');recog=null;}
+}
+
+function stopListening(){
+ listening=false;
+ voiceBtn.classList.remove('listening');
+ voiceBtn.textContent='🎙';
+ document.getElementById('voiceStatus').textContent='VOICE SYSTEM READY';
+ document.getElementById('voiceStatus').className='voice-status';
+ stopWave();
+}
+
+function toggleVoice(){
+ if(listening){if(recog)recog.stop();return;}
+ if(isAndroid&&navigator.permissions&&navigator.permissions.query){
+  navigator.permissions.query({name:'microphone'}).then(result=>{
+   if(result.state==='granted'){
+    micPermissionGranted=true;startRecog();
+   } else if(result.state==='prompt'){
+    setVoiceStatus('REQUESTING MIC...','Allow microphone when prompted.');
+    navigator.mediaDevices&&navigator.mediaDevices.getUserMedia({audio:true})
+     .then(stream=>{stream.getTracks().forEach(t=>t.stop());micPermissionGranted=true;startRecog();})
+     .catch(()=>startRecog());
+   } else {
+    setVoiceStatus('MIC BLOCKED','Go to Chrome Settings → Site Settings → Microphone → Allow this site.');
+    addLog('Mic blocked in Chrome settings','danger');
+   }
+  }).catch(()=>startRecog());
+ } else {
+  startRecog();
+ }
+}
+function processCmd(text){
+ addLog(`Voice: "${text}"`, 'info');
+ const t=getTheme();
+ if(text.includes('ascend')||text.includes('arise')){
+ speak(t.voiceGreet(state.name,state.level,getTitles()[Math.min(state.level-1,getTitles().length-1)]),true);return;
+ }
+ if(text.includes('status')||text.includes('report')){
+ const rem=state.quests.filter(q=>!q.completed).length;
+ speak(`Level ${state.level}. ${state.xp} of ${xpForLevel(state.level)} experience. ${rem} missions remain. Streak ${state.streak} days.`,true);return;
+ }
+ if(text.includes('stat')||text.includes('attribute')){
+ const s=state.stats;
+ speak(`Strength ${s.str}. Agility ${s.agi}. Vitality ${s.vit}. Intelligence ${s.int}. Perception ${s.per}.`,true);return;
+ }
+ if(text.includes('quest')||text.includes('mission')||text.includes('rite')||text.includes('task')){
+ const rem=state.quests.filter(q=>!q.completed);
+ speak(rem.length===0?'All missions complete. The Protocol acknowledges your discipline.':`${rem.length} missions remain: ${rem.map(q=>q.name).join(', ')}.`,true);return;
+ }
+ if(text.includes('reset day')||text.includes('new day')){resetDay();speak('Daily missions reset.',true);return;}
+ const cKW=['complete','finish','done','finished','completed'];
+ const uKW=['uncheck','undo','remove','incomplete'];
+ let action=null;
+ if(cKW.some(k=>text.includes(k)))action='complete';
+ else if(uKW.some(k=>text.includes(k)))action='uncheck';
+ if(action){
+ let cleaned=text;
+ [...cKW,...uKW,'quest','mission','rite','the','my','a','with','i','done','just'].forEach(w=>{cleaned=cleaned.replace(new RegExp('\\b'+w+'\\b','gi'),'');});
+ cleaned=cleaned.trim();
+ let best=null,bestScore=0;
+ state.quests.forEach(q=>{
+ const ql=q.name.toLowerCase();
+ if(ql.includes(cleaned)&&cleaned.length>2){best=q;bestScore=1;return;}
+ const words=cleaned.split(' ').filter(w=>w.length>2);
+ const score=words.filter(w=>ql.includes(w)).length/Math.max(words.length,1);
+ if(score>bestScore){bestScore=score;best=q;}
+ });
+ if(best&&bestScore>0){
+ if(action==='complete'&&!best.completed){
+ const lvlBefore=state.level;toggleQuest(best.id);
+ speak(`${t.questComplete(best.name,best.xp)}${state.level>lvlBefore?' Level up! You are now level '+state.level+'!':''}`,true);
+ }else if(action==='uncheck'&&best.completed){toggleQuest(best.id);speak(`${best.name} unchecked.`,true);}
+ else if(action==='complete'&&best.completed){speak(`${best.name} is already complete.`,true);}
+ else{speak(`${best.name} is not yet complete.`,true);}
+ }else{speak(`Mission not found. Remaining: ${state.quests.filter(q=>!q.completed).slice(0,3).map(q=>q.name).join(', ')}.`,true);}
+ return;
+ }
+ speak('Command not recognised. Say ascend, status, missions, or complete followed by a mission name.',true);
+}
+function toggleSection(bodyId,chevronId){
+ const body=document.getElementById(bodyId);
+ const btn=document.getElementById(chevronId);
+ const isCollapsed=body.classList.toggle('collapsed');
+ btn.classList.toggle('collapsed',isCollapsed);
+ if(!state.collapsedSections)state.collapsedSections={};
+ state.collapsedSections[bodyId]=isCollapsed;
+ saveState();
+}
+function restoreCollapsedSections(){
+ if(!state.collapsedSections)return;
+ Object.entries(state.collapsedSections).forEach(([bodyId,isCollapsed])=>{
+  const body=document.getElementById(bodyId);
+  const chevId=bodyId.replace('Body','Chevron');
+  const btn=document.getElementById(chevId);
+  if(body)body.classList.toggle('collapsed',isCollapsed);
+  if(btn)btn.classList.toggle('collapsed',isCollapsed);
+ });
+}
+function renderLog(){
+ document.getElementById('logEntries').innerHTML=state.log.map(l=>`<div class="log-entry ${l.type}"><span class="ts">[${l.ts}]</span>${l.msg}</div>`).join('');
+ document.getElementById('logDate').textContent=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric'});
+}
+function renderPlayer(){
+ const l=state.level;
+ const ranks=getRanks(),rankColors=getRankColors(),titles=getTitles();
+ const rank=ranks[Math.min(l,ranks.length-1)];
+ const title=titles[Math.min(l-1,titles.length-1)];
+ document.getElementById('playerLevel').textContent=l;
+ document.getElementById('playerTitle').textContent=`[ ${title} ]`;
+ document.getElementById('streakVal').textContent=state.streak;
+ document.getElementById('totalCompleted').textContent=state.totalCompleted;
+ document.getElementById('totalXPVal').textContent=state.totalXP;
+ document.getElementById('playerName').value=state.name;
+ const b=document.getElementById('rankBadge');
+ b.textContent=toRoman(l);
+ const rc=rankColors[rank]||'#888';
+ b.style.color=rc;b.style.borderColor=rc;b.style.boxShadow=`0 0 20px ${rc}66,inset 0 0 20px ${rc}22`;
+ const needed=xpForLevel(l);
+ document.getElementById('xpFill').style.width=Math.min((state.xp/needed)*100,100)+'%';
+ document.getElementById('xpText').textContent=`${state.xp} / ${needed}`;
+}
+function toRoman(n){
+ const v=[1000,900,500,400,100,90,50,40,10,9,5,4,1];
+ const s=['M','CM','D','CD','C','XC','L','XL','X','IX','V','IV','I'];
+ let r='';for(let i=0;i<v.length;i++){while(n>=v[i]){r+=s[i];n-=v[i];}}return r;
+}
+function renderStats(){
+ const s=state.stats,cap=Math.max(20,...Object.values(s));
+ ['str','agi','vit','int','per'].forEach(k=>{
+ document.getElementById('stat-'+k).textContent=s[k];
+ document.getElementById('bar-'+k).style.width=Math.max(5,(s[k]/cap)*100)+'%';
+ });
+}
+function getPresets(){return getMode()==='female'?PRESETS_FEMALE:PRESETS_MALE;}
+function switchPreset(presetId){
+ if(!state.activePreset) state.activePreset='fitness';
+ if(presetId===state.activePreset && presetId!=='custom') return;
+ const completed=state.quests.filter(q=>q.completed);
+ if(completed.length>0){
+ const bonus=completed.length*5;
+ state.xp+=bonus; state.totalXP+=bonus;
+ if(!state.weeklyStats) state.weeklyStats={missions:0,xp:0,penalties:0};
+ state.weeklyStats.xp=(state.weeklyStats.xp||0)+bonus;
+ addLog(`Carry-over bonus: ${completed.length} completed mission${completed.length>1?'s':''} → +${bonus} XP`,'level');
+ checkAndTriggerLevelUp();
+ }
+ state.activePreset=presetId;
+ state.triggeredPenalties=[]; 
+ if(presetId==='custom'){
+ if(!state.customQuests) state.customQuests=[];
+ state.quests=state.customQuests.map(q=>({...q,completed:false}));
+ } else {
+ const presets=getPresets();
+ const preset=presets[presetId];
+ if(!preset) return;
+ const fresh=JSON.parse(JSON.stringify(preset.quests));
+ state.quests=fresh.map(q=>{
+ const renamed=state.questEdits&&state.questEdits[q.id];
+ if(renamed){q.name=renamed.name||q.name;q.alias=renamed.alias||null;q.desc=renamed.desc||q.desc;}
+ return q;
+ });
+ }
+ saveState();renderAll();
+}
+function getActivePresetMeta(){
+ if(state.activePreset==='custom') return {label:'✏ CUSTOM',desc:'Your personally added missions.'};
+ const p=getPresets()[state.activePreset];
+ return p||getPresets().fitness;
+}
+function renderPresetTabs(){
+ const tabsEl=document.getElementById('presetTabs');
+ const descEl=document.getElementById('presetTabDesc');
+ const active=state.activePreset||'fitness';
+ const presets=getPresets();
+ const tabs=[...PRESET_ORDER];
+ if(state.customQuests&&state.customQuests.length>0) tabs.push('custom');
+ tabsEl.innerHTML=tabs.map(id=>{
+ const label=id==='custom'?'✏ CUSTOM':(presets[id]?.label||id.toUpperCase());
+ return `<button class="preset-tab${active===id?' active':''}" onclick="switchPreset('${id}')">${label}</button>`;
+ }).join('');
+ const meta=getActivePresetMeta();
+ const descOpen=state.presetDescOpen!==false;
+ descEl.innerHTML=`
+ <span style="cursor:pointer;display:flex;align-items:center;gap:8px;justify-content:space-between;" onclick="togglePresetDesc()">
+ <span style="flex:1;">${meta.desc||''}</span>
+ <span style="font-family:var(--mono-font);font-size:10px;color:var(--text-dim);flex-shrink:0;">${descOpen?'▲':'▼'}</span>
+ </span>
+ `;
+ descEl.style.display=meta.desc?'block':'none';
+ if(!descOpen) descEl.querySelector('span>span:first-child').style.display='none';
+}
+function togglePresetDesc(){
+ state.presetDescOpen=!(state.presetDescOpen!==false);
+ saveState();renderPresetTabs();
+}
+function renderQuests(){
+ renderPresetTabs();
+ const list=document.getElementById('questList'),done=state.quests.filter(q=>q.completed).length;
+ document.getElementById('questCount').textContent=`${done}/${state.quests.length}`;
+ list.innerHTML=state.quests.map(q=>`
+ <div class="quest-item ${q.completed?'completed':''}" onclick="toggleQuest('${q.id}')">
+ <div class="quest-check">${q.completed?'✓':''}</div>
+ <div class="quest-body">
+ <div class="quest-name">${q.name}</div>
+ ${q.alias?`<div class="quest-alias">↳ ${q.alias}</div>`:''}
+ <div class="quest-desc">${q.desc}</div>
+ </div>
+ <div class="quest-reward">
+ <div class="quest-xp">+${q.xp} XP</div>
+ <div class="quest-stat">+1 ${q.stat.toUpperCase()}</div>
+ </div>
+ <button class="quest-edit-btn" onclick="openEditModal(event,'${q.id}')" title="Rename / Substitute">✏</button>
+ </div>`).join('');
+}
+function toggleQuest(id){
+ const q=state.quests.find(q=>q.id===id);if(!q)return;
+ if(!state.weeklyStats)state.weeklyStats={missions:0,xp:0,penalties:0};
+ if(!q.completed){
+ const xpMult=hasSkill('xpBoost')?1.25:1;
+ const earnedXP=Math.round(q.xp*xpMult);
+ q.completed=true;
+ state.xp+=earnedXP;state.totalXP+=earnedXP;
+ state.weeklyStats.xp=(state.weeklyStats.xp||0)+earnedXP;
+ let statGain=1;
+ if(q.stat==='agi'&&hasSkill('doubleAgi'))statGain=2;
+ if(q.stat==='int'&&hasSkill('doubleInt'))statGain=2;
+ if(q.stat==='str'&&hasSkill('doubleStr'))statGain=2;
+ if(q.stat==='per'&&hasSkill('doublePerc'))statGain=2;
+ state.stats[q.stat]=(state.stats[q.stat]||1)+statGain;
+ state.totalCompleted++;
+ addLog(`Mission complete: ${q.name} (+${earnedXP} XP, +${statGain} ${q.stat.toUpperCase()})${xpMult>1?' [XP Boost]':''}${statGain>1?' [Skill]':''}`, 'good');
+ if(state.quests.every(q=>q.completed)){
+ const perfectBonus=Math.round(earnedXP*0.5); 
+ state.xp+=perfectBonus;state.totalXP+=perfectBonus;
+ addLog(`⚡ PERFECT DAY UNLOCKED — +${perfectBonus} bonus XP`,'level');
+ }
+ checkAndTriggerLevelUp();
+ } else {
+ q.completed=false;
+ const xpMult=hasSkill('xpBoost')?1.25:1;
+ const earnedXP=Math.round(q.xp*xpMult);
+ state.xp=Math.max(0,state.xp-earnedXP);state.totalXP=Math.max(0,state.totalXP-earnedXP);
+ state.weeklyStats.xp=Math.max(0,(state.weeklyStats.xp||0)-earnedXP);
+ let statGain=1;
+ if(q.stat==='agi'&&hasSkill('doubleAgi'))statGain=2;
+ if(q.stat==='int'&&hasSkill('doubleInt'))statGain=2;
+ if(q.stat==='str'&&hasSkill('doubleStr'))statGain=2;
+ if(q.stat==='per'&&hasSkill('doublePerc'))statGain=2;
+ state.stats[q.stat]=Math.max(1,(state.stats[q.stat]||1)-statGain);
+ state.totalCompleted=Math.max(0,state.totalCompleted-1);
+ addLog(`Mission unchecked: ${q.name}`,'info');
+ }
+ saveState();renderAll();
+}
+let pendingBonusPoints=0;
+let pendingLevelUpNum=0;
+let allocatedThisSession={str:0,agi:0,vit:0,int:0,per:0};
+function bonusPointsForLevel(lvl){
+ return lvl%5===0?2:1; 
+}
+function checkLevelUp(){
+ const needed=xpForLevel(state.level);
+ if(state.xp>=needed){
+ state.xp-=needed;
+ state.level++;
+ const bonus=bonusPointsForLevel(state.level);
+ pendingBonusPoints+=bonus;
+ pendingLevelUpNum=state.level;
+ addLog(`ASCENDED! Level ${state.level} — ${getTitles()[Math.min(state.level-1,getTitles().length-1)]}${state.level%5===0?' [MILESTONE — 2 bonus points]':''}`,'level');
+ checkLevelUp(); 
+ }
+}
+function showLevelUp(lvl){
+ document.getElementById('levelupNum').textContent=lvl;
+ document.getElementById('levelupText').textContent=getTheme().levelUpText;
+ document.getElementById('levelupSub').textContent=getTheme().levelUpSub;
+ document.getElementById('levelupOverlay').classList.add('show');
+ setTimeout(()=>speak(`Level up! You are now level ${lvl}. ${getTitles()[Math.min(lvl-1,getTitles().length-1)]}. You grow stronger.`,true),400);
+}
+function closeLevelUp(){
+ document.getElementById('levelupOverlay').classList.remove('show');
+ if(pendingBonusPoints>0) showAllocation();
+}
+function showAllocation(){
+ const isFemale=getMode()==='female';
+ allocatedThisSession={str:0,agi:0,vit:0,int:0,per:0};
+ document.getElementById('allocateTitle').textContent=`LEVEL ${pendingLevelUpNum}`;
+ document.getElementById('allocateSub').textContent=isFemale?'INVEST YOUR SOVEREIGN BONUS':'ALLOCATE YOUR BONUS POINTS';
+ document.getElementById('allocateHint').textContent=
+ `Tap a stat to invest your bonus point. Every 5 levels you earn 2 points.${pendingLevelUpNum%5===0?' This is a milestone level — you have 2 points.':''}`;
+ if(isFemale){
+ document.getElementById('alloc-icon-str').textContent='🏋️';
+ document.getElementById('alloc-icon-agi').textContent='⚡';
+ document.getElementById('alloc-icon-vit').textContent='🌸';
+ document.getElementById('alloc-icon-int').textContent='👑';
+ document.getElementById('alloc-icon-per').textContent='🌙';
+ } else {
+ document.getElementById('alloc-icon-str').textContent='⚔️';
+ document.getElementById('alloc-icon-agi').textContent='💨';
+ document.getElementById('alloc-icon-vit').textContent='❤️';
+ document.getElementById('alloc-icon-int').textContent='🧠';
+ document.getElementById('alloc-icon-per').textContent='👁️';
+ }
+ updateAllocationUI();
+ document.getElementById('allocateOverlay').classList.add('show');
+}
+function updateAllocationUI(){
+ ['str','agi','vit','int','per'].forEach(k=>{
+ document.getElementById('alloc-val-'+k).textContent=state.stats[k];
+ const gained=allocatedThisSession[k];
+ const gainEl=document.getElementById('alloc-gain-'+k);
+ gainEl.textContent=gained>0?`+${gained} allocated`:'';
+ gainEl.style.color=gained>0?'var(--accent3)':'';
+ });
+ document.getElementById('allocatePointsLeft').textContent=pendingBonusPoints;
+ const confirm=document.getElementById('allocateConfirm');
+ confirm.style.display=pendingBonusPoints===0?'block':'none';
+}
+function allocatePoint(stat){
+ if(pendingBonusPoints<=0)return;
+ state.stats[stat]=(state.stats[stat]||1)+1;
+ allocatedThisSession[stat]=(allocatedThisSession[stat]||0)+1;
+ pendingBonusPoints--;
+ addLog(`Bonus point invested: +1 ${stat.toUpperCase()} (now ${state.stats[stat]})`,'level');
+ saveState();
+ updateAllocationUI();
+ renderStats();
+ if(pendingBonusPoints===0){
+ document.getElementById('allocateConfirm').style.display='block';
+ }
+}
+function confirmAllocation(){
+ document.getElementById('allocateOverlay').classList.remove('show');
+ saveState();
+ renderAll();
+ if(pendingLevelUpNum>0) showLevelUp(pendingLevelUpNum);
+}
+function checkAndTriggerLevelUp(){
+ pendingBonusPoints=0;
+ pendingLevelUpNum=0;
+ checkLevelUp();
+ if(pendingBonusPoints>0) showAllocation();
+ else if(pendingLevelUpNum>0) showLevelUp(pendingLevelUpNum);
+}
+function renderPenalties(){
+ const penaltySet=getActivePenaltySet();
+ const penalties=penaltySet.list;
+ const triggered=penalties.filter(p=>state.triggeredPenalties&&state.triggeredPenalties.includes(p.id)).length;
+ document.getElementById('penaltyCount').textContent=triggered+' penalties';
+ document.getElementById('noticeText').innerHTML=
+ `${penaltySet.desc} <b>Only you know what you skipped.</b><br>Log your failures honestly — accept the cost — rise anyway.<br><b>Uncompleted missions at day\'s end invoke automatic penalties.</b>`;
+ document.getElementById('penaltyList').innerHTML=penalties.map(p=>{
+ const done=state.triggeredPenalties&&state.triggeredPenalties.includes(p.id);
+ return `<div class="penalty-item ${done?'triggered':''}" onclick="triggerPenalty('${p.id}')">
+ <div class="penalty-btn">${done?'✗':''}</div>
+ <div class="penalty-body">
+ <div class="penalty-name">${p.name}</div>
+ <div class="penalty-desc">${p.desc}</div>
+ <div class="penalty-consequence">"${p.consequence}"</div>
+ </div>
+ <div class="penalty-cost">
+ <div class="penalty-xp">-${p.xp} XP</div>
+ <div class="penalty-stat-cost">-1 ${p.stat.toUpperCase()}</div>
+ </div>
+ </div>`;
+ }).join('');
+}
+function triggerPenalty(id){
+ if(!state.triggeredPenalties)state.triggeredPenalties=[];
+ const penalties=getPenalties();
+ const p=penalties.find(p=>p.id===id);if(!p)return;
+ if(state.triggeredPenalties.includes(id)){
+ state.triggeredPenalties=state.triggeredPenalties.filter(x=>x!==id);
+ state.xp=Math.min(state.xp+p.xp,xpForLevel(state.level)-1);
+ state.stats[p.stat]=Math.max(1,(state.stats[p.stat]||1)+1);
+ state.totalPenalties=Math.max(0,(state.totalPenalties||0)-1);
+ addLog(`Penalty cleared: ${p.name}`,'info');saveState();renderAll();return;
+ }
+ state.triggeredPenalties.push(id);
+ state.xp=Math.max(0,state.xp-p.xp);
+ state.stats[p.stat]=Math.max(1,(state.stats[p.stat]||1)-1);
+ state.totalPenalties=(state.totalPenalties||0)+1;
+ addLog(`PENALTY: ${p.name} (-${p.xp} XP, -1 ${p.stat.toUpperCase()})`,'danger');
+ showPenalty(p);saveState();renderAll();
+}
+function showPenalty(p){
+ const icons={str:'💪',agi:'🏃',vit:'❤️',int:'🧠',per:'👁️'};
+ document.getElementById('penaltyIcon').textContent=icons[p.stat]||'⚠️';
+ document.getElementById('penaltyTitle').textContent=getMode()==='female'?'SHADOW PENALTY':'PENALTY APPLIED';
+ document.getElementById('penaltyMsg').innerHTML=`<b style="color:var(--danger)">${p.name}</b><br><br>"${p.consequence}"<br><br><span style="opacity:0.5">-${p.xp} XP · -1 ${p.stat.toUpperCase()}</span>`;
+ document.getElementById('penaltyOverlay').classList.add('show');
+ speak(`Penalty registered. ${p.name}. ${p.consequence}`,true);
+}
+function closePenalty(){document.getElementById('penaltyOverlay').classList.remove('show');}
+function addCustomQuest(){
+ const name=document.getElementById('newQuestName').value.trim();
+ const stat=document.getElementById('newQuestStat').value;
+ const xp=Math.min(50,Math.max(1,parseInt(document.getElementById('newQuestXP').value)||10));
+ if(!name)return;
+ if(!state.customQuests)state.customQuests=[];
+ const q={id:'q'+Date.now(),name,desc:'Custom mission',stat,xp,completed:false};
+ state.customQuests.push(q);
+ addLog(`Mission registered: ${name}`,'info');
+ document.getElementById('newQuestName').value='';document.getElementById('newQuestXP').value='';
+ state.activePreset='custom';
+ state.quests=state.customQuests.map(q=>({...q,completed:false}));
+ saveState();renderAll();
+}
+function resetDay(){
+ if(!state.triggeredPenalties)state.triggeredPenalties=[];
+ if(!state.weeklyStats)state.weeklyStats={missions:0,xp:0,penalties:0};
+ if(!state.snapshots)state.snapshots=[];
+ const today=new Date().toDateString();
+ const allDone=state.quests.every(q=>q.completed);
+ const questPenaltyMap={str:['p2','p10'],agi:['p1','p9'],vit:['p3','p8'],int:['p5','p6'],per:['p7']};
+ const unfinished=state.quests.filter(q=>!q.completed);
+ const failedStats=new Set(unfinished.map(q=>q.stat));
+ const autoApplied=[];
+ const penalties=getPenalties();
+ const penaltyMult=hasSkill('penaltyReduce')?0.7:1;
+ failedStats.forEach(stat=>{
+ (questPenaltyMap[stat]||[]).forEach(pid=>{
+ if(!state.triggeredPenalties.includes(pid)){
+ const p=penalties.find(p=>p.id===pid);
+ if(p){
+ state.triggeredPenalties.push(pid);
+ const cost=Math.round(p.xp*penaltyMult);
+ state.xp=Math.max(0,state.xp-cost);
+ state.stats[p.stat]=Math.max(1,(state.stats[p.stat]||1)-1);
+ state.totalPenalties=(state.totalPenalties||0)+1;
+ state.weeklyStats.penalties=(state.weeklyStats.penalties||0)+1;
+ addLog(`AUTO-PENALTY: ${p.name} (-${cost} XP, -1 ${p.stat.toUpperCase()})`,'danger');
+ autoApplied.push({...p,cost});
+ }
+ }
+ });
+ });
+ if(allDone&&state.lastDate!==today){
+ state.streak++;
+ let streakBonus=hasSkill('streakBonus')?35:20;
+ if(state.streak>=7) streakBonus=Math.round(streakBonus*1.5);
+ if(state.streak>=14) streakBonus=Math.round(streakBonus*1.75);
+ if(state.streak>=30) streakBonus=Math.round(streakBonus*2.0);
+ if(state.streak>=60) streakBonus=Math.round(streakBonus*2.5);
+ addLog(`🔥 PERFECT DAY — Streak: ${state.streak}d! +${streakBonus} bonus XP`+(state.streak>=7?' [Streak Multiplier]':''),'level');
+ state.xp+=streakBonus;state.totalXP+=streakBonus;
+ state.weeklyStats.xp=(state.weeklyStats.xp||0)+streakBonus;
+ checkAndTriggerLevelUp();
+ } else if(!allDone&&state.lastDate!==today){
+ if(state.streak>0){
+ addLog(`Streak broken at ${state.streak} days.`,'danger');
+ state.streak=0;
+ }
+ }
+ const doneMissions=state.quests.filter(q=>q.completed).length;
+ state.weeklyStats.missions=(state.weeklyStats.missions||0)+doneMissions;
+ recordSnapshot();
+ state.quests.forEach(q=>q.completed=false);
+ state.triggeredPenalties=[];
+ state.lastDate=today;
+ const boss=getCurrentBoss();
+ if(boss&&boss.name.includes('Gauntlet')||boss?.name?.includes('Bloom')){
+ if(allDone&&!boss.cleared){boss.progress=Math.min(boss.target,boss.progress+1);saveState();}
+ }
+ if(autoApplied.length>0){
+ const totalXP=autoApplied.reduce((s,p)=>s+p.cost,0);
+ addLog(`${autoApplied.length} auto-penalt${autoApplied.length>1?'ies':'y'} applied`,'danger');
+ saveState();renderAll();
+ document.getElementById('penaltyIcon').textContent='⚠️';
+ document.getElementById('penaltyTitle').textContent=getMode()==='female'?'SHADOW PENALTIES':'PENALTIES APPLIED';
+ document.getElementById('penaltyMsg').innerHTML=`<b style="color:var(--danger)">${autoApplied.length} AUTO-PENALT${autoApplied.length>1?'IES':'Y'}</b><br><br>`+autoApplied.map(p=>`• ${p.name}`).join('<br>')+`<br><br><span style="opacity:0.5">-${totalXP} XP total. The Protocol does not negotiate.</span>`;
+ document.getElementById('penaltyOverlay').classList.add('show');
+ speak(`Warning. ${autoApplied.length} automatic penalt${autoApplied.length>1?'ies':'y'} applied. ${autoApplied.map(p=>p.name).join('. ')}.`,true);
+ const pb=document.getElementById('penaltyBody');const pch=document.getElementById('penaltyChevron');
+ pb.classList.remove('collapsed');pch.classList.remove('collapsed');
+ } else {
+ addLog('Missions reset. A new protocol begins.','info');saveState();renderAll();
+ speak(getMode()==='female'?'Daily rites reset. A new eclipse begins.':'Daily missions reset. A new protocol begins.',true);
+ }
+}
+function fullReset(){
+ localStorage.removeItem('ascendant_v1');
+ state=defaultState(getMode());
+ state.log=[{msg:'Protocol initialised. Your ascension begins now.',type:'info',ts:ts()}];
+ saveState();renderAll();
+ speak('System reset. You start again from zero. Rise.',true);
+}
+let editingQuestId=null;
+function openEditModal(event,id){
+ event.stopPropagation();
+ const q=state.quests.find(q=>q.id===id);if(!q)return;
+ editingQuestId=id;
+ if(!q._origName)q._origName=q.name;
+ if(!q._origDesc)q._origDesc=q.desc;
+ document.getElementById('editOriginalLabel').textContent=`ORIGINAL: ${q._origName}`;
+ document.getElementById('editName').value=q.name;
+ document.getElementById('editAlias').value=q.alias||'';
+ document.getElementById('editDesc').value=q.desc;
+ document.getElementById('editOverlay').classList.add('show');
+}
+function saveQuestEdit(){
+ const q=state.quests.find(q=>q.id===editingQuestId);if(!q)return;
+ const newName=document.getElementById('editName').value.trim();
+ const newAlias=document.getElementById('editAlias').value.trim();
+ const newDesc=document.getElementById('editDesc').value.trim();
+ if(!newName){document.getElementById('editName').focus();return;}
+ const oldName=q.name;
+ q.name=newName;q.alias=newAlias||null;q.desc=newDesc||q.desc;
+ if(!state.questEdits)state.questEdits={};
+ state.questEdits[q.id]={name:newName,alias:newAlias||null,desc:newDesc||q.desc};
+ addLog(`Mission renamed: "${oldName}" → "${newName}"${newAlias?' ('+newAlias+')':''}`, 'info');
+ saveState();renderAll();closeEditModal();
+}
+function resetQuestEdit(){
+ const q=state.quests.find(q=>q.id===editingQuestId);if(!q)return;
+ if(q._origName)q.name=q._origName;
+ if(q._origDesc)q.desc=q._origDesc;
+ q.alias=null;
+ if(state.questEdits)delete state.questEdits[q.id];
+ addLog(`Mission restored: "${q.name}"`, 'info');
+ saveState();renderAll();closeEditModal();
+}
+function closeEditModal(){document.getElementById('editOverlay').classList.remove('show');editingQuestId=null;}
+document.getElementById('editOverlay').addEventListener('click',function(e){if(e.target===this)closeEditModal();});
+// ── PRESET-SPECIFIC BOSS POOLS ──
+// Each preset has its own pool — switching preset always gives a different boss.
+// Base targets are calibrated per unit so scaling stays sensible at high levels.
+// Scale formula: +30% per 5 levels on target, +5% per level on XP.
+
+const BOSS_POOLS = {
+ fitness:[
+  {name:'The Iron Week',        desc:'Total push-ups logged across 7 days. No excuses.',                    unit:'reps',     target:200, xp:80},
+  {name:'Iron Throne',          desc:'Total squats this week. Legs built for war.',                         unit:'reps',     target:300, xp:85},
+  {name:'The 500',              desc:'500 sit-ups distributed across the week. Core of iron.',              unit:'reps',     target:500, xp:90},
+  {name:'Pull-up Protocol',     desc:'Accumulate pull-ups across 7 days. Back of steel.',                   unit:'reps',     target:100, xp:75},
+  {name:'Endurance Protocol',   desc:'Total km run or walked this week. Keep moving.',                      unit:'km',       target:30,  xp:100},
+  {name:'Shadow Sprint',        desc:'Sprint interval sessions this week. Log each one.',                   unit:'sessions', target:5,   xp:75},
+  {name:'Cold Gauntlet',        desc:'Cold showers taken this week. Temper the body daily.',                unit:'sessions', target:7,   xp:80},
+ ],
+ focus:[
+  {name:'Deep Work Protocol',   desc:'Total hours of focused, distraction-free work this week.',            unit:'hours',    target:20,  xp:100},
+  {name:'The Reading Gauntlet', desc:'Total pages read across 7 days.',                                     unit:'pages',    target:140, xp:85},
+  {name:'No Distraction Week',  desc:'Phone-free focused work blocks. Log each 1hr+ session.',              unit:'sessions', target:7,   xp:90},
+  {name:'The Output Challenge', desc:'Major work deliverables completed this week.',                        unit:'tasks',    target:5,   xp:95},
+  {name:'Digital Detox Boss',   desc:'Days your total social media use stayed under 30 minutes.',           unit:'days',     target:5,   xp:80},
+  {name:'Journal Sovereignty',  desc:'Journal entries written this week. One per day.',                     unit:'entries',  target:7,   xp:65},
+  {name:'Mind Forge',           desc:'Meditation or study sessions completed. Log each one.',               unit:'sessions', target:7,   xp:70},
+ ],
+ balance:[
+  {name:'The Balance Trial',    desc:'Days you completed at least 15 of your daily missions.',              unit:'days',     target:6,   xp:100},
+  {name:'Body & Mind Week',     desc:'Total focused work hours AND 3 physical sessions. Log hours.',        unit:'hours',    target:10,  xp:95},
+  {name:'The Full Stack',       desc:'Days you hit both a physical mission and a cognitive mission.',        unit:'days',     target:6,   xp:90},
+  {name:'Consistency Protocol', desc:'Complete every mission for 5 out of 7 days this week.',               unit:'full days',target:5,   xp:120},
+  {name:'The Equilibrium',      desc:'Read 70 pages AND log 3 physical sessions this week. Log pages.',     unit:'pages',    target:70,  xp:85},
+  {name:'Dual Discipline',      desc:'Cold showers every day this week AND 5 hours of deep work. Log days.',unit:'days',     target:7,   xp:90},
+ ],
+ wellness:[
+  {name:'Hydration Protocol',   desc:'Days you hit your water target. Log each qualifying day.',            unit:'days',     target:7,   xp:70},
+  {name:'Sleep Sovereignty',    desc:'Days you achieved 7+ hours of sleep. Log each day.',                  unit:'days',     target:6,   xp:75},
+  {name:'Cold Discipline',      desc:'Cold showers taken this week. One per day.',                          unit:'sessions', target:7,   xp:80},
+  {name:'Breathwork Gauntlet',  desc:'Total breathwork or meditation sessions this week.',                  unit:'sessions', target:7,   xp:75},
+  {name:'Nourishment Rite',     desc:'Days you ate a clean, intentional meal. Log each day.',               unit:'days',     target:6,   xp:70},
+  {name:'Digital Sunset Week',  desc:'Days you stayed screen-free after 9pm. Log each day.',                unit:'days',     target:6,   xp:75},
+  {name:'Recovery Protocol',    desc:'Total stretching or mobility minutes this week.',                     unit:'minutes',  target:90,  xp:80},
+ ],
+ entrepreneur:[
+  {name:'The Output Week',      desc:'Total hours of deep, focused output work this week.',                 unit:'hours',    target:20,  xp:100},
+  {name:'The Content Machine',  desc:'Content pieces created and published this week.',                     unit:'pieces',   target:5,   xp:90},
+  {name:'Network Protocol',     desc:'Meaningful business connections made this week.',                     unit:'contacts', target:5,   xp:85},
+  {name:'The Learning Gauntlet',desc:'Total pages read across 7 days. Leaders are readers.',                unit:'pages',    target:120, xp:85},
+  {name:'The Priority Stack',   desc:'Major priority tasks completed this week. One per day.',              unit:'tasks',    target:7,   xp:95},
+  {name:'Revenue Protocol',     desc:'Days you reviewed your metrics and took one revenue action.',         unit:'days',     target:5,   xp:80},
+  {name:'No Distraction Week',  desc:'Days your social media use stayed under 30 minutes total.',          unit:'days',     target:5,   xp:85},
+ ],
+ custom:[
+  {name:'Custom Gauntlet',      desc:'Complete all your custom missions for 5 out of 7 days this week.',   unit:'full days',target:5,   xp:100},
+  {name:'Personal Protocol',    desc:'Days you hit every single one of your custom missions.',              unit:'full days',target:6,   xp:110},
+  {name:'Your Own Standard',    desc:'Log your most important custom mission every day this week.',         unit:'days',     target:7,   xp:90},
+  {name:'Consistency Trial',    desc:'Complete at least 80% of your custom missions for 6 days.',          unit:'days',     target:6,   xp:95},
+ ],
+};
+
+const BOSS_POOLS_FEMALE = {
+ fitness:[
+  {name:'The Sovereign Week',   desc:'Push-ups or modified push-ups logged across 7 days.',                unit:'reps',     target:150, xp:80},
+  {name:'Core Ritual',          desc:'Sit-ups or crunches across the week. The core is your power.',       unit:'reps',     target:300, xp:85},
+  {name:'Pilates Forge',        desc:'Pilates or core sessions this week. Minimum 15 min each.',           unit:'sessions', target:5,   xp:75},
+  {name:'Eclipse Run',          desc:'Total km run or walked this week. Every step counts.',               unit:'km',       target:20,  xp:100},
+  {name:'HIIT Sovereign',       desc:'HIIT sessions this week. Intensity is non-negotiable.',              unit:'sessions', target:4,   xp:90},
+  {name:'Strength Bloom',       desc:'Total squats across the week. Build from the ground up.',            unit:'reps',     target:200, xp:80},
+  {name:'Cold Rite',            desc:'Cold showers taken this week. Discipline before the day begins.',    unit:'sessions', target:7,   xp:80},
+ ],
+ focus:[
+  {name:'Deep Focus Rite',      desc:'Hours of focused, distraction-free work or study this week.',        unit:'hours',    target:15,  xp:100},
+  {name:'The Reading Queen',    desc:'Total pages read across 7 days.',                                    unit:'pages',    target:120, xp:85},
+  {name:'Phone-Free Protocol',  desc:'Social-media-free focused sessions. Log each 1hr+ block.',           unit:'sessions', target:6,   xp:90},
+  {name:'Output Sovereignty',   desc:'Major work or creative deliverables completed this week.',           unit:'tasks',    target:4,   xp:95},
+  {name:'Digital Eclipse',      desc:'Days social media stayed under 30 minutes total.',                   unit:'days',     target:5,   xp:80},
+  {name:'Chronicle Week',       desc:'Journal entries written this week. Write your becoming.',            unit:'entries',  target:7,   xp:65},
+  {name:'The Quiet Power',      desc:'Meditation or breathwork sessions completed this week.',             unit:'sessions', target:7,   xp:70},
+ ],
+ balance:[
+  {name:'The Sovereign Balance',desc:'Days you completed at least 15 of your daily rites.',               unit:'days',     target:6,   xp:100},
+  {name:'Body & Soul Week',     desc:'Total focused work hours this week alongside daily movement.',       unit:'hours',    target:10,  xp:95},
+  {name:'The Full Rite',        desc:'Days you hit both a physical rite and a cognitive rite.',             unit:'days',     target:6,   xp:90},
+  {name:'The Eclipse Protocol', desc:'Complete every rite for 5 out of 7 days this week.',                unit:'full days',target:5,   xp:120},
+  {name:'The Equilibrium',      desc:'Read 70 pages AND complete 3 physical sessions. Log pages.',        unit:'pages',    target:70,  xp:85},
+  {name:'Dual Sovereignty',     desc:'Cold shower every day AND 5 hours of deep work. Log days.',         unit:'days',     target:7,   xp:90},
+ ],
+ wellness:[
+  {name:'Hydration Queen',      desc:'Days you hit your water target. Log each qualifying day.',           unit:'days',     target:7,   xp:70},
+  {name:'Sleep Sovereign',      desc:'Days you achieved 8 hours of sleep. Log each day.',                 unit:'days',     target:6,   xp:75},
+  {name:'Cold Rite',            desc:'Cold showers taken this week. The body honours your demands.',       unit:'sessions', target:7,   xp:80},
+  {name:'Breathwork Sovereign', desc:'Total breathwork or meditation sessions this week.',                 unit:'sessions', target:7,   xp:75},
+  {name:'Nourish & Rise',       desc:'Days you ate a clean, nourishing meal. Log each day.',              unit:'days',     target:6,   xp:70},
+  {name:'Digital Sunset Week',  desc:'Days you stayed screen-free after 9pm. Log each day.',              unit:'days',     target:6,   xp:75},
+  {name:'Restoration Protocol', desc:'Total stretching, yoga, or mobility minutes this week.',            unit:'minutes',  target:90,  xp:80},
+ ],
+ entrepreneur:[
+  {name:'The Empire Week',      desc:'Total hours of deep, focused output work this week.',               unit:'hours',    target:15,  xp:100},
+  {name:'The Creator Protocol', desc:'Content pieces created and published this week.',                   unit:'pieces',   target:4,   xp:90},
+  {name:'Network Sovereignty',  desc:'Meaningful business connections made this week.',                   unit:'contacts', target:5,   xp:85},
+  {name:'The Learning Throne',  desc:'Total pages read this week. Every sovereign leader is a reader.',   unit:'pages',    target:100, xp:85},
+  {name:'The Priority Rite',    desc:'Major priority tasks completed this week. One per day.',            unit:'tasks',    target:7,   xp:95},
+  {name:'Revenue Rite',         desc:'Days you reviewed your metrics and took one revenue action.',       unit:'days',     target:5,   xp:80},
+  {name:'Visibility Protocol',  desc:'Days your social media use stayed under 30 minutes total.',        unit:'days',     target:5,   xp:85},
+ ],
+ custom:[
+  {name:'Sovereign Gauntlet',   desc:'Complete all your custom rites for 5 out of 7 days this week.',    unit:'full days',target:5,   xp:100},
+  {name:'Personal Protocol',    desc:'Days you completed every single one of your custom rites.',         unit:'full days',target:6,   xp:110},
+  {name:'Your Own Standard',    desc:'Log your most important custom rite every day this week.',          unit:'days',     target:7,   xp:90},
+  {name:'Consistency Trial',    desc:'Complete at least 80% of your custom rites for 6 days.',           unit:'days',     target:6,   xp:95},
+ ],
+};
+
+function getBossPool(){
+ const preset=state.activePreset||'fitness';
+ const pools=getMode()==='female'?BOSS_POOLS_FEMALE:BOSS_POOLS;
+ return pools[preset]||pools.fitness;
+}
+
+function getWeekKey(){
+ const d=new Date();
+ const jan1=new Date(d.getFullYear(),0,1);
+ const week=Math.ceil(((d-jan1)/86400000+jan1.getDay()+1)/7);
+ return `${d.getFullYear()}-W${week}-${getMode()}-${state.activePreset||'fitness'}`;
+}
+function getCurrentBoss(){
+ const key=getWeekKey();
+ if(!state.boss||state.boss.key!==key){
+  const pool=getBossPool();
+  const idx=Math.floor((new Date().getMonth()*4+Math.floor(new Date().getDate()/7)))%pool.length;
+  const base=pool[idx];
+  const scale=1+Math.floor(state.level/5)*0.3;
+  // Cap scaling for units that are naturally bounded by the week
+  const cappedUnits=['days','full days','sessions','entries','contacts','pieces','tasks'];
+  const isCapped=cappedUnits.includes(base.unit);
+  const maxTarget=isCapped?Math.min(base.target*2,base.unit==='days'||base.unit==='full days'?7:base.target*2):base.target*scale;
+  const scaledTarget=isCapped?Math.min(Math.round(base.target*scale),maxTarget):Math.round(base.target*scale);
+  const scaled={...base,target:scaledTarget,xp:Math.round(base.xp*(1+state.level*0.05)),progress:0,cleared:false,key,customised:false};
+  state.boss=scaled;saveState();
+ }
+ return state.boss;
+}
+function logBossProgress(){
+ const val=parseFloat(document.getElementById('bossInput').value)||0;
+ if(val<=0)return;
+ const boss=getCurrentBoss();
+ if(boss.cleared){speak('Boss already cleared this week. The reward is yours.',true);return;}
+ boss.progress=Math.min(boss.target,boss.progress+val);
+ document.getElementById('bossInput').value='';
+ if(boss.progress>=boss.target&&!boss.cleared){
+ boss.cleared=true;
+ state.xp+=boss.xp;state.totalXP+=boss.xp;
+ addLog(`BOSS CLEARED: ${boss.name} — +${boss.xp} XP!`,'level');
+ checkAndTriggerLevelUp();
+ speak(`Boss challenge cleared! ${boss.name}. ${boss.xp} experience rewarded. You are beyond ordinary.`,true);
+ } else {
+ addLog(`Boss progress: ${boss.name} — ${boss.progress}/${boss.target} ${boss.unit}`,'info');
+ }
+ saveState();renderBoss();renderPlayer();
+}
+function openBossEditModal(){
+ const boss=getCurrentBoss();
+ document.getElementById('bossEditOrigLabel').textContent=`CURRENT: ${boss.name}`;
+ document.getElementById('bossEditName').value=boss.name;
+ document.getElementById('bossEditDesc').value=boss.desc;
+ document.getElementById('bossEditTarget').value=boss.target;
+ document.getElementById('bossEditUnit').value=boss.unit;
+ document.getElementById('bossEditXP').value=boss.xp;
+ document.getElementById('bossEditOverlay').classList.add('show');
+}
+function saveBossEdit(){
+ const name=document.getElementById('bossEditName').value.trim();
+ const desc=document.getElementById('bossEditDesc').value.trim();
+ const target=Math.max(1,parseInt(document.getElementById('bossEditTarget').value)||1);
+ const unit=document.getElementById('bossEditUnit').value.trim()||'reps';
+ const xp=Math.min(500,Math.max(10,parseInt(document.getElementById('bossEditXP').value)||80));
+ if(!name)return;
+ const boss=getCurrentBoss();
+ boss.name=name;boss.desc=desc;boss.target=target;boss.unit=unit;boss.xp=xp;boss.customised=true;
+ boss.progress=Math.min(boss.progress,boss.target);
+ if(boss.progress>=boss.target&&!boss.cleared){
+ boss.cleared=true;state.xp+=boss.xp;state.totalXP+=boss.xp;
+ addLog(`BOSS CLEARED: ${boss.name} — +${boss.xp} XP!`,'level');
+ checkAndTriggerLevelUp();
+ }
+ addLog(`Boss challenge updated: ${name}`,'info');
+ saveState();renderBoss();renderPlayer();closeBossEditModal();
+}
+function closeBossEditModal(){document.getElementById('bossEditOverlay').classList.remove('show');}
+document.getElementById('bossEditOverlay').addEventListener('click',function(e){if(e.target===this)closeBossEditModal();});
+function renderBoss(){
+ const boss=getCurrentBoss();
+ const isFemale=getMode()==='female';
+ document.getElementById('bossHeaderLabel').textContent=isFemale?'🌑 WEEKLY SOVEREIGN TRIAL':'⚔ WEEKLY BOSS';
+ document.getElementById('skillHeaderLabel').textContent=isFemale?'◈ SOVEREIGN ABILITIES':'◈ SKILL TREE';
+ document.getElementById('bossName').textContent=boss.name+(boss.customised?' ✏':'');
+ document.getElementById('bossDesc').textContent=boss.desc;
+ document.getElementById('bossInput').placeholder=`Log ${boss.unit}...`;
+ const pct=Math.min(100,(boss.progress/boss.target)*100);
+ document.getElementById('bossBarFill').style.width=pct+'%';
+ document.getElementById('bossBarFill').className='boss-bar-fill'+(boss.cleared?' cleared':'');
+ document.getElementById('bossProgressLabel').textContent=`${boss.progress} / ${boss.target} ${boss.unit}`;
+ document.getElementById('bossReward').textContent=`+${boss.xp} XP`;
+ const badge=document.getElementById('bossBadge');
+ if(boss.cleared){badge.textContent='CLEARED ✓';badge.className='boss-badge cleared';}
+ else{badge.textContent='IN PROGRESS';badge.className='boss-badge';}
+ document.getElementById('bossClearedMsg').style.display=boss.cleared?'block':'none';
+ const presetLabels={fitness:'🏋 FITNESS',focus:'💻 FOCUS',balance:'⚖ BALANCE',wellness:'🧘 WELLNESS',entrepreneur:'💼 ENTREPRENEUR',custom:'✏ CUSTOM'};
+ const activeLabel=presetLabels[state.activePreset||'fitness']||'';
+ document.getElementById('bossSub').textContent=`${activeLabel} · Resets Monday · Scales with your level`;
+}
+const SKILLS_MALE=[
+ {id:'s1',level:3,icon:'🛡',name:'Iron Will',desc:'Streak base bonus increased to +35 XP. Combines with the streak multiplier for bigger rewards on long runs.',effect:'streakBonus',value:35},
+ {id:'s2',level:5,icon:'⚡',name:'Shadow Step',desc:'Agility quests grant +2 stat points instead of +1.',effect:'doubleAgi',value:true},
+ {id:'s3',level:8,icon:'🔥',name:'Berserker',desc:'Penalty XP cost reduced by 30%.',effect:'penaltyReduce',value:0.7},
+ {id:'s4',level:10,icon:'🧠',name:'Tactician',desc:'Intelligence quests grant +2 stat points instead of +1.',effect:'doubleInt',value:true},
+ {id:'s5',level:15,icon:'⚔',name:'War Forged',desc:'Strength quests grant +2 stat points instead of +1.',effect:'doubleStr',value:true},
+ {id:'s6',level:20,icon:'👑',name:'Sovereign Protocol',desc:'All quest XP increased by 25%.',effect:'xpBoost',value:1.25},
+];
+const SKILLS_FEMALE=[
+ {id:'s1',level:3,icon:'🌸',name:"Sovereign's Grace",desc:'Streak base bonus increased to +35 XP. Combines with the streak multiplier for bigger rewards on long runs.',effect:'streakBonus',value:35},
+ {id:'s2',level:5,icon:'⚡',name:'Eclipse Surge',desc:'Penalty XP cost reduced by 30%.',effect:'penaltyReduce',value:0.7},
+ {id:'s3',level:8,icon:'👑',name:'Inner Flame',desc:'Intelligence quests grant +2 stat points instead of +1.',effect:'doubleInt',value:true},
+ {id:'s4',level:10,icon:'🌙',name:'Moon Rhythm',desc:'Perception quests grant +2 stat points instead of +1.',effect:'doublePerc',value:true},
+ {id:'s5',level:15,icon:'🔥',name:'Fierce Ascension',desc:'All quest XP increased by 25%.',effect:'xpBoost',value:1.25},
+ {id:'s6',level:20,icon:'🌑',name:'Eclipse Sovereign',desc:'Agility quests grant +2 stat points instead of +1.',effect:'doubleAgi',value:true},
+];
+function getSkills(){return getMode()==='female'?SKILLS_FEMALE:SKILLS_MALE;}
+function getUnlockedSkills(){return getSkills().filter(s=>state.level>=s.level);}
+function hasSkill(effect){return getUnlockedSkills().some(s=>s.effect===effect);}
+function renderSkillTree(){
+ const skills=getSkills();
+ const unlocked=getUnlockedSkills().length;
+ document.getElementById('skillUnlockCount').textContent=`${unlocked}/${skills.length} unlocked`;
+ document.getElementById('skillHeaderInner').textContent=getMode()==='female'?'▶ SOVEREIGN ABILITIES':'▶ PASSIVE ABILITIES';
+ const canvas=document.getElementById('skillCanvas');
+ const w=Math.min(700,window.innerWidth-60);
+ canvas.width=w;canvas.height=100;
+ const ctx2=canvas.getContext('2d');
+ ctx2.clearRect(0,0,w,100);
+ const pad=40,spacing=(w-pad*2)/(skills.length-1);
+ const isFemale=getMode()==='female';
+ const activeColor=isFemale?'#c44aff':'#4488ff';
+ const lockedColor='#2a2a4a';
+ for(let i=0;i<skills.length-1;i++){
+ const x1=pad+i*spacing,x2=pad+(i+1)*spacing;
+ const bothUnlocked=state.level>=skills[i].level&&state.level>=skills[i+1].level;
+ ctx2.beginPath();ctx2.moveTo(x1,50);ctx2.lineTo(x2,50);
+ ctx2.strokeStyle=bothUnlocked?activeColor:lockedColor;
+ ctx2.lineWidth=2;ctx2.stroke();
+ }
+ skills.forEach((s,i)=>{
+ const x=pad+i*spacing,isUnlocked=state.level>=s.level;
+ ctx2.beginPath();ctx2.arc(x,50,isUnlocked?14:10,0,Math.PI*2);
+ ctx2.fillStyle=isUnlocked?activeColor:lockedColor;ctx2.fill();
+ if(isUnlocked){
+ ctx2.beginPath();ctx2.arc(x,50,18,0,Math.PI*2);
+ ctx2.strokeStyle=activeColor+'55';ctx2.lineWidth=2;ctx2.stroke();
+ }
+ ctx2.font=isUnlocked?'13px serif':'11px serif';
+ ctx2.fillStyle='#fff';ctx2.textAlign='center';ctx2.textBaseline='middle';
+ ctx2.fillText(isUnlocked?s.icon:'?',x,50);
+ ctx2.font='9px Share Tech Mono, monospace';
+ ctx2.fillStyle=isUnlocked?'#aac4ff':'#444466';
+ ctx2.fillText(`Lv${s.level}`,x,78);
+ });
+ document.getElementById('skillList').innerHTML=skills.map(s=>{
+ const isUnlocked=state.level>=s.level;
+ return `<div class="skill-node ${isUnlocked?'unlocked':'locked'}">
+ <div class="skill-icon">${isUnlocked?s.icon:'🔒'}</div>
+ <div class="skill-info">
+ <div class="skill-name">${s.name}</div>
+ <div class="skill-desc">${s.desc}</div>
+ </div>
+ <div class="skill-unlock-label">${isUnlocked?'ACTIVE':'LVL '+s.level}</div>
+ </div>`;
+ }).join('');
+}
+function checkWeeklySummary(){
+ const now=new Date();
+ const weekKey=`${now.getFullYear()}-W${Math.ceil(((now-new Date(now.getFullYear(),0,1))/86400000+new Date(now.getFullYear(),0,1).getDay()+1)/7)}`;
+ if(state.lastWeekSummary===weekKey)return;
+ if(!state.weeklyStats)return; 
+ state.lastWeekSummary=weekKey;
+ showWeeklySummary();
+ saveState();
+}
+function showWeeklySummary(){
+ if(!state.weeklyStats)return;
+ const ws=state.weeklyStats;
+ const isFemale=getMode()==='female';
+ document.getElementById('summaryTitle').textContent=isFemale?'SOVEREIGN\'S CHRONICLE':'WEEKLY DEBRIEF';
+ const now=new Date();
+ document.getElementById('summaryWeek').textContent=`WEEK ENDING ${now.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase()}`;
+ document.getElementById('sumMissions').textContent=ws.missions||0;
+ document.getElementById('sumXP').textContent=ws.xp||0;
+ document.getElementById('sumStreak').textContent=state.streak||0;
+ document.getElementById('sumPenalties').textContent=ws.penalties||0;
+ const quotes_m=[
+ `You completed <b>${ws.missions||0} missions</b> and earned <b>${ws.xp||0} XP</b>. ${ws.penalties>3?'Discipline needs work. The Protocol remembers.':ws.penalties===0?'Zero penalties. Absolute execution.':'Keep tightening the margins, Operative.'}`,
+ `A ${state.streak}-day streak. ${state.streak>=5?'Consistency is your weapon.':state.streak>=3?'Building momentum. Do not stop.':'Streaks are built one day at a time. Start now.'}`,
+ ];
+ const quotes_f=[
+ `<b>${ws.missions||0} rites completed</b> — <b>${ws.xp||0} XP</b> earned. ${ws.penalties>3?'The Eclipse sees what you avoided. Next week, leave nothing behind.':ws.penalties===0?'Flawless. A true sovereign.':'You are growing. Stay ruthless with yourself.'}`,
+ `${state.streak} days of consistency. ${state.streak>=5?'This is who you are becoming.':state.streak>=3?'The pattern is forming. Honour it.':'Every queen had a first day. This is yours.'}`,
+ ];
+ const pool=isFemale?quotes_f:quotes_m;
+ document.getElementById('summaryQuote').innerHTML=pool[Math.floor(Math.random()*pool.length)];
+ document.getElementById('summaryOverlay').classList.add('show');
+ speak(isFemale?`Sovereign's chronicle. ${ws.missions} rites complete. ${ws.xp} ascension points. ${state.streak} day streak.`:`Weekly debrief. ${ws.missions} missions complete. ${ws.xp} experience earned. ${state.streak} day streak.`,true);
+}
+function closeSummary(){
+ document.getElementById('summaryOverlay').classList.remove('show');
+ state.weeklyStats={missions:0,xp:0,penalties:0};
+ saveState();
+}
+function recordSnapshot(){
+ if(!state.snapshots)state.snapshots=[];
+ const snap={
+ date:new Date().toLocaleDateString('en-US',{month:'short',day:'numeric'}),
+ str:state.stats.str,agi:state.stats.agi,vit:state.stats.vit,
+ int:state.stats.int,per:state.stats.per
+ };
+ state.snapshots.push(snap);
+ if(state.snapshots.length>30)state.snapshots=state.snapshots.slice(-30);
+}
+function renderChart(){
+ const snaps=state.snapshots||[];
+ const empty=document.getElementById('chartEmpty');
+ const legend=document.getElementById('chartLegend');
+ document.getElementById('chartSnapCount').textContent=`${snaps.length} snapshot${snaps.length!==1?'s':''}`;
+ if(snaps.length<2){empty.style.display='block';legend.innerHTML='';return;}
+ empty.style.display='none';
+ const canvas=document.getElementById('statChart');
+ const W=Math.min(860,window.innerWidth-60);
+ const H=180;
+ canvas.width=W;canvas.height=H;
+ const ctx2=canvas.getContext('2d');
+ ctx2.clearRect(0,0,W,H);
+ const isFemale=getMode()==='female';
+ const COLORS=isFemale
+ ?{str:'#ff2d6e',agi:'#c44aff',vit:'#ffd700',int:'#ff8adb',per:'#9944ff'}
+ :{str:'#ff6644',agi:'#44ff88',vit:'#ff4488',int:'#44aaff',per:'#ffaa44'};
+ const keys=['str','agi','vit','int','per'];
+ const pad={t:10,r:10,b:30,l:28};
+ const chartW=W-pad.l-pad.r,chartH=H-pad.t-pad.b;
+ const maxVal=Math.max(10,...snaps.flatMap(s=>keys.map(k=>s[k]||0)));
+ ctx2.strokeStyle='rgba(255,255,255,0.04)';ctx2.lineWidth=1;
+ for(let i=0;i<=4;i++){
+ const y=pad.t+chartH*(1-i/4);
+ ctx2.beginPath();ctx2.moveTo(pad.l,y);ctx2.lineTo(pad.l+chartW,y);ctx2.stroke();
+ ctx2.fillStyle='rgba(255,255,255,0.2)';ctx2.font='9px Share Tech Mono,monospace';ctx2.textAlign='right';
+ ctx2.fillText(Math.round(maxVal*i/4),pad.l-4,y+3);
+ }
+ ctx2.fillStyle='rgba(255,255,255,0.2)';ctx2.font='8px Share Tech Mono,monospace';ctx2.textAlign='center';
+ const step=Math.max(1,Math.floor(snaps.length/6));
+ snaps.forEach((s,i)=>{if(i%step===0||i===snaps.length-1){const x=pad.l+i*(chartW/(snaps.length-1));ctx2.fillText(s.date,x,H-8);}});
+ keys.forEach(k=>{
+ ctx2.beginPath();ctx2.strokeStyle=COLORS[k];ctx2.lineWidth=2;ctx2.lineJoin='round';
+ snaps.forEach((s,i)=>{
+ const x=pad.l+i*(chartW/(snaps.length-1));
+ const y=pad.t+chartH*(1-(s[k]||0)/maxVal);
+ i===0?ctx2.moveTo(x,y):ctx2.lineTo(x,y);
+ });
+ ctx2.stroke();
+ const last=snaps[snaps.length-1];
+ const lx=pad.l+chartW,ly=pad.t+chartH*(1-(last[k]||0)/maxVal);
+ ctx2.beginPath();ctx2.arc(lx,ly,3,0,Math.PI*2);ctx2.fillStyle=COLORS[k];ctx2.fill();
+ });
+ const labels={str:'STRENGTH',agi:'AGILITY',vit:'VITALITY',int:'INTELLIGENCE',per:'PERCEPTION'};
+ legend.innerHTML=keys.map(k=>`<span><span class="legend-dot" style="background:${COLORS[k]}"></span>${labels[k]}</span>`).join('');
+}
+function getResetTime(){
+ const h=state.resetHour!==undefined?state.resetHour:0;
+ const m=state.resetMinute!==undefined?state.resetMinute:0;
+ return {h,m};
+}
+function getSecondsUntilReset(){
+ const now=new Date();
+ const {h,m}=getResetTime();
+ const reset=new Date();
+ reset.setHours(h,m,0,0);
+ if(reset<=now) reset.setDate(reset.getDate()+1);
+ return Math.floor((reset-now)/1000);
+}
+function getTotalSecondsInDay(){return 86400;}
+function formatTimer(secs){
+ const h=Math.floor(secs/3600);
+ const m=Math.floor((secs%3600)/60);
+ const s=secs%60;
+ return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+let timerInterval=null;
+function startTimer(){
+ if(timerInterval) clearInterval(timerInterval);
+ timerInterval=setInterval(tickTimer,1000);
+ tickTimer();
+}
+function tickTimer(){
+ const secs=getSecondsUntilReset();
+ const total=getTotalSecondsInDay();
+ const pct=Math.max(0,Math.min(100,(secs/total)*100));
+ const disp=document.getElementById('timerDisplay');
+ const fill=document.getElementById('timerFill');
+ const label=document.getElementById('timerLabel');
+ if(!disp)return;
+ disp.textContent=formatTimer(secs);
+ fill.style.width=pct+'%';
+ disp.className='timer-display';
+ fill.className='timer-progress-fill';
+ if(secs<=3600){
+ disp.classList.add('urgent');
+ fill.classList.add('urgent');
+ label.textContent='⚠ FINAL HOUR — COMPLETE YOUR MISSIONS';
+ } else if(secs<=1800){
+ disp.classList.add('critical');
+ fill.classList.add('urgent');
+ label.textContent='🔴 CRITICAL — TIME IS ALMOST UP';
+ } else {
+ label.textContent=getMode()==='female'?'TIME REMAINING TODAY — RISE, SOVEREIGN':'TIME REMAINING TODAY — EXECUTE, OPERATIVE';
+ }
+ if(secs<=0){
+ clearInterval(timerInterval);
+ addLog('Daily timer reached zero. Auto-resetting missions.','info');
+ speak(getMode()==='female'?'The day is over, Sovereign. The Protocol resets. Rise again tomorrow.':'Time is up, Operative. The Protocol resets. Execute harder tomorrow.',true);
+ setTimeout(()=>{resetDay();startTimer();},1500);
+ }
+}
+function openTimerModal(){
+ const hourSel=document.getElementById('timerHour');
+ const minSel=document.getElementById('timerMinute');
+ hourSel.innerHTML='';
+ for(let i=0;i<24;i++){
+ const o=document.createElement('option');
+ o.value=i;
+ o.textContent=String(i).padStart(2,'0')+':00';
+ if(i===(state.resetHour||0))o.selected=true;
+ hourSel.appendChild(o);
+ }
+ minSel.innerHTML='';
+ [0,15,30,45].forEach(m=>{
+ const o=document.createElement('option');
+ o.value=m;
+ o.textContent=':'+String(m).padStart(2,'0');
+ if(m===(state.resetMinute||0))o.selected=true;
+ minSel.appendChild(o);
+ });
+ document.getElementById('timerModal').classList.add('show');
+}
+function closeTimerModal(){document.getElementById('timerModal').classList.remove('show');}
+function openGuide(){
+ const isFemale=getMode()==='female';
+ document.getElementById('guideTitleEl').textContent=isFemale?'📖 HOW TO USE ECLIPSE':'📖 HOW TO USE ASCENDANT';
+ document.getElementById('guideOverlay').classList.add('show');
+}
+function saveTimerSettings(){
+ state.resetHour=parseInt(document.getElementById('timerHour').value);
+ state.resetMinute=parseInt(document.getElementById('timerMinute').value)||0;
+ saveState();
+ closeTimerModal();
+ tickTimer();
+ const {h,m}=getResetTime();
+ const label=`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;
+ addLog(`Reset time set to ${label} daily`,'info');
+ speak(`Reset time set to ${h} ${m===0?'hundred':m} hours daily.`,true);
+}
+document.getElementById('timerModal').addEventListener('click',function(e){if(e.target===this)closeTimerModal();});
+function applySmartDefaults(){
+ if(!state.collapsedSections) state.collapsedSections={};
+ // Always apply saved collapse state first if returning user
+ if(state.hasSetDefaults){
+  restoreCollapsedSections();
+  return;
+ }
+ // First-time user — set default collapsed sections
+ const toCollapse=['voiceBody','penaltyBody','bossBody','skillBody','chartBody'];
+ toCollapse.forEach(bodyId=>{
+  const b=document.getElementById(bodyId);
+  const chevId=bodyId.replace('Body','Chevron');
+  const c=document.getElementById(chevId);
+  if(b) b.classList.add('collapsed');
+  if(c) c.classList.add('collapsed');
+  state.collapsedSections[bodyId]=true;
+ });
+ state.hasSetDefaults=true;
+ saveState();
+}
+function renderAll(){applyTheme();applyThemeClass();renderThemeSwitcher();renderPlayer();renderStats();renderQuests();renderPenalties();renderLog();renderBoss();renderSkillTree();renderChart();}
+document.getElementById('playerName').addEventListener('change',function(){state.name=this.value.toUpperCase().slice(0,20);saveState();});
+if(state.log.length===0)state.log.push({msg:'Protocol initialised. Your ascension begins now.',type:'info',ts:ts()});
+renderAll();
+applyThemeClass();
+pColors=getParticleColors();
+applySmartDefaults();
+startTimer();
+if(!state.weeklyStats)state.weeklyStats={missions:0,xp:0,penalties:0};
+if(!state.snapshots)state.snapshots=[];
+checkWeeklySummary();
+let greetingFired=false;
+function fireGreeting(){
+ if(greetingFired)return;
+ greetingFired=true;
+ speak(getTheme().greet(state.name,state.level));
+}
+const isMobile=/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+if(isMobile){
+ document.addEventListener('touchstart',fireGreeting,{once:true,passive:true});
+ document.addEventListener('click',fireGreeting,{once:true});
+} else {
+ setTimeout(fireGreeting,1200);
+}</script></body>
+</html>
