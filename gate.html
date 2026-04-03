@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#02020a">
+<title>ASCENDANT — Access Required</title>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body{
+    background:#02020a;
+    color:#c8d8ff;
+    font-family:'Share Tech Mono',monospace;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    position:relative;
+  }
+
+  /* Particle canvas */
+  #particles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+    opacity:0.4;
+  }
+
+  /* Grid background */
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background-image:
+      linear-gradient(rgba(68,136,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(68,136,255,0.04) 1px, transparent 1px);
+    background-size:80px 80px;
+    pointer-events:none;
+    z-index:0;
+  }
+
+  /* Centre glow */
+  body::after{
+    content:'';
+    position:fixed;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    width:600px;height:600px;
+    background:radial-gradient(circle, rgba(68,136,255,0.08) 0%, transparent 70%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .gate-box{
+    position:relative;
+    z-index:1;
+    text-align:center;
+    padding:48px 36px;
+    max-width:420px;
+    width:92%;
+    background:linear-gradient(135deg,#10103a 0%,#0a0a30 100%);
+    border:1px solid #1e1e6a;
+    border-radius:4px;
+    animation:fadeIn 0.8s ease forwards;
+  }
+
+  /* Top accent line */
+  .gate-box::before{
+    content:'';
+    position:absolute;
+    top:0;left:0;right:0;
+    height:2px;
+    background:linear-gradient(90deg,#8844ff,#4488ff,#00d4ff);
+    border-radius:4px 4px 0 0;
+  }
+
+  /* Corner marks */
+  .corner{position:absolute;width:14px;height:14px;border-color:#00d4ff;border-style:solid;}
+  .corner-tl{top:8px;left:8px;border-width:1px 0 0 1px;}
+  .corner-tr{top:8px;right:8px;border-width:1px 1px 0 0;}
+  .corner-bl{bottom:8px;left:8px;border-width:0 0 1px 1px;}
+  .corner-br{bottom:8px;right:8px;border-width:0 1px 1px 0;}
+
+  .sys-label{
+    font-size:9px;
+    letter-spacing:5px;
+    color:#00d4ff;
+    text-transform:uppercase;
+    margin-bottom:12px;
+    animation:flicker 4s infinite;
+  }
+
+  .title{
+    font-family:'Black Han Sans',sans-serif;
+    font-size:clamp(28px,9vw,48px);
+    letter-spacing:4px;
+    background:linear-gradient(135deg,#fff 0%,#00d4ff 40%,#8844ff 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    margin-bottom:6px;
+    filter:drop-shadow(0 0 20px rgba(68,136,255,0.4));
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    width:100%;
+  }
+
+  .subtitle{
+    font-size:9px;
+    letter-spacing:3px;
+    color:#5566aa;
+    margin-bottom:36px;
+  }
+
+  .lock-icon{
+    font-size:32px;
+    margin-bottom:16px;
+    display:block;
+    filter:drop-shadow(0 0 12px rgba(68,136,255,0.5));
+  }
+
+  .gate-label{
+    font-size:9px;
+    letter-spacing:3px;
+    color:#5566aa;
+    text-transform:uppercase;
+    margin-bottom:8px;
+    text-align:left;
+  }
+
+  .gate-input{
+    width:100%;
+    background:rgba(255,255,255,0.03);
+    border:1px solid #1e1e6a;
+    border-radius:3px;
+    color:#c8d8ff;
+    font-family:'Share Tech Mono',monospace;
+    font-size:16px;
+    letter-spacing:4px;
+    padding:14px 16px;
+    outline:none;
+    transition:border-color 0.3s, box-shadow 0.3s;
+    text-align:center;
+    margin-bottom:16px;
+  }
+
+  .gate-input:focus{
+    border-color:#4488ff;
+    box-shadow:0 0 20px rgba(68,136,255,0.2);
+  }
+
+  .gate-input::placeholder{
+    color:#2a2a5a;
+    letter-spacing:2px;
+    font-size:12px;
+  }
+
+  .gate-btn{
+    width:100%;
+    background:linear-gradient(135deg,rgba(68,136,255,0.2),rgba(136,68,255,0.2));
+    border:1px solid #4488ff;
+    border-radius:3px;
+    color:#00d4ff;
+    font-family:'Share Tech Mono',monospace;
+    font-size:12px;
+    letter-spacing:4px;
+    padding:14px;
+    cursor:pointer;
+    transition:all 0.3s;
+    text-transform:uppercase;
+    margin-bottom:20px;
+  }
+
+  .gate-btn:hover{
+    background:rgba(68,136,255,0.3);
+    box-shadow:0 0 20px rgba(68,136,255,0.4);
+  }
+
+  .gate-btn:active{
+    transform:scale(0.98);
+  }
+
+  .remember-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-bottom:24px;
+  }
+
+  .remember-row input[type="checkbox"]{
+    accent-color:#4488ff;
+    width:14px;
+    height:14px;
+    cursor:pointer;
+  }
+
+  .remember-row label{
+    font-size:9px;
+    letter-spacing:2px;
+    color:#5566aa;
+    cursor:pointer;
+  }
+
+  .error-msg{
+    font-size:10px;
+    letter-spacing:2px;
+    color:#ff4466;
+    margin-bottom:16px;
+    min-height:16px;
+    display:none;
+  }
+
+  .error-msg.show{display:block;}
+
+  .gate-footer{
+    font-size:8px;
+    letter-spacing:2px;
+    color:#2a2a5a;
+    line-height:1.8;
+    border-top:1px solid #1e1e6a;
+    padding-top:20px;
+    margin-top:4px;
+  }
+
+  .gate-footer a{
+    color:#4488ff;
+    text-decoration:none;
+  }
+
+  /* XP-style bar below button */
+  .progress-bar{
+    height:2px;
+    background:rgba(68,136,255,0.1);
+    border-radius:1px;
+    margin-bottom:20px;
+    overflow:hidden;
+    display:none;
+  }
+  .progress-fill{
+    height:100%;
+    background:linear-gradient(90deg,#4488ff,#00d4ff);
+    border-radius:1px;
+    width:0%;
+    transition:width 0.6s ease;
+  }
+
+  @keyframes flicker{
+    0%,94%,96%,100%{opacity:1}
+    95%{opacity:0.3}
+  }
+  @keyframes fadeIn{
+    from{opacity:0;transform:translateY(12px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  @keyframes shake{
+    0%,100%{transform:translateX(0);}
+    20%,60%{transform:translateX(-6px);}
+    40%,80%{transform:translateX(6px);}
+  }
+  .shake{animation:shake 0.4s ease;}
+
+  @media(max-width:480px){
+    .gate-box{padding:36px 24px;}
+    .title{font-size:clamp(28px,10vw,48px);}
+  }
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<div class="gate-box">
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
+
+  <div class="sys-label">▶ DAILY TRAINING PROTOCOL ◀</div>
+  <div class="title">ASCENDANT</div>
+  <div class="subtitle">ACCESS VERIFICATION REQUIRED</div>
+
+  <span class="lock-icon">🔒</span>
+
+  <div class="gate-label">ACCESS CODE</div>
+  <input
+    class="gate-input"
+    id="staticrypt-password"
+    type="password"
+    placeholder="ENTER YOUR CODE"
+    autocomplete="current-password"
+    autofocus
+  />
+
+  <div class="error-msg" id="staticrypt-error-message">
+    ⚠ INVALID CODE — ACCESS DENIED
+  </div>
+
+  <div class="progress-bar" id="progress-bar">
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+
+  <button class="gate-btn" id="staticrypt-decrypt-button">
+    [ INITIATE PROTOCOL ]
+  </button>
+
+  <div class="remember-row">
+    <input type="checkbox" id="staticrypt-remember" checked>
+    <label for="staticrypt-remember">REMEMBER THIS DEVICE</label>
+  </div>
+
+  <div class="gate-footer">
+    ASCENDANT — DAILY TRAINING PROTOCOL<br>
+    ACCESS IS GRANTED TO VERIFIED OPERATIVES ONLY<br><br>
+    If you purchased ASCENDANT, your access code<br>
+    was included in your delivery confirmation.
+  </div>
+</div>
+
+<!-- Particles -->
+<script>
+const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');
+let pts=[];
+function rsz(){canvas.width=innerWidth;canvas.height=innerHeight;}
+rsz();addEventListener('resize',rsz);
+for(let i=0;i<50;i++) pts.push({
+  x:Math.random()*innerWidth,
+  y:Math.random()*innerHeight,
+  vx:(Math.random()-.5)*.3,
+  vy:-Math.random()*.3-.05,
+  sz:Math.random()*1.5+.5,
+  a:Math.random()*.4+.1
+});
+(function ap(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  pts.forEach(p=>{
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.y<0){p.y=canvas.height;p.x=Math.random()*canvas.width;}
+    if(p.x<0||p.x>canvas.width)p.vx*=-1;
+    ctx.beginPath();ctx.arc(p.x,p.y,p.sz,0,Math.PI*2);
+    ctx.fillStyle=`rgba(68,136,255,${p.a})`;ctx.fill();
+  });
+  requestAnimationFrame(ap);
+})();
+
+// Animate button loading state on submit
+document.getElementById('staticrypt-decrypt-button').addEventListener('click',function(){
+  const bar=document.getElementById('progress-bar');
+  const fill=document.getElementById('progress-fill');
+  bar.style.display='block';
+  fill.style.width='0%';
+  setTimeout(()=>fill.style.width='100%',50);
+});
+
+// Shake on wrong password (StatiCrypt fires this)
+const observer=new MutationObserver(()=>{
+  const err=document.getElementById('staticrypt-error-message');
+  if(err&&err.classList.contains('show')){
+    const input=document.getElementById('staticrypt-password');
+    input.classList.add('shake');
+    setTimeout(()=>input.classList.remove('shake'),400);
+    document.getElementById('progress-bar').style.display='none';
+  }
+});
+const err=document.getElementById('staticrypt-error-message');
+if(err) observer.observe(err,{attributes:true,attributeFilter:['class']});
+</script>
+
+<!--
+  ═══════════════════════════════════════════════════════════
+  STATICRYPT TEMPLATE USAGE INSTRUCTIONS
+  ═══════════════════════════════════════════════════════════
+
+  This template is designed for use with StatiCrypt CLI.
+  It replaces the default password prompt with an ASCENDANT-
+  branded gate screen.
+
+  REQUIRED ELEMENT IDs (StatiCrypt expects these exactly):
+    #staticrypt-password          — password input field
+    #staticrypt-decrypt-button    — submit button
+    #staticrypt-remember          — remember me checkbox
+    #staticrypt-error-message     — error display (show class added on fail)
+
+  HOW TO USE:
+  ────────────
+  1. Install StatiCrypt CLI:
+     npm install -g staticrypt
+
+  2. Encrypt your gate file with this custom template:
+     staticrypt ascendant-gate.html \
+       --password YOUR-LONG-PASSWORD \
+       --template ascendant-staticrypt-template.html \
+       --template-title "ASCENDANT — Access Required" \
+       --remember 0
+
+  3. This produces: encrypted/ascendant-gate.html
+     Upload this file to your GitHub Pages repo as gate.html
+
+  4. Your ASCENDANT main file (index.html) stays as-is on GitHub.
+
+  5. The NFC chip and delivery email both point to:
+     yourusername.github.io/gate.html
+
+  ONLINE (NO TERMINAL) METHOD:
+  ──────────────────────────────
+  Visit: robinmoisson.github.io/staticrypt
+  — Paste ascendant-gate.html contents
+  — Set your password
+  — Note: custom template requires the CLI, not the online tool
+
+  ═══════════════════════════════════════════════════════════
+-->
+
+</body>
+</html>
