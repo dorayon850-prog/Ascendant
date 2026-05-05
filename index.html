@@ -1467,7 +1467,7 @@ function resetDay(){
  if(autoApplied.length>0){
   const totalXP=autoApplied.reduce((s,p)=>s+p.cost,0);
   addLog(`${autoApplied.length} auto-penalt${autoApplied.length>1?'ies':'y'} applied`,'danger');
-  saveState();renderAll();
+  saveState();renderAll();updateResetBtn();
   const _s=(id,val,html=false)=>{const e=document.getElementById(id);if(e){if(html)e.innerHTML=val;else e.textContent=val;}};
   const _c=(id,cls)=>{const e=document.getElementById(id);if(e)e.classList.add(cls);};
   const _r=(id,cls)=>{const e=document.getElementById(id);if(e)e.classList.remove(cls);};
@@ -1480,7 +1480,7 @@ function resetDay(){
  } else {
   const msg=state.dayComplete?'Protocol locked — perfect day logged. A new protocol begins.':'Missions reset. A new protocol begins.';
   addLog(msg,'info');
-  saveState();renderAll();
+  saveState();renderAll();updateResetBtn();
   speak(getMode()==='female'?'Daily rites reset. A new eclipse begins.':'Daily missions reset. A new protocol begins.',true);
  }
 }
