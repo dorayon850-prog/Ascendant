@@ -2100,18 +2100,19 @@ checkPendingAnnouncement();
 // ── STALE DATE CHECK — reset if app was closed overnight and reopened next day ──
 (function checkStaleDayOnLoad(){
  const today=new Date().toDateString();
- const {h,m}=getResetTime();
- const now=new Date();
- const resetToday=new Date();
- resetToday.setHours(h,m,0,0);
- // If lastDate is a different day AND the reset window has already passed today
- if(state.lastDate && state.lastDate!==today){
+ const lastDate=state.lastDate;
+ const dayComplete=state.dayComplete;
+ // Case 1: lastDate is a previous calendar day (timer never fired while app was closed)
+ // Case 2: lastDate is null but dayComplete=true (user manually locked, timer never ran resetDay)
+ const staleDayDetected=lastDate && lastDate!==today;
+ const lockedWithNoDate=dayComplete && !lastDate;
+ if(staleDayDetected||lockedWithNoDate){
   const msPerDay=1000*60*60*24;
-  const daysDiff=Math.round((new Date(today)-new Date(state.lastDate))/msPerDay);
+  const daysDiff=lastDate?Math.round((new Date(today)-new Date(lastDate))/msPerDay):1;
   if(daysDiff>1&&state.streak>0){
    addLog(`${daysDiff} days missed — streak broken at ${state.streak} days.`,'danger');
    speak(getMode()==='female'
-    ?`Sovereign. You were absent for ${daysDiff} days. Your streak has been broken. The Protocol resets.`
+    ?`Sovereign. ${daysDiff} days of absence detected. Streak broken. The Protocol resets.`
     :`Operative. ${daysDiff} days of absence detected. Streak broken. The Protocol resets.`,false);
    state.streak=0;
   } else {
