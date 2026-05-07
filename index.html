@@ -176,7 +176,7 @@
  #mobileNav{
   display:flex;position:fixed;bottom:0;left:0;right:0;z-index:600;
   background:#04040f;border-top:1px solid #1a1a4a;
-  padding:6px 0 max(8px,env(safe-area-inset-bottom));
+  padding:8px 0 max(16px,env(safe-area-inset-bottom));
   overflow-x:auto;overflow-y:hidden;
   -webkit-overflow-scrolling:touch;
   scrollbar-width:none;
@@ -193,9 +193,11 @@
  .mob-nav-icon{font-size:16px;margin-bottom:3px;display:block;}
  .mob-nav-lbl{font-size:6px;letter-spacing:2px;color:#3a4570;font-family:var(--mono-font);}
  /* iPhone safe area — ensures content clears notch and nav bar */
- .app{padding-top:env(safe-area-inset-top);padding-bottom:calc(110px + env(safe-area-inset-bottom));}
- /* Reset section needs extra breathing room above nav bar */
- .reset-section{margin-bottom:16px;}
+ .app{padding-top:env(safe-area-inset-top);padding-bottom:calc(140px + env(safe-area-inset-bottom));}
+ /* Reset section needs explicit bottom breathing room above nav */
+ .reset-section{margin-bottom:24px;padding-bottom:16px;}
+ /* Ensure last child of app always has space */
+ .app>*:last-child{margin-bottom:calc(20px + env(safe-area-inset-bottom));}
  /* All overlay windows need bottom padding so content clears the nav bar */
  .sw-overlay{padding-bottom:calc(70px + env(safe-area-inset-bottom));}
  /* sw-body scrolls inside the overlay — it needs to clear the nav too */
@@ -946,7 +948,7 @@ function buildRecog(){
  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
  if(!SR) return null;
  const r=new SR();
- r.continuous=false;r.interimResults=true;r.lang='en-US';
+ r.continuous=!isAndroid;r.interimResults=true;r.lang='en-US';
  r.onstart=()=>{
   listening=true;
   const _vbL=document.getElementById('voiceBtn');if(_vbL){_vbL.classList.add('listening');_vbL.textContent='🔴';}
@@ -1014,7 +1016,23 @@ function toggleVoice(){
    }
   }).catch(()=>startRecog());
  } else {
-  startRecog();
+  // Desktop — request getUserMedia first to trigger the browser permission prompt
+  // Without this, SpeechRecognition silently fails with not-allowed on first use
+  if(!micPermissionGranted && navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+   setVoiceStatus('REQUESTING MIC...','Allow microphone when prompted.');
+   navigator.mediaDevices.getUserMedia({audio:true})
+    .then(stream=>{
+     stream.getTracks().forEach(t=>t.stop());
+     micPermissionGranted=true;
+     startRecog();
+    })
+    .catch(err=>{
+     setVoiceStatus('MIC BLOCKED','Allow microphone access in your browser address bar.');
+     addLog('Mic access denied: '+err.message,'danger');
+    });
+  } else {
+   startRecog();
+  }
  }
 }
 function processCmd(text){
